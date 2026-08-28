@@ -1,0 +1,7 @@
+{
+  "own": [
+    { "code": "EMT", "name": "EBOS MedTech", "domain": "ebosmedtech.com" },
+    { "code": "LHC", "name": "Life Healthcare", "domain": "lifehealthcare.com.au" },
+    { "code": "TMD", "name": "Transmedic", "domain": "transmedicgroup.com" }
+  ]
+}

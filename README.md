@@ -62,3 +62,4 @@ deployment) by diffing across dated files.
 - No historical dashboard — just JSON files; build a small script over
   `results/*.json` if you want trend charts.
 # ebos-visibility
+# ai-visibility
