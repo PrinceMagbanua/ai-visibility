@@ -6,7 +6,34 @@ const brands = require("../config/brands.json").own;
 const prompts = require("../config/prompts.json");
 const trackedPages = require("../config/pages.json");
 
-const client = new Anthropic(); // reads ANTHROPIC_API_KEY from env
+const client = new Anthropic({
+  // reads ANTHROPIC_API_KEY from env
+  defaultHeaders: process.env.ANTHROPIC_WORKSPACE_ID
+    ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID }
+    : undefined,
+});
+
+// Evaluation-tier keys have very low rate limits — space requests out and
+// retry on 429 instead of hammering the API.
+const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 5000);
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function withRateLimit(fn) {
+  const maxAttempts = 5;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const result = await fn();
+      await sleep(CALL_DELAY_MS);
+      return result;
+    } catch (err) {
+      const isRateLimit = err?.status === 429 || err?.error?.error?.type === "rate_limit_error";
+      if (!isRateLimit || attempt === maxAttempts) throw err;
+      const backoff = CALL_DELAY_MS * 2 ** attempt;
+      console.warn(`Rate limited (attempt ${attempt}/${maxAttempts}), waiting ${backoff}ms...`);
+      await sleep(backoff);
+    }
+  }
+}
 
 const ANALYSIS_SCHEMA = {
   type: "object",
@@ -43,12 +70,14 @@ const ANALYSIS_SCHEMA = {
 };
 
 async function getAnswer(prompt) {
-  const response = await client.messages.create({
-    model: "claude-opus-4-8",
-    max_tokens: 2048,
-    tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 5 }],
-    messages: [{ role: "user", content: prompt }],
-  });
+  const response = await withRateLimit(() =>
+    client.messages.create({
+      model: "claude-opus-4-8",
+      max_tokens: 2048,
+      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 5 }],
+      messages: [{ role: "user", content: prompt }],
+    }),
+  );
 
   const text = response.content
     .filter((b) => b.type === "text")
@@ -70,24 +99,26 @@ async function getAnswer(prompt) {
 async function analyzeAnswer(prompt, answerText) {
   const brandList = brands.map((b) => `${b.code} (${b.name}, ${b.domain})`).join(", ");
 
-  const response = await client.messages.create({
-    model: "claude-opus-4-8",
-    max_tokens: 1024,
-    output_config: { format: { type: "json_schema", schema: ANALYSIS_SCHEMA } },
-    messages: [
-      {
-        role: "user",
-        content:
-          `Here is an AI-generated answer to the question: "${prompt}"\n\n` +
-          `---\n${answerText}\n---\n\n` +
-          `Tracked brands: ${brandList}.\n` +
-          `For each tracked brand, determine whether it is mentioned in the answer, ` +
-          `roughly where (early/mid/late in the text, or not_mentioned), and the sentiment ` +
-          `of the mention (positive/neutral/negative, or not_mentioned if absent). ` +
-          `Also list any other company names mentioned that are not in the tracked brand list.`,
-      },
-    ],
-  });
+  const response = await withRateLimit(() =>
+    client.messages.create({
+      model: "claude-opus-4-8",
+      max_tokens: 1024,
+      output_config: { format: { type: "json_schema", schema: ANALYSIS_SCHEMA } },
+      messages: [
+        {
+          role: "user",
+          content:
+            `Here is an AI-generated answer to the question: "${prompt}"\n\n` +
+            `---\n${answerText}\n---\n\n` +
+            `Tracked brands: ${brandList}.\n` +
+            `For each tracked brand, determine whether it is mentioned in the answer, ` +
+            `roughly where (early/mid/late in the text, or not_mentioned), and the sentiment ` +
+            `of the mention (positive/neutral/negative, or not_mentioned if absent). ` +
+            `Also list any other company names mentioned that are not in the tracked brand list.`,
+        },
+      ],
+    }),
+  );
 
   const textBlock = response.content.find((b) => b.type === "text");
   return JSON.parse(textBlock.text);

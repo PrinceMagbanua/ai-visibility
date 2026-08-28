@@ -25,10 +25,22 @@ Both checks write into a single combined `results/<date>.json` per run.
 ## Setup
 
 1. `npm install`
-2. Add an `ANTHROPIC_API_KEY` as a GitHub Actions secret on this repo
+2. Add `ANTHROPIC_API_KEY` as a GitHub Actions secret on this repo
    (Settings → Secrets and variables → Actions → New repository secret).
-3. The workflow in `.github/workflows/weekly-visibility-check.yml` runs every
+3. **If your API key is an identity-linked (workspace-member) key** — you'll
+   see a 400 error `anthropic-workspace-id is required` if so — also add an
+   `ANTHROPIC_WORKSPACE_ID` secret with your workspace's ID (found in the
+   Anthropic Console under workspace settings; the ID starts with `wrkspc_`).
+   Standalone/legacy API keys don't need this.
+4. The workflow in `.github/workflows/weekly-visibility-check.yml` runs every
    Monday. Trigger it manually any time via the Actions tab ("Run workflow").
+
+**Evaluation-tier / low rate-limit keys:** the script spaces out API calls
+(default 5 seconds between requests, plus exponential backoff retries on
+429s) via `API_CALL_DELAY_MS`. If you're still hitting rate limits, raise it
+(e.g. `API_CALL_DELAY_MS=10000` as a repo variable/secret passed into the
+workflow's `env`), or trim `config/prompts.json` down to fewer prompts —
+each prompt costs 2 API calls, each tracked page costs 1.
 
 To run locally:
 
