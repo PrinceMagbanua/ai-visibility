@@ -1,0 +1,149 @@
+{
+  "timestamp": "2026-08-28T02:15:46.541Z",
+  "prompts": [
+    {
+      "prompt": "Who are the leading medical device distributors in New Zealand?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Who are the leading medical device distributors in Australia?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Best supplier of orthopaedic implants in New Zealand",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Best supplier of orthopaedic implants in Australia",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Top spine surgery device distributors in Australia and New Zealand",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Who supplies surgical capital equipment to Australian hospitals?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Leading distributors of biologics and allograft products in Australasia",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "What is EBOS MedTech and what companies does it own?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "What does LifeHealthcare distribute and who owns LifeHealthcare?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "What does Transmedic Group do and where does it operate?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Is LifeHealthcare part of EBOS Group?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "EBOS Medtech vs Life Healthcare - what's the difference?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Who are the biggest medical technology distributors in Southeast Asia?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Best medical device distributor for orthopaedic revision arthroplasty in Australia",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Which company distributes plastics and reconstructive surgery devices in New Zealand?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Who supplies neurosurgery and neurovascular intervention devices in Australia?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Best supplier of endoscopy equipment for Australian hospitals",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Top healthcare technology distributors in Singapore and Malaysia",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Which medical device companies operate in both Australia and New Zealand?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "prompt": "Who distributes regenerative medicine and biologics products in New Zealand hospitals?",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    }
+  ],
+  "page_checks": [
+    {
+      "code": "EMT",
+      "type": "homepage",
+      "url": "https://www.ebosmedtech.com/",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "code": "EMT",
+      "type": "article",
+      "url": "https://www.ebosmedtech.com/our-companies/",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "code": "LHC",
+      "type": "homepage",
+      "url": "https://www.lifehealthcare.com.au/",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "code": "LHC",
+      "type": "article",
+      "url": "https://www.lifehealthcare.com.au/spine/",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "code": "TMD",
+      "type": "homepage",
+      "url": "https://www.transmedicgroup.com/",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    },
+    {
+      "code": "TMD",
+      "type": "article",
+      "url": "https://www.transmedicgroup.com/our-therapeutic-areas/",
+      "timestamp": "2026-08-28T02:15:46.541Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id is required when authenticating with an identity-linked API key; send the id of the workspace this request acts in.\"},\"request_id\":null}"
+    }
+  ]
+}
