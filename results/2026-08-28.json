@@ -1,105 +1,105 @@
 {
-  "timestamp": "2026-08-28T02:24:01.362Z",
+  "timestamp": "2026-08-28T02:25:56.559Z",
   "prompts": [
     {
       "prompt": "Who are the leading medical device distributors in New Zealand?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWVzQXhHphkBHRth9E\"}"
     },
     {
       "prompt": "Who are the leading medical device distributors in Australia?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWX6drh4oj2NpeDkcP\"}"
     },
     {
       "prompt": "Best supplier of orthopaedic implants in New Zealand",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWYUUpthcCRVVj7JnQ\"}"
     },
     {
       "prompt": "Best supplier of orthopaedic implants in Australia",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWZi9bDLf3MXCfV4JD\"}"
     },
     {
       "prompt": "Top spine surgery device distributors in Australia and New Zealand",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWaYFm65QQCuyGyKdy\"}"
     },
     {
       "prompt": "Who supplies surgical capital equipment to Australian hospitals?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWc8WBvm3Yt28iQWmE\"}"
     },
     {
       "prompt": "Leading distributors of biologics and allograft products in Australasia",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWcxN4sPSyNV17uGgq\"}"
     },
     {
       "prompt": "What is EBOS MedTech and what companies does it own?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWdqSoHr69Kb3zLWuC\"}"
     },
     {
       "prompt": "What does LifeHealthcare distribute and who owns LifeHealthcare?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWfGmAyt3FGGPDytyL\"}"
     },
     {
       "prompt": "What does Transmedic Group do and where does it operate?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWgbt1vA7D8HYvdQ5w\"}"
     },
     {
       "prompt": "Is LifeHealthcare part of EBOS Group?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWi2TVR7gBJHB55v11\"}"
     },
     {
       "prompt": "EBOS Medtech vs Life Healthcare - what's the difference?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWjjQD4zPhKxiQdYZg\"}"
     },
     {
       "prompt": "Who are the biggest medical technology distributors in Southeast Asia?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWm2YBri1MjW7PLiPG\"}"
     },
     {
       "prompt": "Best medical device distributor for orthopaedic revision arthroplasty in Australia",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWnFTNfg72b1aHzc9N\"}"
     },
     {
       "prompt": "Which company distributes plastics and reconstructive surgery devices in New Zealand?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWoBX6up8npe9baThX\"}"
     },
     {
       "prompt": "Who supplies neurosurgery and neurovascular intervention devices in Australia?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWpU9y9kdTg56BhoYG\"}"
     },
     {
       "prompt": "Best supplier of endoscopy equipment for Australian hospitals",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWqPDi4yuQHViPGd4q\"}"
     },
     {
       "prompt": "Top healthcare technology distributors in Singapore and Malaysia",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWrEpUVZF1Zpi4w4Ld\"}"
     },
     {
       "prompt": "Which medical device companies operate in both Australia and New Zealand?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWs6uWcfYYFekSN6Fq\"}"
     },
     {
       "prompt": "Who distributes regenerative medicine and biologics products in New Zealand hospitals?",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWtHr4RrFbf84gGvP8\"}"
     }
   ],
   "page_checks": [
@@ -107,43 +107,43 @@
       "code": "EMT",
       "type": "homepage",
       "url": "https://www.ebosmedtech.com/",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWuZFFdWmHm6ELMdzL\"}"
     },
     {
       "code": "EMT",
       "type": "article",
       "url": "https://www.ebosmedtech.com/our-companies/",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWvpQ6CLpQ7tinN4Gu\"}"
     },
     {
       "code": "LHC",
       "type": "homepage",
       "url": "https://www.lifehealthcare.com.au/",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWx7Y5Wy9Ztcp1E3ye\"}"
     },
     {
       "code": "LHC",
       "type": "article",
       "url": "https://www.lifehealthcare.com.au/spine/",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWy1rxaEDdwpY8UM2C\"}"
     },
     {
       "code": "TMD",
       "type": "homepage",
       "url": "https://www.transmedicgroup.com/",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMWysCuxszmRKVFRqvz\"}"
     },
     {
       "code": "TMD",
       "type": "article",
       "url": "https://www.transmedicgroup.com/our-therapeutic-areas/",
-      "timestamp": "2026-08-28T02:24:01.362Z",
-      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"anthropic-workspace-id header must be a valid workspace ID.\"},\"request_id\":null}"
+      "timestamp": "2026-08-28T02:25:56.559Z",
+      "error": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CeUMX1ALmpFjcXdSB6DmS\"}"
     }
   ]
 }
