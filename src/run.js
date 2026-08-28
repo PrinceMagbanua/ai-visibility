@@ -4,6 +4,7 @@ const Anthropic = require("@anthropic-ai/sdk");
 
 const brands = require("../config/brands.json").own;
 const prompts = require("../config/prompts.json");
+const trackedPages = require("../config/pages.json");
 
 const client = new Anthropic(); // reads ANTHROPIC_API_KEY from env
 
@@ -92,8 +93,40 @@ async function analyzeAnswer(prompt, answerText) {
   return JSON.parse(textBlock.text);
 }
 
+function normalizeUrl(u) {
+  try {
+    const withProtocol = /^https?:\/\//i.test(u) ? u : `https://${u}`;
+    const parsed = new URL(withProtocol);
+    const hostname = parsed.hostname.replace(/^www\./, "");
+    const pathname = parsed.pathname.replace(/\/$/, "");
+    return { hostname: hostname.toLowerCase(), full: (hostname + pathname).toLowerCase() };
+  } catch {
+    return { hostname: u.toLowerCase(), full: u.toLowerCase() };
+  }
+}
+
+async function checkPageCitation(page) {
+  const { citations } = await getAnswer(page.question);
+  const target = normalizeUrl(page.url);
+
+  const domainMatches = citations.filter((c) => normalizeUrl(c.url).hostname === target.hostname);
+  const exactMatches = citations.filter((c) => normalizeUrl(c.url).full === target.full);
+
+  return {
+    code: page.code,
+    type: page.type,
+    url: page.url,
+    question: page.question,
+    domain_cited: domainMatches.length > 0,
+    exact_page_cited: exactMatches.length > 0,
+    matched_citations: domainMatches,
+    total_citations: citations.length,
+  };
+}
+
 async function main() {
-  const results = [];
+  const promptResults = [];
+  const pageCheckResults = [];
   const timestamp = new Date().toISOString();
 
   for (const prompt of prompts) {
@@ -101,10 +134,21 @@ async function main() {
     try {
       const { text, citations } = await getAnswer(prompt);
       const analysis = await analyzeAnswer(prompt, text);
-      results.push({ prompt, timestamp, raw_response: text, citations, analysis });
+      promptResults.push({ prompt, timestamp, raw_response: text, citations, analysis });
     } catch (err) {
       console.error(`Failed on prompt "${prompt}":`, err.message);
-      results.push({ prompt, timestamp, error: err.message });
+      promptResults.push({ prompt, timestamp, error: err.message });
+    }
+  }
+
+  for (const page of trackedPages) {
+    console.log(`Checking page citation: ${page.url}`);
+    try {
+      const result = await checkPageCitation(page);
+      pageCheckResults.push({ ...result, timestamp });
+    } catch (err) {
+      console.error(`Failed on page "${page.url}":`, err.message);
+      pageCheckResults.push({ code: page.code, type: page.type, url: page.url, timestamp, error: err.message });
     }
   }
 
@@ -113,8 +157,13 @@ async function main() {
 
   const dateStr = timestamp.slice(0, 10);
   const outPath = path.join(resultsDir, `${dateStr}.json`);
-  fs.writeFileSync(outPath, JSON.stringify(results, null, 2));
-  console.log(`Wrote ${results.length} results to ${outPath}`);
+  fs.writeFileSync(
+    outPath,
+    JSON.stringify({ timestamp, prompts: promptResults, page_checks: pageCheckResults }, null, 2),
+  );
+  console.log(
+    `Wrote ${promptResults.length} prompt results and ${pageCheckResults.length} page checks to ${outPath}`,
+  );
 }
 
 main().catch((err) => {

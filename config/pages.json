@@ -1,0 +1,38 @@
+[
+  {
+    "code": "EMT",
+    "type": "homepage",
+    "url": "https://www.ebosmedtech.com/",
+    "question": "What is EBOS MedTech and what companies does it own?"
+  },
+  {
+    "code": "EMT",
+    "type": "article",
+    "url": "https://www.ebosmedtech.com/our-companies/",
+    "question": "What companies make up the EBOS MedTech portfolio?"
+  },
+  {
+    "code": "LHC",
+    "type": "homepage",
+    "url": "https://www.lifehealthcare.com.au/",
+    "question": "What does LifeHealthcare distribute and who owns LifeHealthcare?"
+  },
+  {
+    "code": "LHC",
+    "type": "article",
+    "url": "https://www.lifehealthcare.com.au/spine/",
+    "question": "What spine surgery products and brands does LifeHealthcare distribute in Australia and New Zealand?"
+  },
+  {
+    "code": "TMD",
+    "type": "homepage",
+    "url": "https://www.transmedicgroup.com/",
+    "question": "What does Transmedic Group do and where does it operate?"
+  },
+  {
+    "code": "TMD",
+    "type": "article",
+    "url": "https://www.transmedicgroup.com/our-therapeutic-areas/",
+    "question": "What therapeutic areas and medical specialties does Transmedic Group cover in Southeast Asia?"
+  }
+]

@@ -6,12 +6,21 @@ commits results back into `results/` as dated JSON files so history lives in git
 
 ## What it does
 
-For each prompt in `config/prompts.json`:
+**Brand-visibility check** — for each prompt in `config/prompts.json`:
 1. Asks Claude (with web search enabled) the prompt, as a real user would.
 2. Asks Claude a second time to analyze that answer: is each tracked brand
    (`config/brands.json`) mentioned, roughly where, what sentiment, and what
    other companies show up.
-3. Writes the combined result to `results/<date>.json`.
+
+**Page-citation check** — for each entry in `config/pages.json` (a homepage +
+one article/product page per brand):
+1. Asks Claude the page's associated search-style question (with web search
+   enabled).
+2. Checks whether that specific tracked URL (or its domain) shows up among
+   the citations returned — a direct signal for whether a given page,
+   including any JSON-LD on it, is actually surfacing in AI answers.
+
+Both checks write into a single combined `results/<date>.json` per run.
 
 ## Setup
 
@@ -30,30 +39,50 @@ ANTHROPIC_API_KEY=sk-... npm run check
 ## Editing what's tracked
 
 - `config/brands.json` — the brand/domain list checked in every answer.
-- `config/prompts.json` — the prompt list. Edit freely; realistic buyer-intent
-  questions work best.
+- `config/prompts.json` — the general buyer-intent prompt list. Edit freely.
+- `config/pages.json` — the specific homepage + article/product page per
+  brand to check for direct citation, each with its own search-style
+  `question`. Add more pages (e.g. right after a JSON-LD deploy) as needed.
 
 ## Reading results
 
-Each `results/<date>.json` is an array of:
+Each `results/<date>.json` looks like:
 
 ```json
 {
-  "prompt": "...",
   "timestamp": "...",
-  "raw_response": "...",
-  "citations": [{ "url": "...", "title": "..." }],
-  "analysis": {
-    "brands_mentioned": [
-      { "code": "EMT", "mentioned": true, "position": "early", "sentiment": "positive" }
-    ],
-    "competitors_mentioned": ["Stryker", "Zimmer Biomet"]
-  }
+  "prompts": [
+    {
+      "prompt": "...",
+      "raw_response": "...",
+      "citations": [{ "url": "...", "title": "..." }],
+      "analysis": {
+        "brands_mentioned": [
+          { "code": "EMT", "mentioned": true, "position": "early", "sentiment": "positive" }
+        ],
+        "competitors_mentioned": ["Stryker", "Zimmer Biomet"]
+      }
+    }
+  ],
+  "page_checks": [
+    {
+      "code": "LHC",
+      "type": "article",
+      "url": "https://www.lifehealthcare.com.au/spine/",
+      "question": "What spine surgery products and brands does LifeHealthcare distribute...",
+      "domain_cited": true,
+      "exact_page_cited": false,
+      "matched_citations": [{ "url": "...", "title": "..." }],
+      "total_citations": 6
+    }
+  ]
 }
 ```
 
-Compare a given URL/page's citation rate before vs. after a change (e.g. a JSON-LD
-deployment) by diffing across dated files.
+`exact_page_cited` is the strict signal (that specific URL was cited);
+`domain_cited` is looser (the site was cited, maybe a different page).
+Compare a tracked page's `exact_page_cited` rate before vs. after a change
+(e.g. a JSON-LD deployment) by diffing across dated files.
 
 ## Known gaps vs. a paid tool
 
