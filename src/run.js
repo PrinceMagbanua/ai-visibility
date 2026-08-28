@@ -155,12 +155,21 @@ async function checkPageCitation(page) {
   };
 }
 
+// Errors that will fail identically on every subsequent call — no point
+// burning through the rest of the prompts/pages once one of these hits.
+function isFatalAccountError(err) {
+  const message = err?.message || "";
+  return /credit balance is too low/i.test(message) || err?.status === 401;
+}
+
 async function main() {
   const promptResults = [];
   const pageCheckResults = [];
   const timestamp = new Date().toISOString();
+  let aborted = false;
 
   for (const prompt of prompts) {
+    if (aborted) break;
     console.log(`Running prompt: ${prompt}`);
     try {
       const { text, citations } = await getAnswer(prompt);
@@ -169,10 +178,15 @@ async function main() {
     } catch (err) {
       console.error(`Failed on prompt "${prompt}":`, err.message);
       promptResults.push({ prompt, timestamp, error: err.message });
+      if (isFatalAccountError(err)) {
+        console.error("Fatal account error — aborting the rest of this run.");
+        aborted = true;
+      }
     }
   }
 
   for (const page of trackedPages) {
+    if (aborted) break;
     console.log(`Checking page citation: ${page.url}`);
     try {
       const result = await checkPageCitation(page);
@@ -180,6 +194,10 @@ async function main() {
     } catch (err) {
       console.error(`Failed on page "${page.url}":`, err.message);
       pageCheckResults.push({ code: page.code, type: page.type, url: page.url, timestamp, error: err.message });
+      if (isFatalAccountError(err)) {
+        console.error("Fatal account error — aborting the rest of this run.");
+        aborted = true;
+      }
     }
   }
 
@@ -190,11 +208,13 @@ async function main() {
   const outPath = path.join(resultsDir, `${dateStr}.json`);
   fs.writeFileSync(
     outPath,
-    JSON.stringify({ timestamp, prompts: promptResults, page_checks: pageCheckResults }, null, 2),
+    JSON.stringify({ timestamp, prompts: promptResults, page_checks: pageCheckResults, aborted }, null, 2),
   );
   console.log(
     `Wrote ${promptResults.length} prompt results and ${pageCheckResults.length} page checks to ${outPath}`,
   );
+
+  if (aborted) process.exitCode = 1;
 }
 
 main().catch((err) => {
