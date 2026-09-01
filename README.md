@@ -73,7 +73,7 @@ model names/quotas often — re-check that dashboard (or run
 a capacity error means something else, and update the `GEMINI_MODEL` list
 if a model gets retired.
 
-The script spaces out Gemini calls (default 5 seconds between requests) via
+The script spaces out Gemini calls (default 10 seconds between requests) via
 `API_CALL_DELAY_MS`. It does **not** retry-with-backoff on auth or quota
 errors — a 401/403 immediately aborts the entire run (and fails the GitHub
 Actions job); a 429 first tries the next candidate model, and only aborts

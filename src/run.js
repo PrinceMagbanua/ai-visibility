@@ -26,7 +26,7 @@ const currentModel = () => MODEL_CANDIDATES[activeModelIndex];
 const TAVILY_MAX_RESULTS = Number(process.env.TAVILY_MAX_RESULTS || 5);
 
 // Stay comfortably under the free-tier RPM cap for the chosen Gemini model.
-const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 5000);
+const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 10000);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function isQuotaError(err) {
