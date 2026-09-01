@@ -69,6 +69,9 @@
   <h2>Brand mention rate over time</h2>
   <div class="card"><canvas id="brandChart"></canvas></div>
 
+  <h2>Brand sentiment over time</h2>
+  <div class="card"><canvas id="sentimentChart"></canvas></div>
+
   <h2>Tracked page citation history</h2>
   <div class="card" id="pageTables"></div>
 
@@ -76,6 +79,7 @@
   <div class="card" id="latestPrompts"></div>
 
   <h2>Top competitors mentioned (all-time)</h2>
+  <div class="card"><canvas id="competitorChart"></canvas></div>
   <div class="card" id="competitorTable"></div>
 
 <script>
@@ -87,8 +91,10 @@ async function main() {
     `${d.run_count} run(s) recorded · latest: ${d.latest_date ?? "n/a"} · generated ${new Date(d.generated_at).toLocaleString()}`;
 
   renderBrandChart(d);
+  renderSentimentChart(d);
   renderPageTables(d);
   renderLatestPrompts(d);
+  renderCompetitorChart(d);
   renderCompetitorTable(d);
 }
 
@@ -115,6 +121,62 @@ function renderBrandChart(d) {
       responsive: true,
       scales: { y: { min: 0, max: 100, title: { display: true, text: "% of prompts mentioning brand" } } },
       plugins: { legend: { position: "bottom" } },
+    },
+  });
+}
+
+function renderSentimentChart(d) {
+  const ctx = document.getElementById("sentimentChart");
+  if (!d.dates.length) {
+    ctx.replaceWith(Object.assign(document.createElement("div"), { className: "empty", textContent: "No runs yet." }));
+    return;
+  }
+  const colors = { EMT: "#2563eb", LHC: "#d97706", TMD: "#059669" };
+  const datasets = d.brands.map((b) => ({
+    label: `${b.code} avg sentiment`,
+    data: d.brand_trend[b.code].map((p) => p.avg_sentiment),
+    borderColor: colors[b.code] || "#888",
+    backgroundColor: "transparent",
+    spanGaps: true,
+    tension: 0.2,
+  }));
+
+  new Chart(ctx, {
+    type: "line",
+    data: { labels: d.dates, datasets },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          min: -1,
+          max: 1,
+          title: { display: true, text: "Avg sentiment (-1 negative to +1 positive)" },
+        },
+      },
+      plugins: { legend: { position: "bottom" } },
+    },
+  });
+}
+
+function renderCompetitorChart(d) {
+  const ctx = document.getElementById("competitorChart");
+  if (!d.competitor_totals.length) {
+    ctx.replaceWith(Object.assign(document.createElement("div"), { className: "empty", textContent: "No competitor mentions recorded yet." }));
+    return;
+  }
+  const top = d.competitor_totals.slice(0, 10);
+
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: top.map((c) => c.name),
+      datasets: [{ label: "Mentions (all-time)", data: top.map((c) => c.count), backgroundColor: "#2563eb" }],
+    },
+    options: {
+      indexAxis: "y",
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: { x: { title: { display: true, text: "Mentions" }, ticks: { precision: 0 } } },
     },
   });
 }
@@ -171,7 +233,7 @@ function renderLatestPrompts(d) {
   const rows = prompts
     .map((p) => {
       if (p.error) {
-        return `<tr><td>${escapeHtml(p.prompt)}</td><td colspan="3" class="na">error: ${escapeHtml(p.error.slice(0, 120))}</td></tr>`;
+        return `<tr><td>${escapeHtml(p.prompt)}</td><td colspan="3" class="na">${escapeHtml(cleanErrorMessage(p.error))}</td></tr>`;
       }
       const mentions = (p.analysis?.brands_mentioned || [])
         .filter((m) => m.mentioned)
@@ -211,6 +273,19 @@ function renderCompetitorTable(d) {
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+// Errors are stored as raw provider JSON/text (e.g. `{"error":{"code":503,
+// "message":"..."}}`) so nothing's lost for debugging — but that's noise to
+// show a viewer. Pull out just the human-readable message.
+function cleanErrorMessage(raw) {
+  try {
+    const parsed = JSON.parse(raw.replace(/^\d+\s*/, ""));
+    if (parsed?.error?.message) return parsed.error.message;
+  } catch {
+    // not JSON — fall through to raw text below
+  }
+  return String(raw).slice(0, 150);
 }
 
 main().catch((err) => {
