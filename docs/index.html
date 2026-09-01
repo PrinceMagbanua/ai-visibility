@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>EBOS AI Visibility Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --border: #ddd;
+    --card: #f7f7f8;
+    --good: #1a7f37;
+    --bad: #cf222e;
+    --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --muted: #9198a1;
+      --border: #30363d;
+      --card: #161b22;
+      --good: #3fb950;
+      --bad: #f85149;
+      --accent: #58a6ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+  h2 { font-size: 1.1rem; margin-top: 40px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 600; }
+  .yes { color: var(--good); font-weight: 600; }
+  .no { color: var(--bad); }
+  .na { color: var(--muted); }
+  canvas { max-height: 320px; }
+  .empty { color: var(--muted); font-style: italic; padding: 12px 0; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 800px) { .grid-2 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <h1>EBOS AI Visibility Dashboard</h1>
+  <div class="subtitle" id="subtitle">Loading...</div>
+
+  <h2>Brand mention rate over time</h2>
+  <div class="card"><canvas id="brandChart"></canvas></div>
+
+  <h2>Tracked page citation history</h2>
+  <div class="card" id="pageTables"></div>
+
+  <h2>Latest run — brand mentions by prompt</h2>
+  <div class="card" id="latestPrompts"></div>
+
+  <h2>Top competitors mentioned (all-time)</h2>
+  <div class="card" id="competitorTable"></div>
+
+<script>
+async function main() {
+  const res = await fetch("./data.json", { cache: "no-store" });
+  const d = await res.json();
+
+  document.getElementById("subtitle").textContent =
+    `${d.run_count} run(s) recorded · latest: ${d.latest_date ?? "n/a"} · generated ${new Date(d.generated_at).toLocaleString()}`;
+
+  renderBrandChart(d);
+  renderPageTables(d);
+  renderLatestPrompts(d);
+  renderCompetitorTable(d);
+}
+
+function renderBrandChart(d) {
+  const ctx = document.getElementById("brandChart");
+  if (!d.dates.length) {
+    ctx.replaceWith(Object.assign(document.createElement("div"), { className: "empty", textContent: "No runs yet." }));
+    return;
+  }
+  const colors = { EMT: "#2563eb", LHC: "#d97706", TMD: "#059669" };
+  const datasets = d.brands.map((b) => ({
+    label: `${b.code} mention rate (%)`,
+    data: d.brand_trend[b.code].map((p) => p.mention_rate),
+    borderColor: colors[b.code] || "#888",
+    backgroundColor: "transparent",
+    spanGaps: true,
+    tension: 0.2,
+  }));
+
+  new Chart(ctx, {
+    type: "line",
+    data: { labels: d.dates, datasets },
+    options: {
+      responsive: true,
+      scales: { y: { min: 0, max: 100, title: { display: true, text: "% of prompts mentioning brand" } } },
+      plugins: { legend: { position: "bottom" } },
+    },
+  });
+}
+
+function renderPageTables(d) {
+  const container = document.getElementById("pageTables");
+  const keys = Object.keys(d.page_trend);
+  if (!keys.length) {
+    container.innerHTML = '<div class="empty">No tracked page checks yet.</div>';
+    return;
+  }
+
+  for (const key of keys) {
+    const page = d.page_trend[key];
+    const wrap = document.createElement("div");
+    wrap.style.marginBottom = "24px";
+
+    const heading = document.createElement("div");
+    heading.innerHTML = `<strong>${page.code} — ${page.type}</strong><br><a href="${page.url}" target="_blank" rel="noopener">${page.url}</a>`;
+    heading.style.marginBottom = "8px";
+    wrap.appendChild(heading);
+
+    const table = document.createElement("table");
+    const rows = page.points
+      .map((p) => {
+        if (p.error) return `<tr><td>${p.date}</td><td colspan="3" class="na">error</td></tr>`;
+        return `<tr>
+          <td>${p.date}</td>
+          <td class="${p.exact_page_cited ? "yes" : "no"}">${p.exact_page_cited ? "Yes" : "No"}</td>
+          <td class="${p.domain_cited ? "yes" : "no"}">${p.domain_cited ? "Yes" : "No"}</td>
+          <td>${p.total_citations ?? "-"}</td>
+        </tr>`;
+      })
+      .join("");
+    table.innerHTML = `
+      <thead><tr><th>Date</th><th>Exact page cited</th><th>Domain cited</th><th>Total citations</th></tr></thead>
+      <tbody>${rows}</tbody>
+    `;
+    wrap.appendChild(table);
+    container.appendChild(wrap);
+  }
+}
+
+function renderLatestPrompts(d) {
+  const container = document.getElementById("latestPrompts");
+  const prompts = d.latest?.prompts || [];
+  if (!prompts.length) {
+    container.innerHTML = '<div class="empty">No prompt data in the latest run.</div>';
+    return;
+  }
+
+  const rows = prompts
+    .map((p) => {
+      if (p.error) {
+        return `<tr><td>${escapeHtml(p.prompt)}</td><td colspan="3" class="na">error: ${escapeHtml(p.error.slice(0, 120))}</td></tr>`;
+      }
+      const mentions = (p.analysis?.brands_mentioned || [])
+        .filter((m) => m.mentioned)
+        .map((m) => `${m.code} (${m.sentiment}, ${m.position})`)
+        .join(", ") || "-";
+      const competitors = (p.analysis?.competitors_mentioned || []).join(", ") || "-";
+      return `<tr>
+        <td>${escapeHtml(p.prompt)}</td>
+        <td>${escapeHtml(mentions)}</td>
+        <td>${escapeHtml(competitors)}</td>
+        <td>${(p.citations || []).length}</td>
+      </tr>`;
+    })
+    .join("");
+
+  const table = document.createElement("table");
+  table.innerHTML = `
+    <thead><tr><th>Prompt</th><th>Tracked brands mentioned</th><th>Competitors mentioned</th><th># citations</th></tr></thead>
+    <tbody>${rows}</tbody>
+  `;
+  container.appendChild(table);
+}
+
+function renderCompetitorTable(d) {
+  const container = document.getElementById("competitorTable");
+  if (!d.competitor_totals.length) {
+    container.innerHTML = '<div class="empty">No competitor mentions recorded yet.</div>';
+    return;
+  }
+  const rows = d.competitor_totals
+    .map((c) => `<tr><td>${escapeHtml(c.name)}</td><td>${c.count}</td></tr>`)
+    .join("");
+  const table = document.createElement("table");
+  table.innerHTML = `<thead><tr><th>Competitor</th><th>Mentions (all-time)</th></tr></thead><tbody>${rows}</tbody>`;
+  container.appendChild(table);
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+main().catch((err) => {
+  document.body.innerHTML += `<pre style="color:red">${err.message}</pre>`;
+});
+</script>
+</body>
+</html>

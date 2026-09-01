@@ -98,9 +98,29 @@ Each `results/<date>.json` looks like:
 Compare a tracked page's `exact_page_cited` rate before vs. after a change
 (e.g. a JSON-LD deployment) by diffing across dated files.
 
+## Dashboard (graphs, tables, history)
+
+Every run also builds `docs/data.json` (via `src/build-dashboard.js`, wired
+into the workflow after `npm run check`), which `docs/index.html` renders as:
+
+- a line chart of brand mention rate (%) over time
+- per tracked page, a table of exact/domain citation history across runs
+- a table of the latest run's per-prompt brand mentions and competitors
+- an all-time top-competitors table
+
+**To view it hosted:** enable GitHub Pages on this repo — Settings → Pages →
+Source: "Deploy from a branch" → Branch: `main`, folder `/docs` → Save. It'll
+be live at `https://<your-username>.github.io/ai-visibility/` within a
+minute or two, and updates automatically each time the workflow runs.
+
+To regenerate and preview locally without waiting for a run:
+
+```
+node src/build-dashboard.js
+# then open docs/index.html in a browser
+```
+
 ## Known gaps vs. a paid tool
 
 - Single AI engine (Gemini only) — no ChatGPT/Claude/Perplexity coverage.
 - No crawler-log or GA4-referral tracking (separate, manual check).
-- No historical dashboard — just JSON files; build a small script over
-  `results/*.json` if you want trend charts.
