@@ -8,6 +8,6 @@
     "check": "node src/run.js"
   },
   "dependencies": {
-    "@google/genai": "^1.0.0"
+    "@google/genai": "^2.20.0"
   }
 }
