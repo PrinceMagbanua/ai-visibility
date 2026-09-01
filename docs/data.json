@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T00:38:09.903Z",
+  "generated_at": "2026-09-01T00:41:27.912Z",
   "dates": [
     "2026-08-28",
     "2026-09-01"
@@ -165,107 +165,107 @@
   },
   "competitor_totals": [],
   "latest": {
-    "timestamp": "2026-09-01T00:34:30.122Z",
+    "timestamp": "2026-09-01T00:41:24.886Z",
     "prompts": [
       {
         "prompt": "Who are the leading medical device distributors in New Zealand?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Who are the leading medical device distributors in Australia?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Best supplier of orthopaedic implants in New Zealand",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Best supplier of orthopaedic implants in Australia",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Top spine surgery device distributors in Australia and New Zealand",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Who supplies surgical capital equipment to Australian hospitals?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Leading distributors of biologics and allograft products in Australasia",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "What is EBOS MedTech and what companies does it own?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "What does LifeHealthcare distribute and who owns LifeHealthcare?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "What does Transmedic Group do and where does it operate?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Is LifeHealthcare part of EBOS Group?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "EBOS Medtech vs Life Healthcare - what's the difference?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Who are the biggest medical technology distributors in Southeast Asia?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Best medical device distributor for orthopaedic revision arthroplasty in Australia",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Which company distributes plastics and reconstructive surgery devices in New Zealand?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Who supplies neurosurgery and neurovascular intervention devices in Australia?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Best supplier of endoscopy equipment for Australian hospitals",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Top healthcare technology distributors in Singapore and Malaysia",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Which medical device companies operate in both Australia and New Zealand?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "prompt": "Who distributes regenerative medicine and biologics products in New Zealand hospitals?",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       }
     ],
     "page_checks": [
@@ -273,43 +273,43 @@
         "code": "EMT",
         "type": "homepage",
         "url": "https://www.ebosmedtech.com/",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "code": "EMT",
         "type": "article",
         "url": "https://www.ebosmedtech.com/our-companies/",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "code": "LHC",
         "type": "homepage",
         "url": "https://www.lifehealthcare.com.au/",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "code": "LHC",
         "type": "article",
         "url": "https://www.lifehealthcare.com.au/spine/",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "code": "TMD",
         "type": "homepage",
         "url": "https://www.transmedicgroup.com/",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       },
       {
         "code": "TMD",
         "type": "article",
         "url": "https://www.transmedicgroup.com/our-therapeutic-areas/",
-        "timestamp": "2026-09-01T00:34:30.122Z",
-        "error": "400 {\"error\":{\"message\":\"The legacy Interactions API schema is no longer supported. Please upgrade your @google/genai JS/TS SDK to version >= 2.0.0 (e.g., run npm install @google/genai@latest or yarn add @google/genai) to use the Interactions API. For details and migration examples, see: https://ai.google.dev/gemini-api/docs/interactions-breaking-changes-may-2026\",\"code\":\"invalid_request\"}}"
+        "timestamp": "2026-09-01T00:41:24.886Z",
+        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
       }
     ],
     "aborted": false
