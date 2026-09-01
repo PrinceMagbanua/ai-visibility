@@ -59,28 +59,25 @@ const ANALYSIS_SCHEMA = {
   required: ["brands_mentioned", "competitors_mentioned"],
 };
 
+// Uses the stable client.models.generateContent() API (not the experimental
+// interactions.create() surface, which appears to draw from a separate,
+// much tighter quota bucket independent of the per-model limits shown at
+// aistudio.google.com/rate-limit).
 async function getAnswer(prompt) {
-  const interaction = await withRateLimit(() =>
-    client.interactions.create({
+  const response = await withRateLimit(() =>
+    client.models.generateContent({
       model: MODEL,
-      input: prompt,
-      tools: [{ type: "google_search" }],
+      contents: prompt,
+      config: { tools: [{ googleSearch: {} }] },
     }),
   );
 
-  const text = interaction.output_text || "";
+  const text = response.text || "";
   const citations = [];
 
-  for (const step of interaction.steps || []) {
-    if (step.type !== "model_output") continue;
-    for (const contentBlock of step.content || []) {
-      if (contentBlock.type !== "text" || !contentBlock.annotations) continue;
-      for (const annotation of contentBlock.annotations) {
-        if (annotation.type === "url_citation") {
-          citations.push({ url: annotation.url, title: annotation.title });
-        }
-      }
-    }
+  const chunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks || [];
+  for (const chunk of chunks) {
+    if (chunk.web?.uri) citations.push({ url: chunk.web.uri, title: chunk.web.title });
   }
 
   return { text, citations };
@@ -89,10 +86,10 @@ async function getAnswer(prompt) {
 async function analyzeAnswer(prompt, answerText) {
   const brandList = brands.map((b) => `${b.code} (${b.name}, ${b.domain})`).join(", ");
 
-  const interaction = await withRateLimit(() =>
-    client.interactions.create({
+  const response = await withRateLimit(() =>
+    client.models.generateContent({
       model: MODEL,
-      input:
+      contents:
         `Here is an AI-generated answer to the question: "${prompt}"\n\n` +
         `---\n${answerText}\n---\n\n` +
         `Tracked brands: ${brandList}.\n` +
@@ -100,15 +97,14 @@ async function analyzeAnswer(prompt, answerText) {
         `roughly where (early/mid/late in the text, or not_mentioned), and the sentiment ` +
         `of the mention (positive/neutral/negative, or not_mentioned if absent). ` +
         `Also list any other company names mentioned that are not in the tracked brand list.`,
-      response_format: {
-        type: "text",
-        mime_type: "application/json",
-        schema: ANALYSIS_SCHEMA,
+      config: {
+        responseMimeType: "application/json",
+        responseJsonSchema: ANALYSIS_SCHEMA,
       },
     }),
   );
 
-  return JSON.parse(interaction.output_text);
+  return JSON.parse(response.text);
 }
 
 function normalizeUrl(u) {
