@@ -35,20 +35,23 @@ Both checks write into a single combined `results/<date>.json` per run.
 4. The workflow in `.github/workflows/weekly-visibility-check.yml` runs every
    Monday. Trigger it manually any time via the Actions tab ("Run workflow").
 
-**Model name changes often.** Google periodically retires free-tier model
-IDs for new users (e.g. `gemini-2.5-flash` → `gemini-3.6-flash` happened
-mid-2026). The default model is set via `GEMINI_MODEL` (currently
-`gemini-3.6-flash` in `src/run.js`) — if a run fails with a 404 naming a
-different recommended model, update that default or set the `GEMINI_MODEL`
-repo variable to the model name the error message suggests.
+**Model choice matters a lot for the free tier — "Flash" vs "Flash Lite" are
+very different quotas.** Checked directly at
+[aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit):
+plain `gemini-3.6-flash` (or `3.5-flash`, `3-flash`, etc.) is capped at just
+**5 RPM / 20 requests-per-day** on the free tier — far too low for this
+script's ~46 calls per run. The **Lite** variants get a much higher free
+quota (`gemini-3.5-flash-lite` / `gemini-3.1-flash-lite`: **15 RPM / 500
+RPD** as of writing), which is why `src/run.js` defaults to
+`gemini-3.5-flash-lite`. Google changes these numbers and model names
+often — re-check that dashboard before assuming a "no capacity" error means
+something else, and update `GEMINI_MODEL` (env var / repo variable) if a
+model gets retired or its quota changes.
 
-**Free-tier rate limits are low** (roughly 10-15 requests/minute, a few
-hundred to ~1500/day depending on model — check your actual limits at
-[aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit) once
-you have a key). The script spaces out calls (default 5 seconds between
-requests, plus exponential backoff retries) via `API_CALL_DELAY_MS`, and
-aborts the whole run early if it hits an auth/permission error rather than
-retrying every remaining prompt. If you're hitting daily quota limits, trim
+The script also spaces out calls (default 5 seconds between requests, plus
+exponential backoff retries) via `API_CALL_DELAY_MS`, and aborts the whole
+run early if it hits an auth/permission error rather than retrying every
+remaining prompt. If you're still hitting daily quota limits, trim
 `config/prompts.json` — each prompt costs 2 API calls, each tracked page costs 1.
 
 To run locally:

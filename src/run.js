@@ -7,11 +7,13 @@ const prompts = require("../config/prompts.json");
 const trackedPages = require("../config/pages.json");
 
 const client = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-const MODEL = process.env.GEMINI_MODEL || "gemini-3.6-flash";
+// The plain "Flash" free tier is only 5 RPM / 20 requests-per-day — far too
+// low for a ~46-call run. "Flash Lite" gets a much higher free daily quota
+// (15 RPM / 500 RPD as of writing) — check current numbers per model at
+// https://aistudio.google.com/rate-limit before changing this.
+const MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
 
-// Free-tier keys have low rate limits (roughly 10-15 requests/minute
-// depending on model) — space requests out and retry on 429 instead of
-// hammering the API.
+// Stay comfortably under the free-tier RPM cap for the chosen model.
 const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 5000);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
