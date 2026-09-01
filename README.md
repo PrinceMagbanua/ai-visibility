@@ -94,19 +94,10 @@ GEMINI_API_KEY=... TAVILY_API_KEY=... npm run check
 ## Editing what's tracked
 
 - `config/brands.json` — the brand/domain list checked in every answer.
-- `config/prompts.json` — an array of `{ "text": "...", "type": "buyer_intent" | "brand_direct" }`.
-  - `buyer_intent`: generic questions a real customer would ask, with no
-    brand name in them (e.g. "Best supplier of orthopaedic implants in
-    Australia"). **This is the real visibility signal** and is the only
-    type that feeds the mention-rate/sentiment charts and the competitor
-    totals.
-  - `brand_direct`: prompts that name a brand outright (e.g. "What is EBOS
-    MedTech?", "Is LifeHealthcare part of EBOS Group?"). A mention here is
-    guaranteed, so it isn't a visibility signal — it's a check that the
-    AI's *facts* about the brand (ownership, relationships) are correct.
-    Shown in its own dashboard section, excluded from the charts.
-  - Keep new prompts tagged correctly — mixing a branded question into the
-    `buyer_intent` bucket silently inflates the mention-rate metric.
+- `config/prompts.json` — the buyer-intent prompt list. Edit freely, but
+  avoid prompts that name a brand outright (e.g. "What is EBOS MedTech?") —
+  a mention there is guaranteed and would inflate the mention-rate metric
+  with a signal that isn't real visibility.
 - `config/pages.json` — the specific homepage + article/product page per
   brand to check for direct citation, each with its own search-style
   `question`. Add more pages (e.g. right after a JSON-LD deploy) as needed.
@@ -121,7 +112,6 @@ Each `results/<date>.json` looks like:
   "prompts": [
     {
       "prompt": "...",
-      "type": "buyer_intent",
       "model": "gemini-3.5-flash-lite",
       "tavily_results": [{ "rank": 1, "url": "...", "title": "...", "score": 0.87 }],
       "raw_response": "...",

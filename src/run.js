@@ -223,16 +223,14 @@ async function main() {
   console.log(`Prompts: ${prompts.length} | Tracked pages: ${trackedPages.length}`);
   console.log("=".repeat(60));
 
-  for (const promptObj of prompts) {
+  for (const prompt of prompts) {
     if (aborted) break;
-    const prompt = promptObj.text;
-    console.log(`[tavily + ${currentModel()}] (${promptObj.type}) Running prompt: ${prompt}`);
+    console.log(`[tavily + ${currentModel()}] Running prompt: ${prompt}`);
     try {
       const { text, citations, tavilyResults } = await getAnswer(prompt);
       const analysis = await analyzeAnswer(prompt, text);
       promptResults.push({
         prompt,
-        type: promptObj.type,
         timestamp,
         model: currentModel(),
         tavily_results: tavilyResults,
@@ -242,7 +240,7 @@ async function main() {
       });
     } catch (err) {
       console.error(`Failed on prompt "${prompt}":`, err.message);
-      promptResults.push({ prompt, type: promptObj.type, timestamp, error: err.message });
+      promptResults.push({ prompt, timestamp, error: err.message });
       if (isFatalAccountError(err)) {
         console.error("Fatal account error — aborting the rest of this run.");
         aborted = true;

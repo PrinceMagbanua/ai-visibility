@@ -75,16 +75,8 @@
   <h2>Tracked page citation history</h2>
   <div class="card" id="pageTables"></div>
 
-  <h2>Latest run — buyer-intent prompts (the real visibility signal)</h2>
-  <div class="card" id="latestPromptsBuyerIntent"></div>
-
-  <h2>Latest run — brand knowledge check</h2>
-  <div class="subtitle">
-    These prompts name the brand directly (e.g. "What is EBOS MedTech?") — a mention here is
-    expected, so this isn't a visibility signal. It checks whether the AI's facts about the
-    brand (ownership, relationships) are correct, and isn't counted in the charts above.
-  </div>
-  <div class="card" id="latestPromptsBrandDirect"></div>
+  <h2>Latest run — brand mentions by prompt</h2>
+  <div class="card" id="latestPrompts"></div>
 
   <h2>Top competitors mentioned (all-time)</h2>
   <div class="card"><canvas id="competitorChart"></canvas></div>
@@ -101,8 +93,7 @@ async function main() {
   renderBrandChart(d);
   renderSentimentChart(d);
   renderPageTables(d);
-  renderLatestPrompts(d, "latestPromptsBuyerIntent", "buyer_intent");
-  renderLatestPrompts(d, "latestPromptsBrandDirect", "brand_direct");
+  renderLatestPrompts(d);
   renderCompetitorChart(d);
   renderCompetitorTable(d);
 }
@@ -231,13 +222,11 @@ function renderPageTables(d) {
   }
 }
 
-function renderLatestPrompts(d, containerId, type) {
-  const container = document.getElementById(containerId);
-  // Older result files predate the buyer_intent/brand_direct tagging —
-  // treat untagged prompts as buyer_intent so historical runs still show.
-  const prompts = (d.latest?.prompts || []).filter((p) => (p.type || "buyer_intent") === type);
+function renderLatestPrompts(d) {
+  const container = document.getElementById("latestPrompts");
+  const prompts = d.latest?.prompts || [];
   if (!prompts.length) {
-    container.innerHTML = '<div class="empty">No prompt data of this type in the latest run.</div>';
+    container.innerHTML = '<div class="empty">No prompt data in the latest run.</div>';
     return;
   }
 

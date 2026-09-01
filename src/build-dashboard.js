@@ -26,22 +26,12 @@ function sentimentScore(s) {
   return null; // not_mentioned
 }
 
-// Only "buyer_intent" prompts (unbranded, generic questions a real customer
-// would ask) feed the visibility metric. "brand_direct" prompts (e.g. "What
-// is EBOS MedTech?") trivially guarantee a mention and would inflate the
-// rate — they get their own separate brand-knowledge-check section instead.
-// Older result files predate this tagging; treat untagged prompts as
-// buyer_intent so historical data isn't silently dropped.
-function isBuyerIntent(p) {
-  return (p.type || "buyer_intent") === "buyer_intent";
-}
-
 function buildBrandTrend(files) {
   const trend = {};
   for (const b of brands) trend[b.code] = [];
 
   for (const { date, data } of files) {
-    const prompts = (data.prompts || []).filter((p) => !p.error && p.analysis && isBuyerIntent(p));
+    const prompts = (data.prompts || []).filter((p) => !p.error && p.analysis);
     const total = prompts.length;
 
     for (const b of brands) {
@@ -99,7 +89,7 @@ function buildCompetitorTotals(files) {
   const counts = {};
   for (const { data } of files) {
     for (const p of data.prompts || []) {
-      if (p.error || !p.analysis || !isBuyerIntent(p)) continue;
+      if (p.error || !p.analysis) continue;
       for (const name of p.analysis.competitors_mentioned || []) {
         counts[name] = (counts[name] || 0) + 1;
       }
