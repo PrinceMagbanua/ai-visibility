@@ -48,11 +48,13 @@ often — re-check that dashboard before assuming a "no capacity" error means
 something else, and update `GEMINI_MODEL` (env var / repo variable) if a
 model gets retired or its quota changes.
 
-The script also spaces out calls (default 5 seconds between requests, plus
-exponential backoff retries) via `API_CALL_DELAY_MS`, and aborts the whole
-run early if it hits an auth/permission error rather than retrying every
-remaining prompt. If you're still hitting daily quota limits, trim
-`config/prompts.json` — each prompt costs 2 API calls, each tracked page costs 1.
+The script spaces out calls (default 5 seconds between requests) via
+`API_CALL_DELAY_MS`. It does **not** retry on auth or quota errors — a 401,
+403, or 429 immediately aborts the entire run (and fails the GitHub Actions
+job), rather than burning time retrying every remaining prompt against a
+quota that isn't going to recover mid-run. If you're hitting daily quota
+limits, trim `config/prompts.json` — each prompt costs 2 API calls, each
+tracked page costs 1.
 
 To run locally:
 

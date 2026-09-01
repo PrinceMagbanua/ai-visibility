@@ -17,23 +17,14 @@ const MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
 const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 5000);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// No retries on quota/rate-limit errors — a quota error means the daily/
+// per-minute cap is genuinely exhausted, and retrying with backoff just
+// burns time waiting on something that won't clear up mid-run. Let it
+// throw straight through to isFatalAccountError() and abort the run.
 async function withRateLimit(fn) {
-  const maxAttempts = 5;
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    try {
-      const result = await fn();
-      await sleep(CALL_DELAY_MS);
-      return result;
-    } catch (err) {
-      const message = err?.message || "";
-      const isRateLimit = err?.status === 429 || /RESOURCE_EXHAUSTED|rate limit|quota/i.test(message);
-      if (!isRateLimit || attempt === maxAttempts) throw err;
-      const backoff = CALL_DELAY_MS * 2 ** attempt;
-      console.warn(`Rate limited (attempt ${attempt}/${maxAttempts}): ${message}`);
-      console.warn(`Waiting ${backoff}ms before retry...`);
-      await sleep(backoff);
-    }
-  }
+  const result = await fn();
+  await sleep(CALL_DELAY_MS);
+  return result;
 }
 
 const ANALYSIS_SCHEMA = {
@@ -153,8 +144,6 @@ async function checkPageCitation(page) {
 
 // Errors that will fail identically on every subsequent call — no point
 // burning through the rest of the prompts/pages once one of these hits.
-// This only fires after withRateLimit has already exhausted its retries, so
-// a 429 here means the quota is genuinely exhausted, not a transient blip.
 function isFatalAccountError(err) {
   const message = err?.message || "";
   return (
@@ -171,9 +160,17 @@ async function main() {
   const timestamp = new Date().toISOString();
   let aborted = false;
 
+  console.log("=".repeat(60));
+  console.log(`AI Visibility Check — ${timestamp}`);
+  console.log(`Provider: Google Gemini (@google/genai)`);
+  console.log(`Model: ${MODEL}`);
+  console.log(`Call delay: ${CALL_DELAY_MS}ms`);
+  console.log(`Prompts: ${prompts.length} | Tracked pages: ${trackedPages.length}`);
+  console.log("=".repeat(60));
+
   for (const prompt of prompts) {
     if (aborted) break;
-    console.log(`Running prompt: ${prompt}`);
+    console.log(`[${MODEL}] Running prompt: ${prompt}`);
     try {
       const { text, citations } = await getAnswer(prompt);
       const analysis = await analyzeAnswer(prompt, text);
@@ -190,7 +187,7 @@ async function main() {
 
   for (const page of trackedPages) {
     if (aborted) break;
-    console.log(`Checking page citation: ${page.url}`);
+    console.log(`[${MODEL}] Checking page citation: ${page.url}`);
     try {
       const result = await checkPageCitation(page);
       pageCheckResults.push({ ...result, timestamp });
@@ -213,9 +210,12 @@ async function main() {
     outPath,
     JSON.stringify({ timestamp, prompts: promptResults, page_checks: pageCheckResults, aborted }, null, 2),
   );
+  console.log("=".repeat(60));
   console.log(
     `Wrote ${promptResults.length} prompt results and ${pageCheckResults.length} page checks to ${outPath}`,
   );
+  console.log(`Provider: Google Gemini | Model: ${MODEL} | Aborted early: ${aborted}`);
+  console.log("=".repeat(60));
 
   if (aborted) process.exitCode = 1;
 }
