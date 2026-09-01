@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T03:35:41.758Z",
+  "generated_at": "2026-09-01T04:05:14.643Z",
   "dates": [
     "2026-08-28",
     "2026-09-01"
@@ -32,10 +32,10 @@
       },
       {
         "date": "2026-09-01",
-        "total_prompts": 0,
-        "mentioned_count": 0,
-        "mention_rate": null,
-        "avg_sentiment": null
+        "total_prompts": 17,
+        "mentioned_count": 2,
+        "mention_rate": 11.8,
+        "avg_sentiment": 0
       }
     ],
     "LHC": [
@@ -48,10 +48,10 @@
       },
       {
         "date": "2026-09-01",
-        "total_prompts": 0,
-        "mentioned_count": 0,
-        "mention_rate": null,
-        "avg_sentiment": null
+        "total_prompts": 17,
+        "mentioned_count": 6,
+        "mention_rate": 35.3,
+        "avg_sentiment": 0.3333333333333333
       }
     ],
     "TMD": [
@@ -64,10 +64,10 @@
       },
       {
         "date": "2026-09-01",
-        "total_prompts": 0,
-        "mentioned_count": 0,
-        "mention_rate": null,
-        "avg_sentiment": null
+        "total_prompts": 17,
+        "mentioned_count": 2,
+        "mention_rate": 11.8,
+        "avg_sentiment": 0
       }
     ]
   },
@@ -83,7 +83,9 @@
         },
         {
           "date": "2026-09-01",
-          "error": true
+          "exact_page_cited": false,
+          "domain_cited": false,
+          "total_results": 5
         }
       ]
     },
@@ -98,7 +100,9 @@
         },
         {
           "date": "2026-09-01",
-          "error": true
+          "exact_page_cited": true,
+          "domain_cited": true,
+          "total_results": 5
         }
       ]
     },
@@ -113,7 +117,9 @@
         },
         {
           "date": "2026-09-01",
-          "error": true
+          "exact_page_cited": false,
+          "domain_cited": true,
+          "total_results": 5
         }
       ]
     },
@@ -128,7 +134,9 @@
         },
         {
           "date": "2026-09-01",
-          "error": true
+          "exact_page_cited": false,
+          "domain_cited": true,
+          "total_results": 5
         }
       ]
     },
@@ -143,7 +151,9 @@
         },
         {
           "date": "2026-09-01",
-          "error": true
+          "exact_page_cited": false,
+          "domain_cited": false,
+          "total_results": 5
         }
       ]
     },
@@ -158,114 +168,1700 @@
         },
         {
           "date": "2026-09-01",
-          "error": true
+          "exact_page_cited": false,
+          "domain_cited": true,
+          "total_results": 5
         }
       ]
     }
   },
-  "competitor_totals": [],
+  "competitor_totals": [
+    {
+      "name": "Revolution Surgical",
+      "count": 3
+    },
+    {
+      "name": "Stryker Australia",
+      "count": 2
+    },
+    {
+      "name": "EBOS Group Ltd",
+      "count": 2
+    },
+    {
+      "name": "Somnotec",
+      "count": 2
+    },
+    {
+      "name": "InterMed",
+      "count": 1
+    },
+    {
+      "name": "Medical Specialties New Zealand (MSA)",
+      "count": 1
+    },
+    {
+      "name": "Connected Healthcare Systems",
+      "count": 1
+    },
+    {
+      "name": "Mindray",
+      "count": 1
+    },
+    {
+      "name": "Vocera",
+      "count": 1
+    },
+    {
+      "name": "Cubro",
+      "count": 1
+    },
+    {
+      "name": "Device Technologies Australia",
+      "count": 1
+    },
+    {
+      "name": "Asia Actual LLC",
+      "count": 1
+    },
+    {
+      "name": "Cook Medical Australia",
+      "count": 1
+    },
+    {
+      "name": "Draeger Australia",
+      "count": 1
+    },
+    {
+      "name": "Edwards Lifesciences",
+      "count": 1
+    },
+    {
+      "name": "Johnson & Johnson MedTech",
+      "count": 1
+    },
+    {
+      "name": "Terumo Australia",
+      "count": 1
+    },
+    {
+      "name": "Pharmac",
+      "count": 1
+    },
+    {
+      "name": "Downs Distributors Limited",
+      "count": 1
+    },
+    {
+      "name": "Johnson and Johnson (New Zealand) Limited",
+      "count": 1
+    }
+  ],
   "latest": {
-    "timestamp": "2026-09-01T00:41:24.886Z",
+    "timestamp": "2026-09-01T03:59:54.917Z",
     "prompts": [
       {
         "prompt": "Who are the leading medical device distributors in New Zealand?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://ensun.io/search/medical-device/new-zealand",
+            "title": "Top 77 Medical Device Companies in New Zealand (2026) | ensun",
+            "content": "Core business\n\nMDR Certified: Enztec | Class Ir, Im and IIa Devices | Orthopaedic - Enztec\n\nMDR Certified - Enztec Class Ir, Im, IIa Devices\n\nConnected Healthcare Systems's Logo\n\nConnected Healthcare Systems\n\nWaitematā, New Zealand\n\nA\n\n11-50 Employees\n\n2014\n\nKey takeaway\n\nConnected Healthcare Systems is a New Zealand distributor of high-quality medical devices, specifically highlighting Mindray's advanced patient monitoring and ventilation equipment.\n\nReference\n\nFind employees [...] Find employees\n\nSimilar companies\n\nCore business\n\nConnected Healthcare Systems New Zealand | Mindray and Vocera\n\nConnected Healthcare Systems are the New Zealand distributors of Mindray Patient Monitoring and Vocera voice communications.\n\nMES -Medical Equipment Services -New Zealand's Logo\n\nMES -Medical Equipment Services -New Zealand\n\nWaitematā, New Zealand\n\nA\n\n1-10 Employees\n\n-\n\nKey takeaway [...] Core business\n\nHealth and medical equipment - World-leading solutions | Cubro®\n\nCubro has been raising the level of health care in New Zealand for 40 years by sourcing world-leading health and medical equipment. Learn more here.\n\nEnztec's Logo\n\nEnztec\n\nChristchurch, New Zealand\n\nA\n\n51-100 Employees\n\n1990\n\nKey takeaway",
+            "score": 0.83932644
+          },
+          {
+            "rank": 2,
+            "url": "https://msanz.co.nz/welcome",
+            "title": "Medical Specialties New Zealand (MSA) - Surgical Device Specialists",
+            "content": "Medical Specialties New Zealand (MSA) is a leading, wholly Australian-owned medical device distribution firm that offers innovative, minimally invasive solutions for vascular access, surgery, peripheral vascular disease, and diabetes.\n\nSince our inception in 1982, we’ve introduced numerous pioneering medical technologies to the Australasia region, including the first Vascular Access Port, Implantable Pump, PICC Line, AAA Stent Graft, and Insulin Pump. [...] Medical Specialties New Zealand (MSA) is a leading, wholly Australian-owned medical device distribution firm that offers innovative, minimally invasive solutions for vascular access, surgery, peripheral vascular disease, and diabetes. [...] Loading\n\nMedical Specialties New Zealand\n\nMSA NZSince 1982\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_Providing  \n Next-Generation  \n Medical TechnologyMedical Devices AustraliaMSA accent\n\n## Providing Next-Generation Medical Technology\n\nSince 1982\n\nPioneersPioneers\n\n### Pioneers",
+            "score": 0.7646988
+          },
+          {
+            "rank": 3,
+            "url": "https://intermed.co.nz",
+            "title": "InterMed Leading supplier of healthcare technology and innovative solutions",
+            "content": "Welcome to InterMed! For over 40 years, we’ve supported healthcare professionals across New Zealand and Australia, empowering them to make a meaningful difference through healthcare technology solutions. Founded in New Zealand in 1980, InterMed has become a leading distributor and supplier of healthcare technologies, medical devices, and surgical equipment, expanding into the Australian market in 2013. [...] ### Anaesthesia ### Cardiology ### Critical Care ### Diabetes ### Emergency ### Enteral Feeding ### ENT ### Scientific ### Interventional Radiology ### Laboratory Diagnostics ### Medical Consumables ### Ophthalmic ### PPE ### Regenerative Medicine ### Respiratory ### Surgical Instruments ### Sterile Services ### Surgical ### Wound Care\n\nYou are about to leave InterMed New Zealand's site, are you sure you would like to continue?\n\n### Request Product Form:\n\n### Something went wrong... [...] NZ \n\n AU\n\n About Us \n  + About Us\n  + Meet the Team\n  + Careers\n Our Partners \n  + Anaesthesia\n  + Cardiology\n  + Critical Care\n  + Diabetes\n  + Emergency\n  + Enteral Feeding\n  + ENT\n  + Scientific\n  + Interventional Radiology\n  + Laboratory Diagnostics\n  + Medical Consumables\n  + Ophthalmic\n  + PPE\n  + Regenerative Medicine\n  + Respiratory\n  + Surgical Instruments\n  + Sterile Services\n  + Surgical\n  + Wound Care\n Insights\n Shop \n  + Shop\n  + Scientific\n  + asap Skincare\n Forms",
+            "score": 0.7636429
+          },
+          {
+            "rank": 4,
+            "url": "https://hta.callaghaninnovation.govt.nz/directory",
+            "title": "Directory | HealthTech Activator",
+            "content": "Visit Website\n\nMedical Technology Association of NZ\n\nMedical Technology Association of NZ\n\nMedical Technology Association of NZ\n\nNetwork/Education\n\nDirectory\n\nThe Medical Technology Association of New Zealand (MTANZ) is the leading industry body representing medical technology manufacturers, importers and distributors of medical devices in New Zealand.\n\nVisit Website\n\nMedicines New Zealand\n\nMedicines New Zealand\n\nMedicines New Zealand\n\nNetwork/Education [...] Accord is New Zealand’s largest precision manufacturer specialising in the design, manufacture and assembly of medical devices. Accord produces critical, high-value components as a total solutions provider to brands including Fisher & Paykel Healthcare and manufactured / exported 15 million individual components in 2020 alone to 138 countries. Accord possesses an extensive portfolio of industry accreditations, including ISO:13485, ISO:9001, ISO:14001, ISO:15001 compliance, and FDA [...] Consulting\n\nElevate MedTech. specialises in expert regulatory consultancy for medical devices, SaMD and IVDs, ensuring seamless global market entry in New Zealand, Australia, USA, Europe and Asia. As an integral part of an international network, we offer specialised regulatory insight, hands-on compliance support and comprehensive educational services. Trust us to be the cornerstone of your success, making complex regulations manageable and your global ambitions achievable.\n\nVisit Website",
+            "score": 0.72465646
+          },
+          {
+            "rank": 5,
+            "url": "https://www.jnjmedtech.com/en-NZ",
+            "title": "Home | J&J MedTech",
+            "content": "This website is intended for New Zealand Health Care Professionals only. If you are a healthcare professional practising in New Zealand, please select “yes” below to confirm your status and consent to view the contents of this site. If this is incorrect, please select “no”. Do you wish to proceed?\n\nBiosense Webster logo\nDePuy Synthes Logo\nEthicon Logo\nMentor logo\n\n## Secondary nav block\n\n# Johnson & Johnson MedTech\n\nJohnson & Johnson MedTech [...] This website is not owned by Johnson & Johnson (New Zealand) Ltd, and we do not review or control the content of this website. Products discussed on this website may not be approved for use or may be approved for different indications in your country. Before using any medical device, review all relevant Instructions for Use, Package Inserts or Summary of Product Characteristics. We do not endorse the use or promotion of unapproved products or indications. Any demonstrations of approved medical [...] Johnson & Johnson Medical Devices homepage hero image of surgeons in operating room.\nJohnson & Johnson Medical Devices homepage hero image of surgeons in operating room.\n\n# Johnson & Johnson MedTech\n\nJohnson & Johnson MedTech\n\nWe are using our breadth, scale and experience to reimagine the way healthcare is delivered.",
+            "score": 0.42706275
+          }
+        ],
+        "raw_response": "Based on the provided search results, the leading medical device distributors and suppliers in New Zealand include:\n\n* **InterMed:** Founded in New Zealand in 1980, InterMed is a leading distributor and supplier of healthcare technologies, medical devices, and surgical equipment [3].\n* **Medical Specialties New Zealand (MSA):** A leading medical device distribution firm offering innovative, minimally invasive solutions for surgery, vascular access, peripheral vascular disease, and diabetes [2]. \n* **Connected Healthcare Systems:** A New Zealand distributor of high-quality medical devices, specifically known for distributing Mindray patient monitoring and ventilation equipment, as well as Vocera voice communications [1].\n* **Cubro:** Sourced as a provider that has raised the level of health care in New Zealand for 40 years by sourcing world-leading health and medical equipment [1].",
+        "citations": [
+          {
+            "url": "https://ensun.io/search/medical-device/new-zealand",
+            "title": "Top 77 Medical Device Companies in New Zealand (2026) | ensun"
+          },
+          {
+            "url": "https://msanz.co.nz/welcome",
+            "title": "Medical Specialties New Zealand (MSA) - Surgical Device Specialists"
+          },
+          {
+            "url": "https://intermed.co.nz",
+            "title": "InterMed Leading supplier of healthcare technology and innovative solutions"
+          },
+          {
+            "url": "https://hta.callaghaninnovation.govt.nz/directory",
+            "title": "Directory | HealthTech Activator"
+          },
+          {
+            "url": "https://www.jnjmedtech.com/en-NZ",
+            "title": "Home | J&J MedTech"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "InterMed",
+            "Medical Specialties New Zealand (MSA)",
+            "Connected Healthcare Systems",
+            "Mindray",
+            "Vocera",
+            "Cubro"
+          ]
+        }
       },
       {
         "prompt": "Who are the leading medical device distributors in Australia?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://asiaactual.com/australia/distributor-search",
+            "title": "Australia Medical Device Distributor Search | Asia Actual LLC",
+            "content": "Constant, local, experienced attention on your distributors [...] The supply chain in Australia is short and efficient, but turnover is high as distributors come and go from the market. Asia Actual provides a (virtual) master distributor service that provides stability to foreign manufacturers. Our experienced local partners in Australia can also help identify, screen and sign optimal distributors for medical or IVD devices.\n\nThis includes: [...] 1. Supply Chain Evaluation: We evaluate the supply chain and all sales channel options to identify distributors that can deliver products to targeted market segments as efficiently and effectively as possible.",
+            "score": 0.8916617634884011
+          },
+          {
+            "rank": 2,
+            "url": "https://www.lsq.com.au/life-sciences-medical-devices-medtech-directory",
+            "title": "Life Sciences Medical Devices & MedTech Directory",
+            "content": "Resolian Bioanalytics is a leading global research laboratory providing services for the pharmaceutical, biotechnology, and medical device industries.\n\nMedical Technology Association of Australia\n\n#### Medical Technology Association of Australia [...] #### Datarwe\n\nDatarwe is a clinical Data-as-a-Service provider operating as a public:private collaboration between healthcare providers and leading healthcare ecosystem partners. We are united by the challenge of revolutionising medicine through enhanced real world clinical data access. Our team of data scientists, engineers, and clinicians are passionate about increasing the adoption of medical AI innovation to the patient bedside and beyond.\n\ndatarwe.com\n\nCook Medical Australia [...] ### Welcome to the Life Sciences Queensland MedTech and Medical Devices directory, a comprehensive guide to the forefront of innovation in Australia's health sector. This curated collection features leading organisations dedicated to advancing healthcare solutions, from groundbreaking medical devices to cutting-edge medtech innovations. Explore everything from revolutionary low-risk, low-cost heart therapy to wearable bioelectric treatment solutions, and a spectrum of other trailblazing",
+            "score": 0.8626584142218975
+          },
+          {
+            "rank": 3,
+            "url": "https://app.biopharmiq.com/company-lists-all/list-of-medical-device-companies-in-australia",
+            "title": "List of Medical Device Companies in Australia",
+            "content": "between the two entities, the research and clinical trials of Photosoft™ are funded by The Cho Group. Invion has an alliance with leading Australian medical research institute, Hudson Institute of Medical Research, for the Photosoft™ research program. [...] Via an R&D services agreement between the two entities, the research and clinical trials of Photosoft™ are funded by The Cho Group. Invion has an alliance with leading Australian medical research institute, Hudson Institute of Medical Research, for the Photosoft™ research program. | [...] | Company | About |\n --- |\n| Atmo Biosciences Atmo Biosciences  436 Elgar Rd, Box Hill, VIC 3128, AU | The Atmo Gas Capsule is a world first patented solution to accurately profile the gases within the gut, leading to better diagnosis and treatment of gastrointestinal disorders. |",
+            "score": 0.8556049312962178
+          },
+          {
+            "rank": 4,
+            "url": "https://www.device.com.au",
+            "title": "Medical Devices & Supplies | Device Technologies AU",
+            "content": "Dedicated to improving patients' lives through leading-edge technology and services\n\n Learn more\n\n## SPECIALTY AREAS\n\nOncology\n\nOphthalmic Technology\n\nOrthopaedics\n\nPlastic  \n& Reconstructive Surgery\n\nRobotics\n\nSimulation\n\nSpine\n\nSurgical  \nSolutions\n\nTheatre  \nEquipment\n\nCardiothoracic Surgery\n\nCritical  \nCare\n\nGastroenterology\n\nHospital Infrastructure\n\nInfection  \nPrevention\n\nIntervention\n\nMicroSurgical Robotics\n\nNeurosurgery\n\nOncology\n\nOphthalmic Technology\n\nOrthopaedics [...] ## our touchpoints\n\nThe Device Technologies extensive portfolio reaches virtually every division of the hospital and healthcare sector. We supply medical professionals and hospitals with the technologies and supplies they require to achieve the best possible outcome for their patients – spanning across the vast majority of departments.\n\n## News\n\n#### Shaping the Future of Thoracic Care in Australia with Professor Christopher Cao [...] Australia’s National Lung Cancer Screening Program represents a significant milestone. From a thoracic surgeon’s perspective, what impact is early detection having on patient care and treatment pathways?\n\nRead more\n\n#### Device Technologies signs Distribution Agreement with Johnson & Johnson MedTech to supply its Hernia Mesh Product Portfolio\n\nDevice Technologies has announced that it has signed an exclusive distribution agreement with Johnson & Johnson MedTech to supply\n\nRead more",
+            "score": 0.8022651042431425
+          },
+          {
+            "rank": 5,
+            "url": "https://www.mtaa.org.au/industry-members",
+            "title": "Industry Members - MTAA",
+            "content": "#### \n\n### D\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| Draeger Australia |  | Dentriod |  | Device Technologies Australia |  | Digital Dental Network |\n\n#### \n\n### E\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| EBR Systems |  | Edwards Lifesciences |  | Elekta |  | ELEN MedTech |\n| EMVision |  | Enovis |  | Eudaemon Technologies |  | Evolution Surgical |\n\n#### \n\n### F\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| Field Orthopaedics |  | Fresenius Medical Care Australia |  |  |  |  |\n\n#### \n\n### G [...] ### S\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| Saluda Medical |  | Sample Assist |  | SinaMedix |  |  |\n| Smith & Nephew |  | Solventum |  | Stratos MedTech |  | Stryker Australia |\n|  |  |  |  |  |  |  |\n\n#### \n\n### T\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| Teleflex Medical Australia |  | Terumo Australia |  |  |  |  |\n\n#### \n\n### U/V\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n|  |  | Varian Medical Systems |  |  |  |  |\n\n### W/X/Y [...] ### \n\n### J\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| Johnson & Johnson MedTech |  |  |  |  |  |  |\n\n#### \n\n### K\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| Karl Storz Endoscopy Australia |  | KLS Martin Australia |  | Kali Healthcare |  |  |\n\n#### \n\n### L\n\n|  |  |  |  |  |  |  |\n ---  ---  --- \n| LifeHealthcare |  | Ligo Medical |  | LivaNova Australia |  |  |\n| Lubdub |  |  |  |  |  |  |\n\n#### \n\n### M",
+            "score": 0.6676318273988711
+          }
+        ],
+        "raw_response": "Based on the provided search results, specific leading medical device distributors mentioned include:\n\n* **Device Technologies Australia** – An extensive portfolio supplier reaching virtually every division of the hospital and healthcare sector, and an MTAA industry member ([4], [5]).\n* **Asia Actual LLC** – Provides services to help foreign manufacturers identify, screen, and sign optimal medical or IVD device distributors, as well as offering a (virtual) master distributor service in Australia ([1]). \n\nOther medical technology and industry members listed through the Medical Technology Association of Australia (MTAA) and directories include companies such as Cook Medical Australia, Draeger Australia, Edwards Lifesciences, Johnson & Johnson MedTech, Stryker Australia, and Terumo Australia, among others ([2], [5]).",
+        "citations": [
+          {
+            "url": "https://asiaactual.com/australia/distributor-search",
+            "title": "Australia Medical Device Distributor Search | Asia Actual LLC"
+          },
+          {
+            "url": "https://www.lsq.com.au/life-sciences-medical-devices-medtech-directory",
+            "title": "Life Sciences Medical Devices & MedTech Directory"
+          },
+          {
+            "url": "https://app.biopharmiq.com/company-lists-all/list-of-medical-device-companies-in-australia",
+            "title": "List of Medical Device Companies in Australia"
+          },
+          {
+            "url": "https://www.device.com.au",
+            "title": "Medical Devices & Supplies | Device Technologies AU"
+          },
+          {
+            "url": "https://www.mtaa.org.au/industry-members",
+            "title": "Industry Members - MTAA"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Device Technologies Australia",
+            "Asia Actual LLC",
+            "Cook Medical Australia",
+            "Draeger Australia",
+            "Edwards Lifesciences",
+            "Johnson & Johnson MedTech",
+            "Stryker Australia",
+            "Terumo Australia"
+          ]
+        }
       },
       {
         "prompt": "Best supplier of orthopaedic implants in New Zealand",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.pharmac.govt.nz/hospital-devices/whats-happening-in-each-category/orthopaedic-implants",
+            "title": "Orthopaedic implants - Pharmac | Te Pātaka Whaioranga | NZ Government",
+            "content": "Home\n Community Schedule\n Hospital Medicines (HML)\n Medicine funding application status\n\nPharmac - Te Pātaka Whaioranga.  Pharmac - Te Pātaka Whaioranga.   Pharmac - Te Pātaka Whaioranga. \n\n# Orthopaedic implants\n\nPharmac has now completed national contracting for orthopaedic implants and associated consumables purchased by Health NZ | Te Whatu Ora for use in hospitals or in the community across New Zealand.\n\n## Included within the scope of orthopaedic implants and associated consumables [...] Ossis Limited\n\nPioneer Medical Limited\n\nREM Systems Limited\n\nSmith and Nephew Limited\n\nStryker New Zealand\n\nSurgical Innovations Limited\n\nSurgical Specialties (NZ) Limited\n\nSurgico Medical and Surgical Limited\n\nZimmer Biomet New Zealand\n\n## Background\n\nThe contracts above are as a result of the RFP released in June 2016.\n\nRFP - Supply of orthopaedic implants and associated products\n\n## Staying in touch [...] Search the Hospital Medical Devices List for \"Orthopaedic\".\n\n## Suppliers under Pharmac national contract\n\nDowns Distributors Limited\n\nJohnson and Johnson (New Zealand) Limited\n\nLifeHealthcare Limited\n\nLima Orthopaedics New Zealand Ltd\n\nLMT Surgical Pty Limited\n\nMathys Limited\n\nMedartis New Zealand Ltd\n\nMedtronic New Zealand Limited\n\nNuVasive (Aust/NZ) Pty Ltd\n\nObex Medical Limited\n\nOrthomed NZ Limited\n\nOrtho Medics Limited\n\nOrthotech Orthopaedics (NZ) Limited\n\nOssis Limited",
+            "score": 0.884957351351352
+          },
+          {
+            "rank": 2,
+            "url": "https://www.zimmerbiomet.com/en",
+            "title": "Zimmer Biomet: Innovations in Orthopedic Care",
+            "content": "We invest in best in class implants, as well as digital technology and infrastructure, to further build connections between healthcare providers and their patients, advance the quality of patient care and personalize the care journey.\n\n### Featured Products\n\nZimmer Biomet HAMMR® Automated Hip Impaction System\n\n### HAMMR® Automated Hip Impaction System\n\nOxford® Cementless Partial Knee from Zimmer Biomet\n\n### Oxford® Cementless Partial Knee\n\nZimmer Biomet Persona IQ® \n\n### Persona IQ® [...] We seamlessly transform the patient experience through our innovative products and suite of integrated digital and robotic technologies that leverage data, data analytics and artificial intelligence.\n\nKnee\n\nKnee\n\nHips\n\nHip\n\nFoot & Ankle\n\nFoot & Ankle\n\nShoulder\n\nShoulder\n\nSports Medicine\n\nSports Medicine\n\nZBEdge\n\nZBEdge\n\nView All\n\n\\Information for healthcare professionals\n\n## Explore New Possibilities with World-Class Education",
+            "score": 0.8574819794586115
+          },
+          {
+            "rank": 3,
+            "url": "https://www.youtube.com/watch?v=IjNcAaOqwOY",
+            "title": "Enztec: Orthopaedic Instruments for World-Leading Implant Companies – 100% NZ-Owned",
+            "content": "# Enztec: Orthopaedic Instruments for World-Leading Implant Companies – 100% NZ-Owned\n## Enztec\n63 subscribers\n4 likes\n\n### Description\n791 views\nPosted: 30 Sep 2019\nEnztec are a proud supplier to Stryker, Smith and Nephew, Corin, Lima Corporate, Ortho, TJO, DePuy, Medacta, Exactech, Amplitude among many other leading brands. [...] hi I'm Bruce the menu battery manager here at insect limited in secrets orthopedic instruments for the world's leading implant companies we are a 100% New Zealand owned company based in Christchurch we utilize modern technology and equipment to manufacture precision products that are exported worldwide the majority of our products are CNC machined and finished by our talented tradesmen we ensure product conformity by using the latest inspection methods and measuring equipments our success is [...] Enztec specialises in creating orthopaedic instrument solutions for implant companies and orthopaedic surgeons worldwide. We offer bespoke design and manufacturing services, contract manufacturing, along with our own line of instruments.\n\nOur team are able to satisfy your instrument needs through the following avenues:\n- Providing an off-the-shelf solution to enhance your patient outcomes\n- Adding to your supply chain; you can trust us with your hardest problems",
+            "score": 0.852642697605166
+          },
+          {
+            "rank": 4,
+            "url": "https://www.orbmedical.nz/systems",
+            "title": "Orthopaedic Devices & Systems | Orb Medical New Zealand | Orb Medical",
+            "content": "Founded in 1997 in Valence in France, Amplitude is a global leader in the design, development, and manufacturing of orthopaedic implants. The company offers a comprehensive range of hip, knee solutions and instruments to meet each patient’s specific needs. Driven by innovation and research, Amplitude is committed to delivering products and services of the highest quality, enhancing patient outcomes and supporting healthcare professionals worldwide.\n\nREAD MORE\n\nENQUIRE [...] 09 379 0733\n\n# Global Brands for New Zealand Surgeons\n\nFilter systems procedure:\n\nUpper Limb\n\nFoot & Ankle\n\nShow all products by brand:\n\nAll\n\n\n\n#### Vantage® Total Ankle System\n\nFoot & Ankle Joints    \n Advita\n\nA new perspective in Total Ankle - achieving a new vantage point in total ankle arthroplasty by combining engineering and surgeon thought leader expertise to address clinical challenges and patient outcomes.\n\nREAD MORE\n\nENQUIRE\n\n\n\n#### Torsional Orthopaedic Revision System [...] drive the Astura team to achieve great success with developing devices and entering them into the spinal implant marketplace.",
+            "score": 0.8457370628089762
+          },
+          {
+            "rank": 5,
+            "url": "https://paragoncare.co.nz/product-portfolio/orthopaedics-capital",
+            "title": "Orthopaedics & Capital | REMNZ",
+            "content": "#### Our Orthopaedics & Capital brands\n\n#### Product Information Request\n\nIf you are after specific information on one of our products, but unable to locate on our website. Please visit our Product Information Request submission form for contact direct to your mailbox.\n\nEnquire Now\n\n#### Quick Contact\n\nOur friendly and knowledgeable team stands ready to answer your questions and help you find the solutions that best suit your needs. [...] REM SYSTEMS has partnered with the leading orthopaedic companies to provide NZ surgeons and hospitals with high quality and innovative products. We provide specialised orthopaedic implants from Corin, ConMed, and MTF Biologics as well as ConMed’s comprehensive range of powered operating equipment.\n\n#### Powered Surgical Tools [...] CONMED is a global leader in the provision of implants and associated equipment for the treatment of soft tissue injuries. CONMED has partnered with some of the world’s most highly regarded orthopaedic surgeons to develop a range of innovative and reliable products to assist in the treatment of shoulder, knee, hip, ankle, elbow and hand injuries.\n\n#### Biologics",
+            "score": 0.8111562814545762
+          }
+        ],
+        "raw_response": "Based on information from Pharmac (Te Pātaka Whaioranga), national contracting for orthopaedic implants and associated consumables used in New Zealand hospitals and communities has been completed with a range of suppliers [1]. \n\nSuppliers under Pharmac national contract include:\n* Downs Distributors Limited [1]\n* Johnson and Johnson (New Zealand) Limited [1]\n* LifeHealthcare Limited [1]\n* Lima Orthopaedics New Zealand Ltd [1]\n* LMT Surgical Pty Limited [1]\n* Mathys Limited [1]\n* Medartis New Zealand Ltd [1]\n* Medtronic New Zealand Limited [1]\n* NuVasive (Aust/NZ) Pty Ltd [1]\n* Obex Medical Limited [1]\n* Orthomed NZ Limited [1]\n* Ortho Medics Limited [1]\n* Orthotech Orthopaedics (NZ) Limited [1]\n* Ossis Limited [1]\n* Pioneer Medical Limited [1]\n* REM Systems Limited [1]\n* Smith and Nephew Limited [1]\n* Stryker New Zealand [1]\n* Surgical Innovations Limited [1]\n* Surgical Specialties (NZ) Limited [1]\n* Surgico Medical and Surgical Limited [1]\n* Zimmer Biomet New Zealand [1]\n\nAdditionally, companies like REM Systems partner with leading international brands (such as Corin, ConMed, and MTF Biologics) to supply specialised implants to New Zealand surgeons and hospitals [5], and Ob Medical supplies global brands like Amplitude [4].",
+        "citations": [
+          {
+            "url": "https://www.pharmac.govt.nz/hospital-devices/whats-happening-in-each-category/orthopaedic-implants",
+            "title": "Orthopaedic implants - Pharmac | Te Pātaka Whaioranga | NZ Government"
+          },
+          {
+            "url": "https://www.zimmerbiomet.com/en",
+            "title": "Zimmer Biomet: Innovations in Orthopedic Care"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=IjNcAaOqwOY",
+            "title": "Enztec: Orthopaedic Instruments for World-Leading Implant Companies – 100% NZ-Owned"
+          },
+          {
+            "url": "https://www.orbmedical.nz/systems",
+            "title": "Orthopaedic Devices & Systems | Orb Medical New Zealand | Orb Medical"
+          },
+          {
+            "url": "https://paragoncare.co.nz/product-portfolio/orthopaedics-capital",
+            "title": "Orthopaedics & Capital | REMNZ"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "neutral"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Pharmac",
+            "Downs Distributors Limited",
+            "Johnson and Johnson (New Zealand) Limited",
+            "Lima Orthopaedics New Zealand Ltd",
+            "LMT Surgical Pty Limited",
+            "Mathys Limited",
+            "Medartis New Zealand Ltd",
+            "Medtronic New Zealand Limited",
+            "NuVasive (Aust/NZ) Pty Ltd",
+            "Obex Medical Limited",
+            "Orthomed NZ Limited",
+            "Ortho Medics Limited",
+            "Orthotech Orthopaedics (NZ) Limited",
+            "Ossis Limited",
+            "Pioneer Medical Limited",
+            "REM Systems Limited",
+            "Smith and Nephew Limited",
+            "Stryker New Zealand",
+            "Surgical Innovations Limited",
+            "Surgical Specialties (NZ) Limited",
+            "Surgico Medical and Surgical Limited",
+            "Zimmer Biomet New Zealand",
+            "Corin",
+            "ConMed",
+            "MTF Biologics",
+            "Ob Medical",
+            "Amplitude"
+          ]
+        }
       },
       {
         "prompt": "Best supplier of orthopaedic implants in Australia",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://medicalsearch.com.au/stryker-orthopaedic-implants-mobile-bearing-hips/p/201616",
+            "title": "Stryker Orthopaedic Implants | Mobile Bearing Hips for sale from Stryker Australia - MedicalSearch Australia",
+            "content": "Title: Stryker Orthopaedic Implants | Mobile Bearing Hips for sale from Stryker Australia - MedicalSearch Australia\nTrusted by **740,000** Australian medical buyers. Trusted by **740,000** Australian medical buyers. All Products > Orthopaedics & Podiatry > Orthopaedic Devices. # Stryker - Orthopaedic Implants | Mobile Bearing Hips. Stryker - Orthopaedic Implants | Mobile Bearing Hips. Orthopaedic Implants | Mobile Bearing Hips. Stryker - Orthopaedic Implants | Mobile Bearing Hips. Orthopaedic Implants | Mobile Bearing Hips. Stryker - Orthopaedic Implants | Mobile Bearing Hips. Compatibility with Trident and Tritanium provides choice in fixation surfaces and screw hole configurations. Implant confidence with Stryker’s patented ADM X3, the only mobile bearing hip that combines an anatomic shell design and the X3 Advanced Bearing Technology. ADM was designed with left and right anatomic cup shapes incorporating a psoas cutout to help provide relief between the acetabular shell rim and iliopsoas tendon. The ADM cup is a monoblock Cobalt Chrome alloy cup with plasma sprayed Titanium surface overlayed with HA. This cup has a peripheral self-locking PSL. Implant confidence with Stryker’s patented ADM X3, the only mobile bearing hip that combines an anatomic shell design and the X3 Advanced Bearing Technology. ADM was designed with left and right anatomic cup shapes incorporating a psoas cutout to help provide relief between the acetabular shell rim and iliopsoas tendon. The ADM cup is a monoblock Cobalt Chrome alloy cup with plasma sprayed Titanium surface overlayed with HA. This cup has a peripheral self-locking PSL. Let **Stryker Australia** provide you with a quote. ### Surgical Navigation Instrument | Nav3  Visum LED Surgical Lights. ### Visum LED Surgical Lights  Radio Frequency Probes | SERFAS Energy Probes. ### Radio Frequency Probes | SERFAS Energy Probes  Tourniquet System | Smart Pump. ### Orthopaedic Devices | Origin  Orthopaedic Devices | Aria. ### Orthopaedic Devices | Remedy  Orthopaedic Devices | Evolve. ### Orthopaedic Devices | Evolve  Orthopaedic Devices | Logical. ### Orthopaedic Devices | Logical  Orthopaedic Devices I Ezy-Aim. ### Orthopaedic Devices I Ezy-Aim  Orthopaedic Devices | World Knee. ### Orthopaedic Implant | TriFit TS  Orthopaedic Implant | Revival. Let Stryker Australia know you found them on MedicalSearch so they can best assist you! Are you an Orthopaedic Devices supplier? Reach valuable medical buyers in minutes.",
+            "score": 0.8816494924136008
+          },
+          {
+            "rank": 2,
+            "url": "http://www.reviewcentre.com/life-style/high-street-shopping/chemists-pharmacies-health-beauty-shops/best-orthopaedic-implants-instruments-supplier-wwwsofiasurgicalscom-16002279",
+            "title": "Best orthopaedic implants & instruments supplier - www.sofiasurgicals.com Reviews | Review Centre",
+            "content": "Title: Best orthopaedic implants & instruments supplier - www.sofiasurgicals.com Reviews | Review Centre\nBest orthopaedic implants & instruments supplier - www.sofiasurgicals.com. #### Best orthopaedic implants & instruments supplier - www.sofiasurgicals.com. # Best orthopaedic implants & instruments supplier - www.sofiasurgicals.com. When you purchase through links on our site, we may earn an affiliate commission. Here's how it works. Best orthopaedic implants & instruments supplier - www.sofiasurgicals.com. ### User Reviews. There are no user reviews yet. Be the first to leave a review. ### Q&A. There are no questions yet. Be the first to ask a question. #### Highest rated in Chemists, Pharmacies, Health & Beauty Shops. Blue Orchid Health Care | Wellness Center in Jaipur. ### Blue Orchid Health Care | Wellness Center in Jaipur. ### Securetabs - securetabs.eu. ### RePharmacy - repharmacy.net. ### Fast Med Store. #### Latest in Chemists, Pharmacies, Health & Beauty Shops. ready medicines - www.readymedicines.com. ### ready medicines - www.readymedicines.com. Breathalysers New Zealand - breathalysers.co.nz. ### Breathalysers New Zealand - breathalysers.co.nz. Blue Orchid Health Care | Wellness Center in Jaipur. ### Blue Orchid Health Care | Wellness Center in Jaipur. ### Health Naturo - healthnaturo.com. ##### Follow Us. ##### About Review Centre. ##### Information. ##### Business.",
+            "score": 0.8702514314986467
+          },
+          {
+            "rank": 3,
+            "url": "https://www.volza.com/p/orthopaedic-implants/manufacturers/manufacturers-in-germany",
+            "title": "Orthopaedic Implants Suppliers from Germany - Volza",
+            "content": "Title: Orthopaedic Implants Suppliers from Germany - Volza\nTop suppliers & exporters of Orthopaedic implants in Malaysia. Top suppliers & exporters of Orthopaedic implants in China. Top suppliers & exporters of Orthopaedic implants in India. Top suppliers & exporters of Orthopaedic implants in United States. Top suppliers & exporters of Orthopaedic implants in Germany. Top suppliers & exporters of Orthopaedic implants in France. Volza’s trade intelligence database features 100 active Orthopaedic Implants Suppliers in Germany which helps you to identify:. Top 10 Orthopaedic Implants Supplier Countries. Top 10 Orthopaedic Implants Supplier Countries. Import and sourcing managers use Volza’s Partner Finder to explore verified Orthopaedic Implants manufacturers within these markets — filtering suppliers by **volume, product type, and pricing tiers** to identify the best trade opportunities. ### Discover Reliable Orthopaedic Implants Supplier Markets. Use Volza’s Supplier Risk Radar to identify the most dependable Orthopaedic Implants sourcing countries backed by real export performance. Leverage Volza’s Freight Optimizer to find Orthopaedic Implants suppliers located closest to your destination markets — reducing both time and transportation costs. Gain precise control over your Orthopaedic Implants sourcing costs with Volza’s Price-Benchmark and Product Intelligence tools. Even in competitive markets, Volza helps importers identify high-performing Orthopaedic Implants suppliers that balance cost, quality, and reliability.With tools like Negotiation Navigator and Company Profiler, you can. ### Confidently Benchmark the Right Price Before You Buy. With Negotiation Navigator, procurement teams gain full visibility into real-world Orthopaedic Implants pricing across buyers, countries, and supplier tiers. Use Competitive Intelligence to understand how leading importers source Orthopaedic Implants — with real shipment data, not guesswork. Volza’s Product Intelligence Tool connects Orthopaedic Implants quality grades with real shipment price bands, helping you align sourcing with what the market truly demands. Access 100 verified Orthopaedic Implants Suppliers in Germany with shipment-level prices, volumes, routes, buyer networks, and verified decision-maker contacts — all backed by bills-of-lading. Use Volza’s Global Partner Finder and Matchmaker to discover Orthopaedic Implants Suppliers in Germany backed by real export shipment records, growth trends, volume, and price-fit — across 203 countries. Use Volza’s pricing filters to identify high-margin manufacturers based on their export prices, origin countries, shipment volume, and frequency — giving you strategic insight into Orthopaedic Implants Manufacturers in Germany profitability.",
+            "score": 0.7197774296384858
+          },
+          {
+            "rank": 4,
+            "url": "https://www.orthopaedic-implants.com",
+            "title": "Orthopedic Implants, Orthopaedic Implants Manufacturer, Orthopedic Implants Suppliers, Orthopaedic Implants Manufacturers India, Orthopaedic Implants Company",
+            "content": "Nails, Wires & Pins - Manufacturer and supplier of orthopedic implants\n\n##### Nails, Wires & Pins\n\nHip Prosthesis - Manufacturer and supplier of orthopaedic implants\n\n##### Hip Prosthesis\n\nSpine Surgery - Manufacturer and supplier of orthopaedic implants\n\n##### Spine Surgery Implants\n\nGeneral Instruments - Manufacturer and supplier of orthopaedic implants\n\n##### General Instruments\n\nExternal Fixators - Manufacturer and supplier of orthopedic implants\n\n##### External Fixators [...] Large Fragment - Safety Locking - Manufacturer and supplier of orthopaedic implants\n\n##### Large Fragment Safety Locking\n\nCable Plate System - Manufacturer and supplier of orthopedic implants\n\n##### Cable Plate System\n\nLarge Fragment - Standard - Manufacturer and supplier of orthopedic implants\n\n##### Large Fragment Standard\n\nDHS/DCS - Manufacturer and supplier of orthopedic implants\n\n##### DHS/DCS & Pediatric\n\nPelvic Implants and Instruments - Manufacturer and supplier of orthopedic implants [...] ##### Pediatric Implants\n\nCannulated Screws - Manufacturer and supplier of orthopedic implants\n\n##### Headless Compression / Cannulated Screws\n\nRIB & FOOT - Manufacturer and supplier of orthopedic implants\n\n##### Rib & Foot Implants\n\nImplants Removal Set - Manufacturer and supplier of orthopedic implants\n\n##### Implants Removal Set\n\nInterlocking Nails - Manufacturer and supplier of orthopaedic implants\n\n##### Interlocking Nails",
+            "score": 0.6781011878272488
+          },
+          {
+            "rank": 5,
+            "url": "https://freshdi.com/supplier/IMPOL-ORTHOPAEDIC-IMPLANTS-www-impol-com-br",
+            "title": "IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br - Supplier, Exporter, Wholesaler & Company from Brazil - Freshdi",
+            "content": "Title: IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br - Supplier, Exporter, Wholesaler & Company from Brazil - Freshdi\nThis is the supplier profile page of IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br, where buyers can explore products, connect directly with the supplier for pricing inquiries. # IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br. # IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br. Ulisses Guimaraes, 3533-Vila Nogueira CEP 09990 080. ## Business Description. ## Business Details. ### Country:. ### Business Types:. ### Main Markets:. ### Main Products:. ### Year Established:. ### Annual Revenue Amount:. ### Numbers Of Employees:. ### Preferred Payment Term:. ### Preferred Trade Term:. ### Port Of Loading:. IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br. This supplier has a Freshdi Website for 1 years. Send inquiry now to connect with this supplier.",
+            "score": 0.6623567518770606
+          }
+        ],
+        "raw_response": "Based on the provided search results, Stryker Australia is featured as a supplier of orthopaedic implants in Australia, offering products such as mobile bearing hips and other orthopaedic devices to Australian medical buyers [1]. \n\nSource:\n- [Stryker Australia - MedicalSearch Australia](https://medicalsearch.com.au/stryker-orthopaedic-implants-mobile-bearing-hips/p/201616)",
+        "citations": [
+          {
+            "url": "https://medicalsearch.com.au/stryker-orthopaedic-implants-mobile-bearing-hips/p/201616",
+            "title": "Stryker Orthopaedic Implants | Mobile Bearing Hips for sale from Stryker Australia - MedicalSearch Australia"
+          },
+          {
+            "url": "http://www.reviewcentre.com/life-style/high-street-shopping/chemists-pharmacies-health-beauty-shops/best-orthopaedic-implants-instruments-supplier-wwwsofiasurgicalscom-16002279",
+            "title": "Best orthopaedic implants & instruments supplier - www.sofiasurgicals.com Reviews | Review Centre"
+          },
+          {
+            "url": "https://www.volza.com/p/orthopaedic-implants/manufacturers/manufacturers-in-germany",
+            "title": "Orthopaedic Implants Suppliers from Germany - Volza"
+          },
+          {
+            "url": "https://www.orthopaedic-implants.com",
+            "title": "Orthopedic Implants, Orthopaedic Implants Manufacturer, Orthopedic Implants Suppliers, Orthopaedic Implants Manufacturers India, Orthopaedic Implants Company"
+          },
+          {
+            "url": "https://freshdi.com/supplier/IMPOL-ORTHOPAEDIC-IMPLANTS-www-impol-com-br",
+            "title": "IMPOL ORTHOPAEDIC IMPLANTS www.impol.com.br - Supplier, Exporter, Wholesaler & Company from Brazil - Freshdi"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Stryker Australia"
+          ]
+        }
       },
       {
         "prompt": "Top spine surgery device distributors in Australia and New Zealand",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://thespinemarketgroup.com/australias-spine-market-2026-growth-top-local-implant-companies-and-key-challenges",
+            "title": "Australia's Spine Market 2026: Growth, Top Local Implant ...",
+            "content": "LifeHealthcare: One of the largest medical device distributors in Australia. · Precision Surgical: An Australian distributor with a strong",
+            "score": 0.9412026252527471
+          },
+          {
+            "rank": 2,
+            "url": "https://synergyspinesolutions.com/synergy-spine-solutions-announces-partnership-with-lifehealthcare-in-australia-and-new-zealand",
+            "title": "Synergy Spine Solutions announces partnership with ...",
+            "content": "LifeHealthcare Pty Ltd. is a medical device and technology distributor that is focussed on supporting patients in Australia and New Zealand.",
+            "score": 0.8817008410218229
+          },
+          {
+            "rank": 3,
+            "url": "https://orthospinenews.com/2025/07/31/vb-spine-launches-in-australia-and-new-zealand",
+            "title": "VB Spine Launches in Australia and New Zealand – Ortho Spine News",
+            "content": "### OrthoPediatrics Corp. Announces Continued Expansion of Specialty Bracing Division Into New Territories with Multiple Clinics\n\n## Recent Posts\n\n## Recent Comments\n\n## Top News\n\n## Latest on this theme\n\nMedTechIntel\n\n## Keep Up to Date with the Most Important News\n\nLinkedIn [...] Medicine), Plastics and Reconstructive Surgery, Neurovascular Intervention, Abdo-Pelvic Surgery, and Neurosurgery, among others. For more information about LifeHealthcare, please visit www.lifehealthcare.com.au or www.lifehealthcare.co.nz. [...] VB Spine LLC is the largest privately held spine company and among the largest family-owned medical technology companies in the world. With a comprehensive product portfolio and a large and growing global distribution network, VB Spine delivers specialized solutions that address critical needs in spine surgery and enhance patient outcomes. Focused on people, partnerships and operational excellence, VB Spine ensures healthcare professionals have access to the tools and resources needed to",
+            "score": 0.872178486226367
+          },
+          {
+            "rank": 4,
+            "url": "https://www.lifehealthcare.com.au",
+            "title": "LHC Homepage | LifeHealthcare",
+            "content": "Life Healthcare\n\nLife Healthcare\n\nIf you are a HCP, then register/login to the HCP portal here to access information on the products we represent.\n\nWe’re one of Australia and New Zealand's leading independent medical technology distributors.\n\nOur strength lies in offering the scale of our clinical suppliers with the support of local experts in both countries.\n\nGet to   \n know us [...] The Extremities division is focused on surgical implants, devices and biologics specifically for upper and lower limb orthopaedic surgery. #### Orthopaedics: Regenerative Medicine\n\nThe regen offering from LifeHealthcare is focused on recovery with brands like Exogen and Durolane. #### Neurovascular Intervention (NVI)\n\nA division focused on interventional neurovascular surgery with minimally invasive surgical products from Microvention. #### Plastics & Reconstructive Surgery [...] LifeHealthcare is focused on providing access to world-leading medical devices and technology for Australian and New Zealand patients, whilst ensuring long-term economic sustainability for our healthcare system. LifeHealthcare has a broad portfolio of products in various channels that includes Spine, Orthopaedics (Recon, Extremities and Regen), Enabling Technology, Plastics & Reconstructive Surgery, Neurovascular Intervention, Abdo-Pelvic and Neurosurgery, OR capital and scope repair, to name a",
+            "score": 0.8470987545994169
+          },
+          {
+            "rank": 5,
+            "url": "https://www.revolution-surgical.com",
+            "title": "Revolution Surgical | MedTech Distributor",
+            "content": "## The Gateway between Cutting-Edge Global MedTech and Australian Healthcare\n\nOrthopaedics\n\n#### Orthopaedics\n\nInfection Control\n\n#### Infection Prevention\n\nAnaesthetics & Pain Specialists\n\n#### Anaesthetics & Pain Specialists\n\nSpine & Neurosurgery\n\n#### Spine & Neurosurgery\n\nBreast, Plastic & Reconstructive\n\n#### Breast, Plastic & Reconstructive\n\nCardiac & Cardiothoracic\n\n#### Cardiac & Cardiothoracic\n\nENT & General Surgery\n\n#### ENT & General Surgery\n\nWound Care\n\n#### Wound Care [...] Established in 2014, Revolution Surgical is a privately owned Australian medical and surgical device distributor. We are committed to providing the best devices to the Australian healthcare industry, whilst maintaining exceptional customer service.  \n  \nAs the Revolution name suggests, our mission is simple: to deliver products that innovate and redefine their therapeutic area. Our objective is ensuring the best possible support for practitioners to deliver unrivalled care to their patients. [...] AUSTRALIA\n\n1300 533 699\n\nRevolution Surgical Pty Ltd  \n4/22 Rowood Road, Prospect NSW 2148  \nABN: 63 165 643 434\n\nNEW ZEALAND\n\n0800 533 699\n\nRevolution Surgical New Zealand Ltd  \n378 Neilson Street, Penrose Auckland 1061 New Zealand  \nNZBN: 145-925-924\n\n© 2018- Revolution Surgical\n\nWebsite by: WebInjection\n\nPRIVACY POLICY        DISCLAIMER",
+            "score": 0.8082244894805609
+          }
+        ],
+        "raw_response": "Based on the provided search results, the top medical device distributors in Australia and New Zealand that operate in the spine sector include:\n\n* **LifeHealthcare:** Identified as one of the largest and leading medical device and technology distributors in Australia and New Zealand, with a broad portfolio that includes spine surgery products [1, 2, 4].\n* **Precision Surgical:** Noted as an Australian distributor with a strong presence in the spine market [1].",
+        "citations": [
+          {
+            "url": "https://thespinemarketgroup.com/australias-spine-market-2026-growth-top-local-implant-companies-and-key-challenges",
+            "title": "Australia's Spine Market 2026: Growth, Top Local Implant ..."
+          },
+          {
+            "url": "https://synergyspinesolutions.com/synergy-spine-solutions-announces-partnership-with-lifehealthcare-in-australia-and-new-zealand",
+            "title": "Synergy Spine Solutions announces partnership with ..."
+          },
+          {
+            "url": "https://orthospinenews.com/2025/07/31/vb-spine-launches-in-australia-and-new-zealand",
+            "title": "VB Spine Launches in Australia and New Zealand – Ortho Spine News"
+          },
+          {
+            "url": "https://www.lifehealthcare.com.au",
+            "title": "LHC Homepage | LifeHealthcare"
+          },
+          {
+            "url": "https://www.revolution-surgical.com",
+            "title": "Revolution Surgical | MedTech Distributor"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "positive"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Precision Surgical"
+          ]
+        }
       },
       {
         "prompt": "Who supplies surgical capital equipment to Australian hospitals?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "error": "{\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       },
       {
         "prompt": "Leading distributors of biologics and allograft products in Australasia",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "error": "{\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       },
       {
         "prompt": "What is EBOS MedTech and what companies does it own?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "error": "{\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAILABLE\"}}"
       },
       {
         "prompt": "What does LifeHealthcare distribute and who owns LifeHealthcare?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.lifehealthcare.com.au/about-us",
+            "title": "About us | LifeHealthcare",
+            "content": "We not only source and distribute surgical implants but are focused on biologics, surgical instruments, consumables, enabling technology, and capital equipment.",
+            "score": 0.8683448278864238
+          },
+          {
+            "rank": 2,
+            "url": "https://ebosgroup.gcs-web.com/static-files/ad78b463-3768-4ea1-8fba-cbb7a98db2ab",
+            "title": "ACQUISITION OF LIFEHEALTHCARE, EQUITY RAISING AND ...",
+            "content": "A$1,167 million1, EBOS will acquire 100% of LifeHealthcare's Australian & New Zealand subsidiaries and 51% of LifeHealthcare's Asian subsidiary",
+            "score": 0.024289162480463634
+          },
+          {
+            "rank": 3,
+            "url": "https://au.linkedin.com/company/lifehealthcare",
+            "title": "LifeHealthcare",
+            "content": "# LifeHealthcare\nN/A\nMedical Equipment Manufacturing • Sydney, NSW • 13,148 followers • 201-500 employees [...] brings together PENTAX Medical’s global technology leadership with LifeHealthcare’s strong local clinical engagement and service capability across ANZ, strengthening how we support hospitals, clinicians and ultimately patient care. As Paul Petherbridge , CEO of LifeHealthcare, shared: “This partnership represents an important step forward for LifeHealthcare as we continue to grow our capability to support clinicians and healthcare providers across Australia and New Zealand.” Customers can [...] ## Overview",
+            "score": 0.022963234507173268
+          },
+          {
+            "rank": 4,
+            "url": "https://www.comcom.govt.nz/news-and-media/news-and-events/2022/ebos-cleared-to-acquire-the-new-zealand-lifehealthcare-business",
+            "title": "EBOS cleared to acquire the New Zealand LifeHealthcare ...",
+            "content": "Both EBOS and LifeHealthcare are distributors of medical equipment and consumables to hospitals and medical professionals.",
+            "score": 0.022511800726768456
+          },
+          {
+            "rank": 5,
+            "url": "https://www.reuters.com/world/asia-pacific/nzs-ebos-buy-lifehealthcare-839-mln-southeast-asia-push-2021-12-08",
+            "title": "NZ's EBOS to buy LifeHealthcare for $839 mln in Southeast Asia push",
+            "content": "Under the deal, opens new tab, EBOS will buy LifeHealthcare's Australian and New Zealand units and 51% of its Asian unit, Transmedic, from funds advised by Pacific Equity Partners and other minority holders.\n\nMake sense of global markets with the Trading Day newsletter. Sign up here.\n\nAdvertisement · Scroll to continue\n\nReport AdImage 3 [...] Skip to main content\n\nReport AdImage 2\n\nExclusive news, data and analytics for financial market professionals Learn more about Refinitiv\n\n - New Zealand healthcare products distributor EBOS Group Ltd (EBO.NZ), opens new tab said on Thursday it would buy Australian peer LifeHealthcare for A$1.17 billion ($839.6 million), as it looks to expand into the Southeast Asia market. [...] LifeHealthcare, one of the largest independent distributors of third-party medical devices and in-house manufactured allograft material in Australia, New Zealand and South East Asia, was bought by Pacific Equity Partners in 2018.\n\nAdvertisement · Scroll to continue\n\nReport AdImage 4\n\nEBOS said it would undertake a retail offering to raise up to A$100 million, a share placement to raise A$642 million and a loan of A$540 million to fund the deal.",
+            "score": 0.017518158296540732
+          }
+        ],
+        "raw_response": "Based on the provided search results:\n\n**What LifeHealthcare distributes:**\nLifeHealthcare distributes surgical implants, biologics, surgical instruments, consumables, enabling technology, and capital equipment [1]. They are also a distributor of medical equipment and consumables [4], as well as third-party medical devices and in-house manufactured allograft material [5]. \n\n**Who owns LifeHealthcare:**\nLifeHealthcare is owned by EBOS Group Ltd, which acquired 100% of LifeHealthcare's Australian and New Zealand subsidiaries and 51% of its Asian subsidiary (Transmedic) [2, 5]. Prior to this acquisition, LifeHealthcare was owned by funds advised by Pacific Equity Partners and other minority holders [5].",
+        "citations": [
+          {
+            "url": "https://www.lifehealthcare.com.au/about-us",
+            "title": "About us | LifeHealthcare"
+          },
+          {
+            "url": "https://ebosgroup.gcs-web.com/static-files/ad78b463-3768-4ea1-8fba-cbb7a98db2ab",
+            "title": "ACQUISITION OF LIFEHEALTHCARE, EQUITY RAISING AND ..."
+          },
+          {
+            "url": "https://au.linkedin.com/company/lifehealthcare",
+            "title": "LifeHealthcare"
+          },
+          {
+            "url": "https://www.comcom.govt.nz/news-and-media/news-and-events/2022/ebos-cleared-to-acquire-the-new-zealand-lifehealthcare-business",
+            "title": "EBOS cleared to acquire the New Zealand LifeHealthcare ..."
+          },
+          {
+            "url": "https://www.reuters.com/world/asia-pacific/nzs-ebos-buy-lifehealthcare-839-mln-southeast-asia-push-2021-12-08",
+            "title": "NZ's EBOS to buy LifeHealthcare for $839 mln in Southeast Asia push"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "neutral"
+            },
+            {
+              "code": "TMD",
+              "mentioned": true,
+              "position": "late",
+              "sentiment": "neutral"
+            }
+          ],
+          "competitors_mentioned": [
+            "EBOS Group Ltd",
+            "Pacific Equity Partners"
+          ]
+        }
       },
       {
         "prompt": "What does Transmedic Group do and where does it operate?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.forbes.com/companies/transmedics-group",
+            "title": "Transmedics Group | TMDX Stock Price, Company Overview & News",
+            "content": "## Forbes Lists\n\n### Transmedics Group Financial Summary\n\n## Transmedics Group (TMDX) Stock Price Performance\n\n## Transmedics Group (TMDX) Stock Key Data\n\n### Key Data\n\n### \n\n### Valuation Measures\n\n### Profitability Metrics\n\n### Revenue and Earnings Metrics\n\n### Cash and Debt Metrics [...] Mini Crossword\nFrase\nPinpoint\nQueens\nCrossclimb\n\n# Transmedics Group\n\n### Share Price\n\nForbes does not accept payment for placement on lists.\n\n## Last Updated Nov 7, 2025, 6:30am EDT [...] TransMedics Group, Inc. operates as a commercial stage medical technology company. The firm engages in the development and commercialization of organ care system platform. It focuses on the preservation of human organs for transplant in a near-physiologic condition to address the limitations of cold storage organ preservation. The company was founded by Waleed H. Hassanein in August 1998 and is headquartered in Andover, MA.\n\n## Transmedics Group Stats As of November 2025\n\n## Forbes Lists",
+            "score": 0.8659043692976989
+          },
+          {
+            "rank": 2,
+            "url": "https://umbrex.com/resources/company-profiles/transmedics-group",
+            "title": "TransMedics Strategy and Business Model",
+            "content": "This channel structure gives TransMedics tight customer feedback and stronger control over adoption, but it also increases fixed operating cost. That makes center utilization, case volume, and retention especially important.\n\n## 9. In What Geographies Does TransMedics Operate? [...] The unusual feature is that a company reported as a single segment now contains both medtech product economics and service-network economics. That matters because reported financials can understate the operational differences between selling a console, shipping a disposable kit, and running an end-to-end transplant case service.\n\n## 12. How Does TransMedics Operate? [...] | Common name | TransMedics |\n| Full legal name | TransMedics Group, Inc. |\n| Headquarters | Andover, Massachusetts, United States |\n| Ownership | Public company |\n| Ticker | TMDX |\n| Exchange | NASDAQ |\n| Market Cap | $2.57B |\n| Revenue (FY2024) | #N/A |",
+            "score": 0.8627509571567574
+          },
+          {
+            "rank": 3,
+            "url": "https://www.linkedin.com/company/transmedics",
+            "title": "TransMedics, Inc. - Redefining what's possible in organ transplantation",
+            "content": "Waleed Hassanein, MD (1w): We are honored and proud to have the PAD Aviation team as a part of the TMDX Group’s family! This is a significant step towards achieving our strategic goal of creating the first pan-European dedicated transplant logistics network to help transplant patients all over Europe and around the world. Remember the TMDX Aviation slogan, “We Fly to Save Lives”. [Likes: 142, Comments: 8]; TransMedics, Inc. (3w): This year at ATC 2026, we are excited to share with you our",
+            "score": 0.7398455329230219
+          },
+          {
+            "rank": 4,
+            "url": "https://www.transmedics.com",
+            "title": "Home - Transmedics",
+            "content": "Transmedics\n\nSelect Page\n\n## Establishing the new standard of care for organ transplantation\n\nTransMedics Organ Care System (OCS™): The only FDA-approved technology for lung, heart & liver transplantation indication in the U.S.\n\nOCS Heart has shown a significant reduction of injurious ischemic time compared to cold storage\n\nOCS™ Lung\n\nOCS™ Heart\n\nOCS Lung has shown an approximate 50% reduction of primary graft dysfunction (PGD) grade 3\n\nOCS™ Liver [...] OCS™ Liver\n\n## TransMedics receives FDA PMA approval of OCS™ DCD Heart indication\n\nThe OCS™ Heart is an FDA-approved device for both DBD and DCD donor Hearts\n\nLearn more\n\n## TransMedics National OCS™ Program (NOP™)\n\nSay farewell to the time & distance limitations of cold storage with our NOP\n\n##### Technology & Clinical Service [...] TransMedics provides end-to-end technology & expert clinical service solutions that maximize heart & lung transplant volume, clinical outcomes and reduce learning curves.\n\n##### Program Growth\n\nAvoid the limitations of ischemic time & distance limitations, as well as resource constraints, while reducing your dry run cost exposure.\n\n##### Maximizing your team’s work/life balance",
+            "score": 0
+          },
+          {
+            "rank": 5,
+            "url": "https://www.transmedics.com/careers",
+            "title": "Careers - Transmedics",
+            "content": "Transmedics\n\nSelect Page\n\n# Redefine Your Future with TransMedics\n\nYou can help preserve more organs and save more lives at TransMedics\n\nWe’re revolutionizing what’s possible in organ transplant through innovation, collaboration and commitment. Become a leader with us.\n\n## Clinical\n\n## Engineering\n\n## Operations\n\n## General and Administrative\n\nSearch Openings\n\n## Discover the benefits and amenities Offered by TransMedics\n\n## World-class laboratory\n\n## State-of-the-art production [...] ## Competitive salaries and benefits\n\n## Free parking\n\n## Free gym\n\n## Onsite cafeteria\n\n## Located just outside Boston\n\n## Hear from TransMedics team members who are revolutionizing Organ care systems for transplant patients\n\n> Great place to work for someone passionate about people and the outcome of the work that they are invested in\n\n> Cutting-edge product and smart colleagues make for an exciting work environment\n\n## Join TransMedics [...] TransMedics is a fast-growing medical device company committed to creating technology that allows more patients with end-stage organ failure to benefit from successful transplantation.\n\nWe offer competitive compensation and benefits in an exciting and demanding, fast-paced work environment. We continually seek exceptionally talented and dedicated people to join our team to help shape both our future and the future of transplant medicine.",
+            "score": 0
+          }
+        ],
+        "raw_response": "Based on the provided search results, here is what Transmedic Group does and where it operates:\n\n### What Transmedic Group Does\n* **Core Business:** TransMedics Group, Inc. operates as a commercial-stage medical technology company focused on organ transplantation [1].\n* **Technology & Products:** The firm develops and commercializes the Organ Care System (OCS™) platform, which is designed to preserve human organs for transplant (including lungs, hearts, and livers) in a near-physiologic condition to address the limitations of traditional cold storage [1, 4]. \n* **Services:** The company provides end-to-end technology and expert clinical service solutions—such as the National OCS™ Program (NOP™)—to maximize transplant volume, improve clinical outcomes, reduce learning curves, and overcome the time and distance limitations associated with cold storage [2, 4].\n\n### Where It Operates\n* **Headquarters:** TransMedics is headquartered in Andover, Massachusetts (just outside Boston), in the United States [1, 2, 5].\n* **Market Reach:** Its OCS technology is FDA-approved in the U.S. for lung, heart, and liver transplantation [4]. Additionally, the company is working toward creating a dedicated transplant logistics network to help transplant patients across Europe and around the world [3].",
+        "citations": [
+          {
+            "url": "https://www.forbes.com/companies/transmedics-group",
+            "title": "Transmedics Group | TMDX Stock Price, Company Overview & News"
+          },
+          {
+            "url": "https://umbrex.com/resources/company-profiles/transmedics-group",
+            "title": "TransMedics Strategy and Business Model"
+          },
+          {
+            "url": "https://www.linkedin.com/company/transmedics",
+            "title": "TransMedics, Inc. - Redefining what's possible in organ transplantation"
+          },
+          {
+            "url": "https://www.transmedics.com",
+            "title": "Home - Transmedics"
+          },
+          {
+            "url": "https://www.transmedics.com/careers",
+            "title": "Careers - Transmedics"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "neutral"
+            }
+          ],
+          "competitors_mentioned": []
+        }
       },
       {
         "prompt": "Is LifeHealthcare part of EBOS Group?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.linkedin.com/posts/ebos-group_this-morning-we-announced-to-the-new-zealand-activity-6874455443981266944-LQKJ",
+            "title": "This morning we announced to the New Zealand and Australian stock exchanges that EBOS has entered into an agreement to acquire one of Australia’s leading medical device companies in LifeHealthcare… | EBOS Group Limited",
+            "content": "# EBOS Group Limited’s Post\n\nEBOS Group Limited\n\n10,329 followers\n\n Report this post [...] This morning we announced to the New Zealand and Australian stock exchanges that EBOS has entered into an agreement to acquire one of Australia’s leading medical device companies in LifeHealthcare Group. LifeHealthcare is a leading independent distributor of third party medical devices, consumables and capital equipment and in-house manufactured allograft material. LifeHealthcare will join our medical devices business sitting alongside LMT, Cryomed, Pioneer Med and MD Solutions. This is a very [...] This is a very exciting development for our business and we look forward to welcoming all the team at LifeHealthcare to EBOS and continuing the strong growth they have achieved to date.",
+            "score": 0.8053920032367642
+          },
+          {
+            "rank": 2,
+            "url": "https://www.dayhospitalsaustralia.net.au/industry-member/lifehealthcare",
+            "title": "LifeHealthcare | Day Hospitals Australia",
+            "content": "In June 2022, EBOS Group Limited, completed the purchase of LifeHealthcare’s group of companies, and formed the EBOS Medical Technology Division with LMT Surgical, Pioneer Medical, and Cryomed. [...] Day Hospitals Australia\n\n# LifeHealthcare\n\n## LifeHealthcare\n\n 23rd August 2023\n\n## LifeHealthcare\n\nLifeHealthcare Pty Ltd. is a medical device and technology distributor that is focused on supporting patients in Australia and New Zealand. LifeHealthcare is a company under EBOS Medical Technology Division that has additional companies across APAC and SEA covering allograft manufacturing (Australian Biotechnologies) and South East Asian (SEA) medical device distributor Transmedic. [...] Our passion is health. Our purpose is helping to make life better for others.\n\nFor more information visit www.lifehealthcare.com.au or ebosmedtech.com\n\n## Enter your username and password to log into your account",
+            "score": 0.8036300353137409
+          },
+          {
+            "rank": 3,
+            "url": "https://www.ebosgroup.com/who-we-are/our-history",
+            "title": "Our History - EBOS Group",
+            "content": "EBOS Group\n\n## Main Navigation\n\n# Our History\n\n## EBOS Group History\n\nEBOS acknowledges First Nations people’s connections to land, water and community. We pay our respects to ancestors and elders – past and present.\n\n© 2025 EBOS Group Limited.\n\nPrivacy Policy / Terms and Conditions / Page updated August 2025\n\n##### EBOS Website Search",
+            "score": 0.7921000526236992
+          },
+          {
+            "rank": 4,
+            "url": "https://www.afr.com/street-talk/ebos-buys-pep-s-lifehealthcare-raising-640m-20211209-p59g2l",
+            "title": "EBOS buys PEP’s Lifehealthcare, raising $742m",
+            "content": "Australasian health care group EBOS has acquired medical devices business Lifehealthcare for $1.167 billion, and is asking shareholders to tip into a $742 million raising to help fund it.\n\nStreet Talk.  Nic Walker\n\nLoading... [...] Kanika Sood is a journalist based in Sydney who writes for the Street Talk column. Email Kanika at kanika.sood@afr.com.au\n\nor Subscribe to save article\n\nEmailLinkedInTwitterFacebook\n\nSubscribe to gift this article\n\nGift 5 articles to anyone you choose each month when you subscribe.\n\nSubscribe now\n\nAlready a subscriber?\n\nLicense article\n\n### Read More\n\n Street Talk\n EBOS Group\n Healthcare\n Mergers & acquisitions\n Capital raising\n\n## Latest Street Talk\n\nSee all Street Talk [...] Skip to navigationSkip to contentSkip to footerHelp using this website - Accessibility statement\n\n Today's Paper\n\n Today's Paper\n Markets Data\n Events\n Lists\n\nNewsfeed\n\nAdvertisement\n\n Companies\n Street Talk\n\nStreet Talk\n\n# EBOS buys PEP’s Lifehealthcare, raising $742m\n\nAnthony Macdonald, Yolanda Redrup and Kanika Sood",
+            "score": 0.7626065115684456
+          },
+          {
+            "rank": 5,
+            "url": "https://www.ebosgroup.com/our-businesses/medical-technology",
+            "title": "Medical Technology",
+            "content": "EBOS Group\n\n## Main Navigation\n\n# Medical Technology\n\n## Medical Technology\n\nFounded in 2006 from an integration of a number of long standing businesses, LifeHealthcare has grown to be one of the leading independent medical technology companies in Australia and New Zealand. [...] Our hands-on experience enables us to offer our current portfolio with total confidence and the knowledge that they have been tried and tested and producing real results with a good return on investment.\n\nFore more information visit www.cryomed.com.au  \nLinkedIn\n\nEBOS acknowledges First Nations people’s connections to land, water and community. We pay our respects to ancestors and elders – past and present.\n\n© 2025 EBOS Group Limited. [...] Privacy Policy / Terms and Conditions / Page updated March 2026\n\n##### EBOS Website Search",
+            "score": 0.7443666890750854
+          }
+        ],
+        "raw_response": "Yes, LifeHealthcare is part of EBOS Group. EBOS Group Limited completed the acquisition of LifeHealthcare in June 2022, and LifeHealthcare now operates as a company under the EBOS Medical Technology Division [2].",
+        "citations": [
+          {
+            "url": "https://www.linkedin.com/posts/ebos-group_this-morning-we-announced-to-the-new-zealand-activity-6874455443981266944-LQKJ",
+            "title": "This morning we announced to the New Zealand and Australian stock exchanges that EBOS has entered into an agreement to acquire one of Australia’s leading medical device companies in LifeHealthcare… | EBOS Group Limited"
+          },
+          {
+            "url": "https://www.dayhospitalsaustralia.net.au/industry-member/lifehealthcare",
+            "title": "LifeHealthcare | Day Hospitals Australia"
+          },
+          {
+            "url": "https://www.ebosgroup.com/who-we-are/our-history",
+            "title": "Our History - EBOS Group"
+          },
+          {
+            "url": "https://www.afr.com/street-talk/ebos-buys-pep-s-lifehealthcare-raising-640m-20211209-p59g2l",
+            "title": "EBOS buys PEP’s Lifehealthcare, raising $742m"
+          },
+          {
+            "url": "https://www.ebosgroup.com/our-businesses/medical-technology",
+            "title": "Medical Technology"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": true,
+              "position": "late",
+              "sentiment": "neutral"
+            },
+            {
+              "code": "LHC",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "neutral"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "EBOS Group"
+          ]
+        }
       },
       {
         "prompt": "EBOS Medtech vs Life Healthcare - what's the difference?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.spce.com/sp_ce/medtech-qa/medtech-vs-pharma-vs-biotech-vs-healthtech",
+            "title": "Medtech vs Pharma vs Biotech vs Health tech - SP_CE",
+            "content": "Skip to content\n\nBook a Demo\n\nHome\n\nBook a Demo\n\n# Medtech vs Pharma vs Biotech vs Health tech\n\nHome » SP\\_CE » Q&A » Medtech vs Pharma vs Biotech vs Health tech\n\nLife science areas like Medtech, Biotech, Pharma and Health tech may sound similar. So, we’ve gathered som key things to know about them, and ways to tell them apart.\n\n## What is medtech? [...] Pharma companies make medicine. These are oftentimes made from artificial components and can take years and years to develop. It’s a very regulated area, and products have to walk a long road before they reach the market.\n\n## Medtech vs Pharma vs Biotech vs Healthtech\n\nThese areas do have one thing in common, namely that they all belong to the larger life-science industry. That said, they are far from the same and all areas have some things that set them apart. For example: [...] Health tech focuses on personal health. Companies in the area develop products that make it easier to get care or monitor one’s health (like apps and wearables). With that, health-tech products are usually used outside of the hospital walls, and aren’t regulated to the same extent as other life-science areas.\n\n### What is Pharma?",
+            "score": 0.9387424761940303
+          },
+          {
+            "rank": 2,
+            "url": "https://www.lifehealthcare.com.au/about-us",
+            "title": "About us | LifeHealthcare",
+            "content": "impact on people's lives every day. That is the powerful \"why\" that drives us... the difference between just making a living and making a life. [...] Life Healthcare\n\nLife Healthcare\n\nAbout us\n\n#### Our passion is health\n\n#### Our purpose is helping to make life better for others [...] At LifeHealthcare we bring Australian and New Zealand healthcare professionals innovative medical devices and technologies by partnering with world-class companies who share our vision for innovation and making a real difference to people’s lives. Together with our partners all over the world, our people work closely with healthcare professionals to ensure the highest standards of patient care.",
+            "score": 0.9287605432535444
+          },
+          {
+            "rank": 3,
+            "url": "https://www.linkedin.com/posts/ebosmt_ebos-medtech-is-built-on-the-work-of-many-activity-7407546395508801536-ZcfT",
+            "title": "EBOS MedTech is built on the work of many people coming together across Transmedic Group, Cryomed Aesthetics, Australian Biotechnologies and LifeHealthcare. Every procedure, delivery, product and… | EBOS MedTech",
+            "content": "EBOS MedTech is built on the work of many people coming together across Transmedic Group, Cryomed Aesthetics, Australian Biotechnologies and LifeHealthcare. Every procedure, delivery, product and patient outcome reflects teams showing up, solving problems and backing one another. That’s what makes the difference. Together, we can change lives through this shared effort, working alongside our partners and healthcare communities across Australia, New Zealand, Hong Kong and Southeast Asia. As you [...] # EBOS MedTech’s Post\n\nEBOS MedTech\n\n3,397 followers\n\n Report this post [...] EBOS MedTech   2mo\n ### From local roots to regional reach: How DDU is shaping the future of spine surgery\n\n  EBOS MedTech   7mo\n ### Kicking off the first 'How to career'\n\n  EBOS MedTech   7mo\n\n## Explore content categories\n\n Career\n Productivity\n Finance\n Soft Skills & Emotional Intelligence\n Project Management\n Education\n Technology\n Leadership\n Ecommerce\n User Experience\n\n## Sign in to view more content\n\nCreate your free account or sign in to continue your search\n\n## Welcome back",
+            "score": 0.9123726213049387
+          },
+          {
+            "rank": 4,
+            "url": "https://www.transmedicgroup.com/our-history-and-legacy",
+            "title": "Our History & Legacy",
+            "content": "A year later, Transmedic became part of EBOS MedTech, medical technology division under EBOS Group Ltd., following EBOS Group’s acquisition of LifeHealthcare. This milestone strengthened Transmedic’s platform and capabilities, enabling us to scale, innovate, and deliver greater value to our healthcare partners across Southeast Asia and Hong Kong. EBOS Group is the largest and most diversified Australasian marketer, wholesaler, and distributor of healthcare, medical, and pharmaceutical products, [...] Transmedic was acquired by LifeHealthcare, a leading provider of healthcare solutions in Australia and New Zealand. This strategic acquisition has strengthened our regional capabilities and expanded our access to greater global resources.\n\n## 2022: Acquired by EBOS Group Ltd. and is now a part of the EBOS MedTech Division [...] ## 2001 - 2014: Expanding Across Southeast Asia\n\nWe established a strong presence in Malaysia, Thailand, Indonesia, Hong Kong, Philippines, and Vietnam—expanding our regional footprint and deepening our commitment to advancing healthcare. This strategic growth laid the foundation for deeper collaborations with healthcare providers and global medtech partners, enabling Transmedic to better serve the evolving needs of the Southeast Asian healthcare landscape.\n\n## 2021: Acquired by LifeHealthcare",
+            "score": 0.8730665248888012
+          },
+          {
+            "rank": 5,
+            "url": "https://ebosgroup.gcs-web.com/static-files/ad78b463-3768-4ea1-8fba-cbb7a98db2ab",
+            "title": "ACQUISITION OF LIFEHEALTHCARE, EQUITY RAISING AND ...",
+            "content": "across both the Healthcare and Animal Care segments. For the four months ended 31 October 2021, growth compared to the prior corresponding period17 was: Healthcare Animal Care Group Revenue 10.4% 14.3% 10.6% EBIT 12.7% 14.8% 13.1% NPAT 14.2% EBOS’ FY22 dividend is expected to be in line with EBOS’ dividend policy to declare dividends representing between 60% and 80% of NPAT. 17 The financial results underpinning this growth are unaudited. The four months ended 31 October 2021 had one less [...] John Cullity, said “The acquisition of LifeHealthcare represents an important step in EBOS’ medical devices strategy, providing greater exposure to this high growth sector as well as providing a measured entry into South East Asia.” “The enlarged medical devices business will remain part of EBOS’ existing Institutional Healthcare division, which will represent approximately 38% of EBOS’ gross operating revenue. After entering the medical devices distribution sector in 2019, EBOS has grown its",
+            "score": 0.800539924511482
+          }
+        ],
+        "raw_response": "Based on the provided search results, Life Healthcare and EBOS MedTech are actually connected rather than being separate competitive entities in opposition:\n\n* **Life Healthcare** is a leading provider of healthcare solutions in Australia and New Zealand that brings healthcare professionals innovative medical devices and technologies by partnering with world-class companies [2, 4]. \n* **EBOS MedTech** is the medical technology division under EBOS Group Ltd [4]. LifeHealthcare was acquired by EBOS Group Ltd., and LifeHealthcare—alongside companies like Transmedic Group, Cryomed Aesthetics, and Australian Biotechnologies—forms the foundation upon which EBOS MedTech is built [3, 4].",
+        "citations": [
+          {
+            "url": "https://www.spce.com/sp_ce/medtech-qa/medtech-vs-pharma-vs-biotech-vs-healthtech",
+            "title": "Medtech vs Pharma vs Biotech vs Health tech - SP_CE"
+          },
+          {
+            "url": "https://www.lifehealthcare.com.au/about-us",
+            "title": "About us | LifeHealthcare"
+          },
+          {
+            "url": "https://www.linkedin.com/posts/ebosmt_ebos-medtech-is-built-on-the-work-of-many-activity-7407546395508801536-ZcfT",
+            "title": "EBOS MedTech is built on the work of many people coming together across Transmedic Group, Cryomed Aesthetics, Australian Biotechnologies and LifeHealthcare. Every procedure, delivery, product and… | EBOS MedTech"
+          },
+          {
+            "url": "https://www.transmedicgroup.com/our-history-and-legacy",
+            "title": "Our History & Legacy"
+          },
+          {
+            "url": "https://ebosgroup.gcs-web.com/static-files/ad78b463-3768-4ea1-8fba-cbb7a98db2ab",
+            "title": "ACQUISITION OF LIFEHEALTHCARE, EQUITY RAISING AND ..."
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "neutral"
+            },
+            {
+              "code": "LHC",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "neutral"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "EBOS Group Ltd",
+            "Transmedic Group",
+            "Cryomed Aesthetics",
+            "Australian Biotechnologies"
+          ]
+        }
       },
       {
         "prompt": "Who are the biggest medical technology distributors in Southeast Asia?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://jahaniandassociates.com/medical-devices-and-digital-health-in-southeast-asia",
+            "title": "Medical Devices and Digital Health in Southeast Asia - Jahani and Associates",
+            "content": "The medical device and digital health industry has received over $1.9 billion from investors with over 337 transactions at an average deal size of $141 million since Q1 2020.\n The second quarter of 2021 saw the largest capital deployment of $426 million in the sector, driven by Sunway Healthcare Holdings, which saw the biggest investment raise of $181 million from Singaporean investor GIC. [...] ## Multi-Site Enterprise Technology Rollout Services Sector M&A Transactions and Valuations\n\n## Aquaculture Technology and Automated Feeding Systems Sector M&A Transactions and Valuations\n\n## Smart Office and Audio-Visual Solutions Sector M&A Transactions and Valuations\n\n## Climate Control Systems and Solutions Sector M&A Transactions and Valuations\n\n## Post Service Recovery in the Customer Experience Sector M&A Transactions and Valuations [...] ## Technology Procurement and IT Solutions Consulting Sector M&A Transactions and Valuations\n\n## The Use of WACC in IoT Sensors, Spectrum, and Semiconductors Valuations for M&A Transactions\n\n## Cybersecurity, Governance, Risk and Compliance Services Sector M&A Transactions and Valuations\n\n## Digital Patient Intake and Clinical Workflow Software Sector M&A Transactions and Valuations\n\n## Technology-Enabled Digital Asset Communications Services Sector M&A Transactions and Valuations",
+            "score": 0.8798535764906793
+          },
+          {
+            "rank": 2,
+            "url": "https://www.lek.com/insights/hea/sea/ei/medtech-cdmos-southeast-asia-landscape-overview-and-investment-opportunities",
+            "title": "Medtech CDMOs in Southeast Asia: Landscape Overview and Investment Opportunities | L.E.K. Consulting",
+            "content": "### Capabilities\n\n Strategy\n Business Unit Strategy\n Corporate Strategy\n Growth Strategy\n New Product Strategy\n Shareholder Value Management\n\nBack to\n\nUp Next:\n\n## Related insights\n\nYou might also be interested in these insights.\n\nBiotech and Pharmaceuticals\n\n## Elevating Medical Affairs: Seven Recommendations for High-Performing Biopharma Organizations\n\nTechnology\n\n## Turning AI-Powered Pricing Into Realized Margin in B2B Technology\n\nBanking [...] Therapy areas: Orthopedics, cardiovascular, diagnostics, drug delivery and neurology\n Technology platforms: Microfluidics, neurovascular delivery, robotic-assisted surgery tools and digital diagnostics\n Value chain roles: From early design and engineering to cleanroom assembly, packaging, sterilization and regulatory consulting\n\nImage\n\nOverall CDMO competitive landscape - representative examples\n\n## Why SEA is the next frontier for medtech CDMO investment [...] L.E.K. Consulting is a registered trademark of L.E.K. Consulting LLC. All other products and brands mentioned in this document are properties of their respective owners. © 2025 L.E.K. Consulting LLC\n\n## Questions about our latest thinking?\n\nGet in touch\n\n## Related Industries\n\n### Industries\n\n MedTech\n Consumables & Disposables\n Medical Equipment\n Procedure-Specific Devices\n Tech-Enabled Services and Healthcare IT\n\n### Capabilities",
+            "score": 0.8493865032450336
+          },
+          {
+            "rank": 3,
+            "url": "https://www.somnotec.net/about-us",
+            "title": "About Us – Somnotec",
+            "content": "With our team of dedicated and well-trained product sales and support team, we meet the high standards of the medical community by providing the best in cutting edge medical technology. We pride ourselves in our steadfast trustworthiness and reliability that is so vital in our community.\n\n#### Our Partners [...] #### Our Partners\n\nWe constantly seek vibrant business partners to bring quality medical technology and solutions into the market place, in addition to undertaking regional product representation and distribution opportunities.\n\n#### Our Community\n\nWe work closely with medical communities via direct participation in scientific meetings, hands-on workshops and in-service educational seminars, while engaging the general public on awareness of various medical disorders and illnesses. [...] Skip to content\n\nSomnotec Logo Somnotec Logo\n\n# About Us\n\nAbout UsRitchie Chin2026-03-30T19:35:04+08:00\n\nSince the company’s incorporation in 2003, we have grown to serve diverse fields of medicine in addition to expanding our respiratory and home care product lines. Today, Somnotec is a distributor of various leading edge medical devices and technology in South East Asia.",
+            "score": 0.836456719933642
+          },
+          {
+            "rank": 4,
+            "url": "https://www.pacificbridgemedical.com/business-development-services/medical-device/distributor-search/others",
+            "title": "Find Device Distributors in Asia",
+            "content": "Pacific Bridge Medical has been locating and working with the best Southeast Asian medical distributors for years. Whether you want to enter the market in Hong Kong, Indonesia, Korea, Malaysia, Philippines, Singapore, Taiwan, Thailand, or Vietnam, our consultants are able to discover the most dependable and efficient distributors for you.\n\nContact us and learn how choosing a distributor that’s right for your company can go a long way.\n\n##### Related Resources [...] Leading global distributors have built regional headquarters or hub operations in Singapore. There are many high-quality medical device distributors in Singapore, but it is crucial to find the best partner for your company.\n\n## Medical Device Distributor Search in Taiwan [...] The process of finding the best medical device distribution partner for your company in the Philippines can take time. The number of good medical device distributors is very limited. Due to the fragmentation of the Philippine archipelago, there are few truly national medical device distributors. Most distributors are based in Manila, so reaching areas far away from the capital can run into issues of logistics, infrastructure, and cost. Hospitals often buy devices from dealers they know and",
+            "score": 0.7995524207075614
+          },
+          {
+            "rank": 5,
+            "url": "https://tracxn.com/d/explore/pharmaceutical-distributors-startups-in-southeast-asia/__Jn42bNbfgFpYeLdZgMNyxNE8UX9o3_beomC350kqSX0",
+            "title": "List of 186 Pharmaceutical Distributors Startups in Southeast Asia & Market Trends (Aug 2026) - Tracxn",
+            "content": "## Top News in Pharmaceutical Distributors in Southeast Asia\n\n## FAQs about Pharmaceutical Distributors sector in Southeast Asia\n\nAccel Partners\nPartech\nIN-Q-TEL - US\nFujitsu\nTenity\nStanford [...] Logo of Sriprasit\n\n### 5. Sriprasit\n\nedit-link\n\n### Key facts about Sriprasit\n\n### Companies founded year-on-year in the Pharmaceutical Distributors sector in Southeast Asia\n\n1 new startup has been founded so far in 2026 in the Pharmaceutical Distributors sector in Southeast Asia. 6 Pharmaceutical Distributors startups in Southeast Asia were founded in 2017 - this is the most number of startups founded in any year in the last 10 years. [...] Logo for Lynasmedikal\nLogo for Firstline\nLogo for Novem Healthcare\nLogo for Aipharma\nLogo for Alliance Pharma Cambodge\n\n### Acquisition trends in Pharmaceutical Distributors sector in Southeast Asia\n\nHere are the acquisition trends in Pharmaceutical Distributors sector in Southeast Asia:\n\n| Year | No. of companies |\n --- |\n| 2026 \n| 2025 | 1 |\n| 2024 \n| 2023 \n| 2022 | 1 |\n| 2021 | 2 |\n| 2020 | 1 |\n| 2019 \n| 2018 \n| 2017 \n\n## IPOs in Pharmaceutical Distributors in Southeast Asia",
+            "score": 0.7853152016401801
+          }
+        ],
+        "raw_response": "Based on the provided search results, there is no specific list or mention of who the *biggest* medical technology distributors are in Southeast Asia. \n\nThe sources only mention that leading global distributors have established regional headquarters or hub operations in Singapore [4], and identify Somnotec as a distributor of leading-edge medical devices and technology in Southeast Asia [3].",
+        "citations": [
+          {
+            "url": "https://jahaniandassociates.com/medical-devices-and-digital-health-in-southeast-asia",
+            "title": "Medical Devices and Digital Health in Southeast Asia - Jahani and Associates"
+          },
+          {
+            "url": "https://www.lek.com/insights/hea/sea/ei/medtech-cdmos-southeast-asia-landscape-overview-and-investment-opportunities",
+            "title": "Medtech CDMOs in Southeast Asia: Landscape Overview and Investment Opportunities | L.E.K. Consulting"
+          },
+          {
+            "url": "https://www.somnotec.net/about-us",
+            "title": "About Us – Somnotec"
+          },
+          {
+            "url": "https://www.pacificbridgemedical.com/business-development-services/medical-device/distributor-search/others",
+            "title": "Find Device Distributors in Asia"
+          },
+          {
+            "url": "https://tracxn.com/d/explore/pharmaceutical-distributors-startups-in-southeast-asia/__Jn42bNbfgFpYeLdZgMNyxNE8UX9o3_beomC350kqSX0",
+            "title": "List of 186 Pharmaceutical Distributors Startups in Southeast Asia & Market Trends (Aug 2026) - Tracxn"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Somnotec"
+          ]
+        }
       },
       {
         "prompt": "Best medical device distributor for orthopaedic revision arthroplasty in Australia",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.spinalsurgerynews.com/2020/07/biocomposites-signs-new-exclusive-distributor-in-australia/58490",
+            "title": "Biocomposites signs new exclusive distributor in Australia",
+            "content": "LifeHealthcare is one of Australia's leading providers of medical device solutions with a team of complex orthopaedic experts that focus on",
+            "score": 0.9276464142499752
+          },
+          {
+            "rank": 2,
+            "url": "https://www.revolution-surgical.com/partners",
+            "title": "Partners | Revolution Surgical | Surgical Device Australian Distributor",
+            "content": "Innovative Orthopedic Technologies\n\nInnovative Orthopedic Technologies develops and distributes specialty technologies for the orthopaedic market for surgical positioning. In close collaboration with surgeons, they create and design innovative leg positioning systems to help surgeons do what they do best - perform surgery. Their Swiss-made products are used in medical institutions around the globe.\n\nGenadyne [...] # Partners\n\nEstablished in 2014, Revolution Surgical is a privately owned Australian medical and surgical device distributor servicing Australia and New Zealand.  \n  \nIf you are interested in working with us, please contact us at info@revolution-surgical.com\n\nMedtronic [...] When Dr. Homer Stryker, an orthopaedic surgeon from Kalamazoo, Michigan, U.S., found that certain medical products were not meeting his patients’ needs, he invented new ones. As interest in these products grew, Dr. Stryker started a company in 1941 to produce them.",
+            "score": 0.906496015517862
+          },
+          {
+            "rank": 3,
+            "url": "https://www.signatureortho.com.au",
+            "title": "Signature Orthopaedics – Quality Beyond Expectation",
+            "content": "Signature Orthopaedics is a one of a kind medical service in Australia, with the ability to design, prototype and manufacture unique concepts in-house, then turn those ideas into production items.  By using the latest CAD software, and cutting edge manufacturing technology there is no project that we can’t offer a solution to.\n\n## Design [...] Signature Orthopaedics takes great pride in developing innovative medical devices that improve the lives of patients and surgeon performance alike. Whether it’s a Signature™ instrument or volume Class III device supply, we have the experience, knowledge and resources to provide you with the solutions you need, at a quality beyond expectation.\n\n## A Look Inside Our Facility\n\nTom gives a tour around the facility with a brief look at how a knee is produced.\n\nView Video\n\n## Core Competencies [...] Skip to content\n\n    Everglade™ More Info         Origin-NS™ More Info         More Info          Origin™ The next generation More Info          Evolve™ Double Taper Design More Info         Custom Delivering a unique solution More Info        World® Acetabular Contemporary geometry More Info \n\nSignature Orthopaedics Logo Signature Orthopaedics Logo",
+            "score": 0.8197221771561422
+          },
+          {
+            "rank": 4,
+            "url": "https://www.arthrex.com.au",
+            "title": "Arthrex - Helping Surgeons Treat Their Patients Better®",
+            "content": "## Our Enterprise\n\nArthrex is recognized as the global leader in sports medicine and less invasive orthopedic surgery.\n\nRead More\n\n## Our Expertise\n\nWith a corporate mission of Helping Surgeons Treat Their Patients Better™, Arthrex has pioneered the field of arthroscopy and develops more than 1,000 innovative products and procedures each year.\n\n Sports Medicine\n Shoulder Arthroplasty\n Distal Extremities and Traumatology\n Orthobiologics\n Imaging and Resection\n Veterinary\n\nRead More [...] Stay up-to-date on our daily innovations in orthopedics and subscribe to our email newsletter:\n\nSubscribe Now\n\n### Contact\n\nArthrex Australia Pty LtdSuite 501, 20 Rodborough Road  \nFrenchs Forest NSW 2086  \nAustralia   \nTel: 1800 950 637\n\nArthrex New Zealand Limited6 Fox Street  \nParnell Auckland 1052  \nNew Zealand  \nTel: 0800 234 347\n\nUseful Links:\n\nSynergyOrthoPediaArthrex Surgeon AppeIFUs\n\nVisit us on LinkedIn\n\nPrivacy NoticeLegal Notice\n\nEthics Helpline [...] Welcome to Arthrex, we are a global medical device company and leader in new product development and medical education in orthopedics. With a corporate mission of Helping Surgeons Treat Their Patients Better™, Arthrex has pioneered the field of arthroscopy and develops more than 1,000 innovative products and procedures each year to advance minimally invasive orthopedics worldwide.",
+            "score": 0.8094867961018646
+          },
+          {
+            "rank": 5,
+            "url": "https://www.jnjmedtech.com/en-US/companies/depuy-synthes",
+            "title": "DePuy Orthopaedics | DePuy Synthes",
+            "content": "Intended for Healthcare Professionals\n\nIntended for HCPs\n\nIntended for Healthcare Professionals\n\n## Secondary nav block\n\n# We Keep People Moving\n\n#### Keeping people moving isn’t just a tagline; it’s our passion.  Welcome to the future of orthopaedics. [...] We are on a mission to keep people moving by leveraging our deep expertise in joint reconstruction, robotics and enabling tech, spine, sports, trauma, and extremities, to develop the next generation of medtech solutions. We offer one of the most comprehensive Orthopaedics portfolios in the world that helps heal and restore movement for the millions of patients we serve.\n\n### Browse Products\n\nSelect a Product Category\n\nDePuy Synthes Logo\n\n#### About\n\n#### -\n\n#### Useful Links\n\n#### - [...] #### -\n\n#### Legal\n\n#### -\n\n#### Connect\n\n#### -\n\nYou are about to leave jnjmedtech.com. By clicking to continue, you will be taken to a web site governed by their own Legal and Privacy Policies.",
+            "score": 0
+          }
+        ],
+        "raw_response": "Based on the provided search results, there is no mention of a specific \"best\" medical device distributor for orthopaedic revision arthroplasty in Australia. \n\nHowever, the sources do mention several relevant companies operating in the Australian orthopaedic and medical device sector:\n* **LifeHealthcare**, which is noted as one of Australia's leading providers of medical device solutions and features a team of complex orthopaedic experts ([1]).\n* **Revolution Surgical**, a privately owned Australian medical and surgical device distributor that partners with specialty orthopaedic technology providers ([2]).\n* **Signature Orthopaedics**, which designs, prototypes, and manufactures orthopedic devices and custom solutions in-house in Australia ([3]).\n* **Arthrex Australia**, which provides orthopedic products and procedures ([4]).",
+        "citations": [
+          {
+            "url": "https://www.spinalsurgerynews.com/2020/07/biocomposites-signs-new-exclusive-distributor-in-australia/58490",
+            "title": "Biocomposites signs new exclusive distributor in Australia"
+          },
+          {
+            "url": "https://www.revolution-surgical.com/partners",
+            "title": "Partners | Revolution Surgical | Surgical Device Australian Distributor"
+          },
+          {
+            "url": "https://www.signatureortho.com.au",
+            "title": "Signature Orthopaedics – Quality Beyond Expectation"
+          },
+          {
+            "url": "https://www.arthrex.com.au",
+            "title": "Arthrex - Helping Surgeons Treat Their Patients Better®"
+          },
+          {
+            "url": "https://www.jnjmedtech.com/en-US/companies/depuy-synthes",
+            "title": "DePuy Orthopaedics | DePuy Synthes"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": true,
+              "position": "early",
+              "sentiment": "positive"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Revolution Surgical",
+            "Signature Orthopaedics",
+            "Arthrex Australia"
+          ]
+        }
       },
       {
         "prompt": "Which company distributes plastics and reconstructive surgery devices in New Zealand?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "CAESjAEB6zswFeiqvBrOi3EUnUISx3xVcCXusIlmd39pQey0dFo3OuZPy1hDyhkHyENECVPy4u92GaZ4HEC2D-nfqB01SIkxGAx2Uxusfe1-7KEhSkPzXKeCLiCdFdf6J6QDiWKfepycXQyvmzFOz2UCjdG4uqndpp6l2CK2o8RUxPKYg0umFvKkwBiui5KuXw",
+            "title": "Reconstructive Plastic Surgery Suppliers & Manufacturers",
+            "content": "Aroa Biosurgery Limited. based inMangere, NEW ZEALAND. Aroa Biosurgery is a soft-tissue regeneration company that develops, manufactures and distributes",
+            "score": 0.8692625846232733
+          },
+          {
+            "rank": 2,
+            "url": "CAESZQHrOzAVfDuCGHPjzhqaZ_8EoJrwZLtFjPWZOUp5H2c_3GGP3Lw7Dgi1fnEYa7ou8gFUjbHJsJ0FIEpdl98G92v0hblzdNcmunx05m5DmleNtju2JsSap0r_6Jh-tSIYV3KCRqdx",
+            "title": "International Distributors - Mercian Surgical",
+            "content": "We specialise in supplying high-quality Spinal, Plastics, Maxillo Facial, Vascular & Cardiac, Endoscopy surgical instruments and medical devices worldwide.",
+            "score": 0.7870884002821866
+          },
+          {
+            "rank": 3,
+            "url": "CAESiAEB6zswFf8OYDxFT_ojdIZKzVcSF8sdSSvZOT9Z2GaFDcIJb2GABHZi00l04VCSpVSWpNZMVhd9QpUC1_-lpS1tyPa0V9IXYQSreCSxvCvKbUok-d4-p2S8yJHYJ4yHieRTbPVudYQL_tV70xSHGI_1-bQHRvfJh9NoJLibObBCu29NGw-hGGrX",
+            "title": "What is Plastic Reconstructive Surgery?",
+            "content": "The New Zealand Association of Plastic Surgeons is committed to upholding the highest standards of surgical excellence within the field of cosmetic and",
+            "score": 0.7688533548275122
+          },
+          {
+            "rank": 4,
+            "url": "CAESgQEB6zswFeUTtsMqtvBTuDsj09OA4n8wIbof-OmObWh5B6G7DZ-2owYKP6AknXkXd1bDZbuJWxrL99Eu0wmVX8sVB682-BLZE3g_3LmiFVgVn-ye5u90-aSnNa-dyYTmZXqknChXpSA4C8j0PZD9WqPlDa6TUDd5BsgGF5_Qgs3oF6E",
+            "title": "VB Spine Launches in Australia and New Zealand - www.vbspineco.com",
+            "content": "Stryker's spinal implants business in Australia and New Zealand fully transitions to VB Spine and LifeHealthcare continues as exclusive",
+            "score": 0.5111273717088214
+          },
+          {
+            "rank": 5,
+            "url": "CAESugEB6zswFRGxrCRD6LdOy9rWGGhDyQzvf3Pk5yByREkqraCrO9svh7P75Ia5A4OTzzQyWsQd1giMViz8H3xZboCNxFquF44-AcejCfSIMmisxASULvfqdtauTvz8FeekMV-AE-0uuUgs3r2QeB0U_DH3Nw03dbn-WbmSsAynmL_aQkYYBETHya-gzImDEESZH8aMFLEAGqZ5zLgxqOoVS5GK7jMjbW4zsWEkyc4tQPRziLbXE2WwdvNSmP8",
+            "title": "Synergy Spine Solutions announces partnership with LifeHealthcare in ...",
+            "content": "LifeHealthcare Pty Ltd. is a medical device and technology distributor that is focussed on supporting patients in Australia and New Zealand.",
+            "score": 0.43971640662404365
+          }
+        ],
+        "raw_response": "Based on the provided search results, Aroa Biosurgery Limited is a company based in Mangere, New Zealand, that develops, manufactures, and distributes soft-tissue regeneration products [1]. \n\nSources:\n- [1] CAESjAEB6zswFeiqvBrOi3EUnUISx3xVcCXusIlmd39pQey0dFo3OuZPy1hDyhkHyENECVPy4u92GaZ4HEC2D-nfqB01SIkxGAx2Uxusfe1-7KEhSkPzXKeCLiCdFdf6J6QDiWKfepycXQyvmzFOz2UCjdG4uqndpp6l2CK2o8RUxPKYg0umFvKkwBiui5KuXw",
+        "citations": [
+          {
+            "url": "CAESjAEB6zswFeiqvBrOi3EUnUISx3xVcCXusIlmd39pQey0dFo3OuZPy1hDyhkHyENECVPy4u92GaZ4HEC2D-nfqB01SIkxGAx2Uxusfe1-7KEhSkPzXKeCLiCdFdf6J6QDiWKfepycXQyvmzFOz2UCjdG4uqndpp6l2CK2o8RUxPKYg0umFvKkwBiui5KuXw",
+            "title": "Reconstructive Plastic Surgery Suppliers & Manufacturers"
+          },
+          {
+            "url": "CAESZQHrOzAVfDuCGHPjzhqaZ_8EoJrwZLtFjPWZOUp5H2c_3GGP3Lw7Dgi1fnEYa7ou8gFUjbHJsJ0FIEpdl98G92v0hblzdNcmunx05m5DmleNtju2JsSap0r_6Jh-tSIYV3KCRqdx",
+            "title": "International Distributors - Mercian Surgical"
+          },
+          {
+            "url": "CAESiAEB6zswFf8OYDxFT_ojdIZKzVcSF8sdSSvZOT9Z2GaFDcIJb2GABHZi00l04VCSpVSWpNZMVhd9QpUC1_-lpS1tyPa0V9IXYQSreCSxvCvKbUok-d4-p2S8yJHYJ4yHieRTbPVudYQL_tV70xSHGI_1-bQHRvfJh9NoJLibObBCu29NGw-hGGrX",
+            "title": "What is Plastic Reconstructive Surgery?"
+          },
+          {
+            "url": "CAESgQEB6zswFeUTtsMqtvBTuDsj09OA4n8wIbof-OmObWh5B6G7DZ-2owYKP6AknXkXd1bDZbuJWxrL99Eu0wmVX8sVB682-BLZE3g_3LmiFVgVn-ye5u90-aSnNa-dyYTmZXqknChXpSA4C8j0PZD9WqPlDa6TUDd5BsgGF5_Qgs3oF6E",
+            "title": "VB Spine Launches in Australia and New Zealand - www.vbspineco.com"
+          },
+          {
+            "url": "CAESugEB6zswFRGxrCRD6LdOy9rWGGhDyQzvf3Pk5yByREkqraCrO9svh7P75Ia5A4OTzzQyWsQd1giMViz8H3xZboCNxFquF44-AcejCfSIMmisxASULvfqdtauTvz8FeekMV-AE-0uuUgs3r2QeB0U_DH3Nw03dbn-WbmSsAynmL_aQkYYBETHya-gzImDEESZH8aMFLEAGqZ5zLgxqOoVS5GK7jMjbW4zsWEkyc4tQPRziLbXE2WwdvNSmP8",
+            "title": "Synergy Spine Solutions announces partnership with LifeHealthcare in ..."
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Aroa Biosurgery Limited"
+          ]
+        }
       },
       {
         "prompt": "Who supplies neurosurgery and neurovascular intervention devices in Australia?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://asj.amegroups.org/article/view/101656/html",
+            "title": "Neurovascular surgery: the way forward—an Australian ...",
+            "content": "1 Department of Neurosurgery , John Hunter Hospital , Newcastle , Australia ; 2 Department of Neurosurgery , Macquarie University Hospital ,",
+            "score": 0.9397375873944154
+          },
+          {
+            "rank": 2,
+            "url": "https://www.revolution-surgical.com",
+            "title": "Revolution Surgical | MedTech Distributor",
+            "content": "## The Gateway between Cutting-Edge Global MedTech and Australian Healthcare\n\nOrthopaedics\n\n#### Orthopaedics\n\nInfection Control\n\n#### Infection Prevention\n\nAnaesthetics & Pain Specialists\n\n#### Anaesthetics & Pain Specialists\n\nSpine & Neurosurgery\n\n#### Spine & Neurosurgery\n\nBreast, Plastic & Reconstructive\n\n#### Breast, Plastic & Reconstructive\n\nCardiac & Cardiothoracic\n\n#### Cardiac & Cardiothoracic\n\nENT & General Surgery\n\n#### ENT & General Surgery\n\nWound Care\n\n#### Wound Care [...] Great Place To Work® Certified\n\nBest Workplaces - Australia 2025\n\nBest Workplaces - Australia 2025\n\n## Revolution Surgical [...] AUSTRALIA\n\n1300 533 699\n\nRevolution Surgical Pty Ltd  \n4/22 Rowood Road, Prospect NSW 2148  \nABN: 63 165 643 434\n\nNEW ZEALAND\n\n0800 533 699\n\nRevolution Surgical New Zealand Ltd  \n378 Neilson Street, Penrose Auckland 1061 New Zealand  \nNZBN: 145-925-924\n\n© 2018- Revolution Surgical\n\nWebsite by: WebInjection\n\nPRIVACY POLICY        DISCLAIMER",
+            "score": 0.8846788852599446
+          },
+          {
+            "rank": 3,
+            "url": "https://baltgroup.com",
+            "title": "Home - Balt Group : Balt Group",
+            "content": "### OUR PRODUCT PORTFOLIO\n\n## Being first was just the beginning\n\nWe introduced one of the first neurovascular intervention devices in 1977. Now we offer the world’s broadest portfolio of medical devices for ischemic and hemorrhagic stroke as well as dedicated products to address peripheral embolization.\n\nExplore Our Products\n\nSilk Vista\n\n### Our Impact [...] Previous\n\nNext\n\n## Continuously Reaching New Frontiers\n\nFor more than 45 years, Balt has been leading the way—collaborating with physicians and institutions to develop elegant neurovascular solutions.\n\nAs the premier global neurovascular platform always seeking to expand beyond boundaries, we are now bringing our innovation to the peripheral vascular space.\n\n## Pioneer in stroke treatment\n\n0  Years of excellence\n\n0+  Dedicated team members\n\n0  Offices around the world [...] Balt\n\nPhysician-inspired innovations.<br /> Patient-focused solutions. \n\n### WE ARE BALT\n\n# Physician-inspired innovations. Patient-focused solutions.\n\nDiscover Balt\n\nJoin a passionate team dedicated to making a difference. \n\n### CAREERS\n\n# Join a passionate team dedicated to making a difference.\n\nView Openings\n\nSTEM trial results in the New England Journal of Medicine <br /> \n\n### NEWS\n\n# STEM trial results in the New England Journal of Medicine\n\nSee More\n\nPrevious\n\nNext",
+            "score": 0.8274824070694736
+          },
+          {
+            "rank": 4,
+            "url": "https://www.delveinsight.com/report-store/neurovascular-devices-interventional-neurology-market",
+            "title": "Neurovascular Devices Market Size, Forecast, Outlook, Companies",
+            "content": "| Neurovascular Devices Regional Scope | North America, Europe, Asia Pacific, Middle East, Africa, and South America |\n| Neurovascular Devices Country Scope | U.S., Canada, Mexico, Germany, United Kingdom, France, Italy, Spain, China, Japan, India, Australia, South Korea, and key Countries | [...] The Neurovascular Devices Market is being primarily driven by the rising prevalence of neurological disorders such as stroke, cerebral aneurysms, arteriovenous malformations, and other cerebrovascular diseases. The increasing incidence of ischemic and hemorrhagic strokes, particularly among the aging population and individuals with risk factors like Hypertension and Diabetes, is significantly boosting the demand for advanced neurovascular intervention devices. Additionally, growing awareness [...] The neurovascular devices market is being primarily driven by the rising prevalence of neurological disorders such as stroke, cerebral aneurysms, arteriovenous malformations, and other cerebrovascular diseases. The increasing incidence of ischemic and hemorrhagic strokes, particularly among the aging population and individuals with risk factors like hypertension and diabetes, is significantly boosting the demand for advanced neurovascular intervention devices. Additionally, growing awareness",
+            "score": 0.8231810726590016
+          },
+          {
+            "rank": 5,
+            "url": "https://www.terumoneuro.com",
+            "title": "Terumo Neuro | Innovative Neurovascular Solutions | Terumo Neuro",
+            "content": "#### Ischemic\n\nTerumo Neuro has developed an innovative portfolio of devices to treat ischemic stroke and carotid artery disease, which are blockages that limit or prevent blood flow into the brain. Our devices include aspiration catheters, stentrievers, and carotid stents.\n\n#### Access [...] MicroVention is now Terumo Neuro\n\n# Game-changing impact™\n\nDriving innovation in neurovascular care\n\nSee what we do\n\n#### Hemorrhagic\n\nTerumo Neuro has a comprehensive portfolio of devices to treat or prevent hemorrhagic stroke. Our solutions for unruptured and ruptured aneurysms and neurovascular malformations are backed by robust clinical data and provide proven performance and versatility.\n\n#### Ischemic [...] Dianne Patient Video Thumbnail\n\n### Ischemic Stroke Patient Video\n\n## Latest News\n\nView newsroom\n\nView newsroom\n\nJun 4, 2026\n\n## Terumo Neuro Launches New Clinical Studies Website Showcasing Its Research Portfolio\n\nA central hub for neurosurgeons and healthcare providers to explore peer-reviewed clinical studies supporting Terumo Neuro devices\n\nMay 13, 2026",
+            "score": 0.3440215843837169
+          }
+        ],
+        "raw_response": "Based on the provided search results, Revolution Surgical is a MedTech distributor in Australia that supplies products for spine and neurosurgery [2].",
+        "citations": [
+          {
+            "url": "https://asj.amegroups.org/article/view/101656/html",
+            "title": "Neurovascular surgery: the way forward—an Australian ..."
+          },
+          {
+            "url": "https://www.revolution-surgical.com",
+            "title": "Revolution Surgical | MedTech Distributor"
+          },
+          {
+            "url": "https://baltgroup.com",
+            "title": "Home - Balt Group : Balt Group"
+          },
+          {
+            "url": "https://www.delveinsight.com/report-store/neurovascular-devices-interventional-neurology-market",
+            "title": "Neurovascular Devices Market Size, Forecast, Outlook, Companies"
+          },
+          {
+            "url": "https://www.terumoneuro.com",
+            "title": "Terumo Neuro | Innovative Neurovascular Solutions | Terumo Neuro"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Revolution Surgical"
+          ]
+        }
       },
       {
         "prompt": "Best supplier of endoscopy equipment for Australian hospitals",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.anzgita.org/equipment.html",
+            "title": "Equipment, Accessories & Logistics Partners",
+            "content": "​CR Kennedy, as the Australian distributor of Fujifilm endoscopy equipment supports the WGO Training Centre at the Colonial War Memorial Hospital in Suva",
+            "score": 0.80089486
+          },
+          {
+            "rank": 2,
+            "url": "https://healthcare.steris.com/en-au/au/endoscopy-suite",
+            "title": "Endoscopy Suite | STERIS Australia",
+            "content": "STERIS Australia delivers endoscopy suite solutions that combine equipment, technology, and services to support reprocessing, workflow efficiency, and clinical",
+            "score": 0.7961819
+          },
+          {
+            "rank": 3,
+            "url": "https://www.researchandmarkets.com/articles/key-companies-in-endoscope",
+            "title": "Top 10 Endoscopy Equipment Companies to Watch in 2025 and Beyond",
+            "content": "Medtronic is renowned for its cutting-edge minimally invasive platforms, integrating advanced imaging, navigation, and AI-powered analytics. Its wide-reaching endoscopy portfolio addresses both diagnostic and therapeutic needs, serving hospitals, clinics, and ambulatory centers. Medtronic’s commitment to clinical training, value-based care, and regional manufacturing ensures adaptability to shifting regulatory and reimbursement landscapes.\n\n## 9. CONMED Corporation [...] CONMED Corporation specializes in innovative surgical endoscopy equipment, emphasizing devices that enhance clinical workflows and safety in high-volume procedures. Its strength lies in ergonomic instrumentation and cost-efficient solutions, making it a preferred choice for ambulatory surgical centers and hospitals seeking scalable technologies. CONMED’s approach to continuous innovation supports its expanding global market share.\n\n## 10. Smith & Nephew plc [...] Olympus Corporation stands as a global market leader in endoscopy equipment, renowned for its comprehensive range of flexible and rigid endoscopes. The company excels in developing advanced imaging technologies, such as narrow band imaging and high-definition visualization, enhancing early detection and procedural accuracy. Olympus’s robust global distribution and extensive after-sales service reinforce its position as a trusted partner for hospitals and clinics seeking quality and reliability.",
+            "score": 0.562874
+          },
+          {
+            "rank": 4,
+            "url": "https://www.marketsandmarkets.com/Market-Reports/geography/endoscopy-devices-market/Australia",
+            "title": "Australia Endoscopy Equipment Market (2025-2030)",
+            "content": "Australia's endoscopy equipment market is valued at USD 301.1 million in 2025 and will reach USD 417.1 million by 2030. Australia's market is growing at a 6.7%",
+            "score": 0.4600226
+          },
+          {
+            "rank": 5,
+            "url": "https://discovery.patsnap.com/topic/endoscopy",
+            "title": "Top 20 Endoscopy companies - Discovery|PatSnap",
+            "content": "and industrial endoscopy now includes more than 15,000 products. The most recent KARL STORZ developments are in digital documentation systems and comprehensive operating room concepts. As a system supplier, the company combines its expertise in endoscopy with software solutions to achieve integration in the operating room and to support clinical process and resource management. [...] |\n\nPublic Company\n\nSonoscape Medical is a manufacturer of medical equipment. Their products include trolley color dopplers, portable color dopplers, B/W ultrasound, image processors, light sources, gastroenterology, pulmonology, and endoscopic ultrasound.\n\nMore\n\nMedical equipment\n\nDiagnostic system\n\nUltrasound\n\nMedical imaging\n\nEndoscopy\n\nIn vitro\n\nBreast ultrasound\n\nColonoscopy\n\nTelemetry\n\nHospital bed\n\nGeneral surgery\n\nUltrasound device\n\nEndoscope\n\nDoppler fetal monitor\n\nFiberscope [...] Subsidiary Company\n\nSince the company’s founding in 1919, Olympus has been renowned as a precision technology leader, creating innovative opto-digital solutions in healthcare, life science and consumer electronics products. In the healthcare arena, Olympus supports the work of medical professionals by providing advanced, minimally invasive therapeutic and diagnostic technologies to improve the quality of patient care around the globe.\n\nMore\n\nEndoscope\n\nMedical equipment\n\nMedicine\n\nEndoscopy",
+            "score": 0.44116792
+          }
+        ],
+        "raw_response": "Based on the provided search results, there are several notable suppliers and companies providing endoscopy equipment and solutions for hospitals:\n\n* **CR Kennedy:** Serves as the Australian distributor of Fujifilm endoscopy equipment [1].\n* **STERIS Australia:** Delivers endoscopy suite solutions that combine equipment, technology, and services to support workflow efficiency, reprocessing, and clinical needs [2].\n* **Medtronic:** Offers a wide-reaching endoscopy portfolio addressing diagnostic and therapeutic needs with advanced imaging, navigation, and AI-powered analytics [3].\n* **CONMED Corporation:** Specializes in innovative surgical endoscopy equipment, offering ergonomic instrumentation and cost-efficient, scalable technologies [3].\n* **Olympus Corporation:** A global market leader providing a comprehensive range of flexible and rigid endoscopes, advanced imaging technologies (such as narrow band imaging and high-definition visualization), and robust after-sales service [3, 5].\n* **KARL STORZ:** Acts as a system supplier combining expertise in endoscopy with digital documentation systems and software solutions for operating room integration [5].\n* **SonoScape Medical:** Manufactures medical equipment including endoscopy, gastroenterology, pulmonology, and endoscopic ultrasound products [5].",
+        "citations": [
+          {
+            "url": "https://www.anzgita.org/equipment.html",
+            "title": "Equipment, Accessories & Logistics Partners"
+          },
+          {
+            "url": "https://healthcare.steris.com/en-au/au/endoscopy-suite",
+            "title": "Endoscopy Suite | STERIS Australia"
+          },
+          {
+            "url": "https://www.researchandmarkets.com/articles/key-companies-in-endoscope",
+            "title": "Top 10 Endoscopy Equipment Companies to Watch in 2025 and Beyond"
+          },
+          {
+            "url": "https://www.marketsandmarkets.com/Market-Reports/geography/endoscopy-devices-market/Australia",
+            "title": "Australia Endoscopy Equipment Market (2025-2030)"
+          },
+          {
+            "url": "https://discovery.patsnap.com/topic/endoscopy",
+            "title": "Top 20 Endoscopy companies - Discovery|PatSnap"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "CR Kennedy",
+            "Fujifilm",
+            "STERIS Australia",
+            "Medtronic",
+            "CONMED Corporation",
+            "Olympus Corporation",
+            "KARL STORZ",
+            "SonoScape Medical"
+          ]
+        }
       },
       {
         "prompt": "Top healthcare technology distributors in Singapore and Malaysia",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://ensun.io/search/medical-device/malaysia",
+            "title": "Top 72 Medical Device Companies in Malaysia (2026) | ensun",
+            "content": "Medi-Life (M) Sdn Bhd\n\nShah Alam, Malaysia\n\nC\n\n51-100 Employees\n\n2008\n\nKey takeaway\n\nMedi-Life (M) Sdn Bhd is a distributor of advanced medical equipment and devices in Malaysia, specializing in high-quality medical technologies such as ultrasound scanners, x-rays, and surgical instruments.\n\nReference\n\nFind employees\n\nSimilar companies\n\nCore business\n\nMedi-Life (M) Sdn Bhd - Medical Equipment and Devices Distributor [...] Ample Healthcare Sdn Bhd\n\nMalaysia\n\nC\n\n11-50 Employees\n\n2020\n\nKey takeaway\n\nAmple Healthcare Sdn Bhd is a specialized medical device distributor in Malaysia, focusing on wound care, pain management, and ortho, spine, and neuro care products. They offer a variety of multinational medical devices, including those for minimally invasive spine surgery and spinal implants.\n\nReference\n\nFind employees\n\nSimilar companies\n\nCore business\n\nCompany – Ample Healthcare Sdn Bhd [...] 2013\n\nKey takeaway\n\nVital Healthcare Sdn. Bhd. specializes in blood purification technology, offering CE-certified products such as hemodialyzers, tubing sets, and AV fistula needles. With plans to export 80% of its production capacity, the company is dedicated to improving patient health globally.\n\nReference\n\nFind employees\n\nSimilar companies\n\nCore business\n\nOur Facility – VITAL HEALTHCARE\n\nBell Comm Technologies Sdn Bhd's Logo\n\nBell Comm Technologies Sdn Bhd\n\nPetaling Jaya, Malaysia\n\nC",
+            "score": 0.57322514
+          },
+          {
+            "rank": 2,
+            "url": "https://dpseng.com.sg/pharmaceutical-industry/top-10-pharmaceutical-medical-technology-companies-singapore",
+            "title": "Top 10 Pharmaceutical & Medical Technology Companies in Singapore - DPS Education",
+            "content": "DPS Education Logo\n\n# Top 10 Pharmaceutical & Medical Technology Companies\n\nHere is the list of top 10 world’s largest Pharmaceutical & Medical Technology Companies.\n\nLogo for Abbott in Singapore\n\nArea: Diagnostics, medical devices, generic pharmaceuticals and nutritionals. [...] GlaxoSmithKline in Singapore: Click here for a full article about GlaxoSmithKline in Singapore.\n\nLogo for Johnson & Johnson in Singapore\n\nArea: Medical Devices and Pharmaceuticals [...] Novartis in Singapore: Novartis has 4 manufacturing sites across Singapore, as well as commercial operations and its regional headquarters. The company’s investment in Singapore totals more than S$1.6 billion. In total, there are over 1500 employees across the country.\n\nLogo for Pfizer in Singapore\n\nArea: Pharmaceuticals",
+            "score": 0.5717911
+          },
+          {
+            "rank": 3,
+            "url": "https://www.somnotec.net/about-us",
+            "title": "About Us - Somnotec",
+            "content": "At Somnotec, we understand the importance of choosing the right type of equipment for your medical care and therapy. We strive to provide the best products and services possible to complement the different lifestyles that patients have.\n\n#### Our Vision\n\nWe aim to be a key distributor of leading edge medical technologies in Southeast Asia, bringing new and quality treatment possibilities to patients, their families and the medical community.\n\n#### Our Mission Statement [...] ### Industry Accreditation\n\nBy meeting the high standards expected by medical professionals and hospitals, Somnotec has attained the award of Good Distribution Practice for Medical Devices in Singapore Guidelines established by the Singapore Accreditation Council; as well as the award of Good Distribution Practice for Medical Devices to comply with Malaysian medical device regulatory requirements as stipulated in the Medical Device Act 2012 (Act 737). [...] Skip to content\n\nSomnotec Logo Somnotec Logo\n\n# About Us\n\nAbout UsRitchie Chin2026-03-30T19:35:04+08:00\n\nSince the company’s incorporation in 2003, we have grown to serve diverse fields of medicine in addition to expanding our respiratory and home care product lines. Today, Somnotec is a distributor of various leading edge medical devices and technology in South East Asia.",
+            "score": 0.498609
+          },
+          {
+            "rank": 4,
+            "url": "https://ammi.com.my/about-the-industry/about-medtech-in-malaysia",
+            "title": "About MedTech in Malaysia - AMMI",
+            "content": "as an outsourcing destination and global supplier of parts and components for major medical devices and equipment companies. [...] Manufacturers\n Suppliers of raw materials and services to the medical device manufacturing companies;\n Importers and exporters of medical devices.\n\nMalaysia is an ideal location for investments in the medical devices sector due to its strong Intellectual Property (IP) protection regime and strategic geographic location. Other factors include [...] To know more about medical device industry in Malaysia, AMMI has published the Medical Device Industry Outlook Report 2016 for sale. To purchase,click here.",
+            "score": 0.38456595
+          },
+          {
+            "rank": 5,
+            "url": "https://devicetechnologies.asia",
+            "title": "Medical Devices & Supplies - Device Technologies Asia",
+            "content": "### COUNTRY\n\n Hong Kong\n Indonesia\n Malaysia\n Philippines\n Singapore\n Thailand\n Vietnam\n\n### HELP & SUPPORT\n\n Contact Us\n Policy Library\n New Account Application Forms [...] ### OUR Vision\n\nFrom the consult room to the operating theatre, the Device Technologies vision is to enable outcomes for patients by providing them with access to the best medical technology available worldwide. By connecting healthcare professionals with state of the art medical technologies and supplies on the market, Device Technologies is helping them be the best they can be.\n\nLEARN MORE\n\n## WHO WE ARE\n\nOUR LEADERS\n\nOUR LEADERS\n\nOur History\n\nOur History\n\nCareers\n\nCareers [...] Careers\n\nCareers\n\n### OUR TOUCHPOINTs\n\nThe Device Technologies global portfolio reaches virtually every division of the hospital and healthcare sector. We supply medical professionals and hospitals with the technologies and supplies they require to achieve the best possible outcome for their patients, spanning across the vast majority of departments.\n\n## Footer\n\n### ABOUT US\n\n Company Overview\n Meet Our Regional Management\n Meet Our Senior Management\n Careers\n News\n Device Technologies Group",
+            "score": 0.33954337
+          }
+        ],
+        "raw_response": "Based on the provided search results, here are healthcare technology distributors and companies operating in Singapore and Malaysia:\n\n**Malaysia**\n* **Medi-Life (M) Sdn Bhd:** A distributor specializing in advanced medical equipment and technologies such as ultrasound scanners, x-rays, and surgical instruments [1].\n* **Ample Healthcare Sdn Bhd:** A specialized medical device distributor focusing on products for wound care, pain management, ortho, spine, and neuro care, including spinal implants [1].\n* **Vital Healthcare Sdn. Bhd.:** Specializes in blood purification technology and offers CE-certified products like hemodialyzers, tubing sets, and AV fistula needles [1].\n\n**Singapore and Southeast Asia**\n* **Somnotec:** A distributor of leading-edge medical devices and technology in Southeast Asia, with operations serving diverse fields of medicine as well as respiratory and home care product lines [3]. They hold accreditations for the Good Distribution Practice for Medical Devices in both Singapore and Malaysia [3].\n* **Device Technologies Asia:** Supplies state-of-the-art medical technologies and supplies across various hospital and healthcare sectors in countries including Singapore and Malaysia [5].\n* **Major Global Companies with Presence in Singapore:** Companies such as Abbott and Johnson & Johnson operate in Singapore, covering areas that include medical devices and diagnostics [2].",
+        "citations": [
+          {
+            "url": "https://ensun.io/search/medical-device/malaysia",
+            "title": "Top 72 Medical Device Companies in Malaysia (2026) | ensun"
+          },
+          {
+            "url": "https://dpseng.com.sg/pharmaceutical-industry/top-10-pharmaceutical-medical-technology-companies-singapore",
+            "title": "Top 10 Pharmaceutical & Medical Technology Companies in Singapore - DPS Education"
+          },
+          {
+            "url": "https://www.somnotec.net/about-us",
+            "title": "About Us - Somnotec"
+          },
+          {
+            "url": "https://ammi.com.my/about-the-industry/about-medtech-in-malaysia",
+            "title": "About MedTech in Malaysia - AMMI"
+          },
+          {
+            "url": "https://devicetechnologies.asia",
+            "title": "Medical Devices & Supplies - Device Technologies Asia"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Medi-Life (M) Sdn Bhd",
+            "Ample Healthcare Sdn Bhd",
+            "Vital Healthcare Sdn. Bhd.",
+            "Somnotec",
+            "Device Technologies Asia",
+            "Abbott",
+            "Johnson & Johnson"
+          ]
+        }
       },
       {
         "prompt": "Which medical device companies operate in both Australia and New Zealand?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.greenlight.guru/blog/australia-new-zealand-markets",
+            "title": "Australia & New Zealand Medical Device Regulations [Overview]",
+            "content": "# Entering the Australia & New Zealand Markets: What Medical Device Manufacturers Need to Know\n\nEntering the Australia & New Zealand Markets What Medical Device Manufacturers Need to Know\n\nEntering the Australia & New Zealand Markets What Medical Device Manufacturers Need to Know\n\nAustralia and New Zealand are often target countries for MedTech companies looking to expand into a new market. [...] One point to remember is that if your company does not have a physical establishment in Australia or New Zealand, you will have to appoint a local authorized representative. This is a requirement in both countries, so if you want to market your device in both Australia and New Zealand, you will need an authorized representative in each country. [...] ## Etienne Nichols\n\nEtienne Nichols is the Head of Industry Insights & Education at Greenlight Guru. As a Mechanical Engineer and Medical Device Guru, he specializes in simplifying complex ideas, teaching system integration, and connecting industry leaders. While hosting the Global Medical Device Podcast, Etienne has led over 200...\n\n## Related Posts\n\n## QMSR Explained: What FDA QSR & ISO 13485 Harmonization Means for Medical Device Companies",
+            "score": 0.8421645938914383
+          },
+          {
+            "rank": 2,
+            "url": "https://app.biopharmiq.com/company-lists-all/list-of-medical-device-companies-in-australia",
+            "title": "List of Medical Device Companies in Australia - 14",
+            "content": "OncoSil Medical's lead product, OncoSil™, is a brachytherapy device which has received CE Marking approval, providing marketing authorisation in both the EU and the UK. The device is approved for use in New Zealand, Hong Kong, Switzerland, Turkey and Israel. OncoSil™ is designated as a breakthrough device in both Europe and the United States¹.\nWe believe in our technology and its ability to have a truly positive impact in Oncology. [...] providing marketing authorisation in both the EU and the UK. The device is approved for use in New Zealand, Hong Kong, Switzerland, Turkey and Israel. OncoSil™ is designated as a breakthrough device in both Europe and the United States¹. We believe in our technology and its ability to have a truly positive impact in Oncology. OncoSil™ technology is not available in all geographies. If you are a healthcare professional, please refer to our website for information about our technology and [...] | Invion Invion  Brisbane, Australia | Invion is a clinical-stage life-sciences company that is leading the global clinical development of the Photosoft™ technology for the treatment of cancers. Invion has been appointed exclusive distributor and licensee in Australia and New Zealand of Photosoft™. The appointment has been made by technology licensor, The Cho Group, a Hong Kong based group that has funded and successfully commercialised a number of unique and advanced technologies. Via an R&D",
+            "score": 0.7853830358467715
+          },
+          {
+            "rank": 3,
+            "url": "https://medenvoyglobal.com/blog/medical-device-regulatory-frameworks-new-zealand-vs-australia",
+            "title": "Medical Device Regulatory Frameworks: New Zealand vs. Australia - MedEnvoy",
+            "content": "Skip to content\n\nSearch MedEnvoy   Resources & News   About Us   Talk to an Expert\n\nResources & News   About Us \n\nTalk to an Expert\n\nLearn how Australia and New Zealand manage their medical device frameworks regarding regulatory compliance.\n\n# Medical Device Regulatory Frameworks: New Zealand vs. Australia\n\n14 mins\n\nAustralian TGA Sponsor New Zealand Sponsor\n\nHome » Resources & News » Medical Device Regulatory Frameworks: New Zealand vs. Australia [...] ## Comparing Australian and New Zealand Medical Device Frameworks\n\nIn this article, we provide an overview of the similarities and differences in the regulatory frameworks for medical devices in New Zealand and Australia.\n\n### Regulatory Agencies, Instruments, Registrations and Notifications [...] Despite efforts to create a single regulator (the Australia New Zealand Therapeutic Products Agency (ANZTPA)) within the Australian and New Zealand markets, medical device frameworks, both Australia and New Zealand maintain their own therapeutic product regulatory agencies, the Therapeutic Goods Administration (TGA) and Medsafe, respectively.\n\nThe primary regulatory frameworks established in each market are outlined below:",
+            "score": 0.784980618413376
+          },
+          {
+            "rank": 4,
+            "url": "https://www.bd.com/en-anz",
+            "title": "Advancing Healthcare Solutions | BD Australia and New Zealand",
+            "content": "NEWS\n\nMMS_BD_Alaris_System_Nurse_and_child_bedside\n\nNews\n\nOur Portfolio\n\nSupporting you across healthcare settings\n\n## MADE FOR TODAY, TOMORROW AND FOR WHAT’S NEEDED NEXT.\n\nhomepage-goal.jpg\n\nCareers\n\nGrow your career at BD\n\nBD is one of the largest global medical technology companies in the world and is advancing the world of health™ by improving medical discovery, diagnostics and the delivery of care. [...] Icon to close the modal\n\n## You are now leaving bd.com – Australia & New Zealand\n\nYou are now leaving bd.com – Australia & New Zealand. [...] Note: Some images displayed may be indicative only.",
+            "score": 0.7730110004322234
+          },
+          {
+            "rank": 5,
+            "url": "https://sabremedical.com.au",
+            "title": "HOME - Sabre Medical | Medical Device Manufacturing & Packaging in Australia",
+            "content": "WATCH OUR VIDEO\n\n, equipped with advanced technology. Including a European thermoforming machine and the Asia-Pacific’s only Rapid Small Run Tray Forming System.  \n Backed by a skilled team of engineers, designers, quality experts, and logistics professionals, we provide comprehensive support to help you succeed in both Australian and New Zealand markets.",
+            "score": 0.6750563017848796
+          }
+        ],
+        "raw_response": "Based on the provided search results, the following companies operate in or provide support for both the Australian and New Zealand markets:\n\n* **Invion:** Operates as the exclusive distributor and licensee in Australia and New Zealand for Photosoft™ technology [2].\n* **Sabre Medical:** Provides support to help succeed in both the Australian and New Zealand markets [5]. \n* **BD (Becton, Dickinson and Company):** Operates as a global medical technology company with an established presence in Australia and New Zealand (BD Australia and New Zealand) [4].\n\nAdditionally, **OncoSil Medical** has a product (OncoSil™) approved for use in New Zealand [2], though the provided text specifically highlights its Australian location/context in relation to other companies on the list, but does not explicitly state it operates physical establishments in both countries.",
+        "citations": [
+          {
+            "url": "https://www.greenlight.guru/blog/australia-new-zealand-markets",
+            "title": "Australia & New Zealand Medical Device Regulations [Overview]"
+          },
+          {
+            "url": "https://app.biopharmiq.com/company-lists-all/list-of-medical-device-companies-in-australia",
+            "title": "List of Medical Device Companies in Australia - 14"
+          },
+          {
+            "url": "https://medenvoyglobal.com/blog/medical-device-regulatory-frameworks-new-zealand-vs-australia",
+            "title": "Medical Device Regulatory Frameworks: New Zealand vs. Australia - MedEnvoy"
+          },
+          {
+            "url": "https://www.bd.com/en-anz",
+            "title": "Advancing Healthcare Solutions | BD Australia and New Zealand"
+          },
+          {
+            "url": "https://sabremedical.com.au",
+            "title": "HOME - Sabre Medical | Medical Device Manufacturing & Packaging in Australia"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Invion",
+            "Sabre Medical",
+            "BD (Becton, Dickinson and Company)",
+            "OncoSil Medical"
+          ]
+        }
       },
       {
         "prompt": "Who distributes regenerative medicine and biologics products in New Zealand hospitals?",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "timestamp": "2026-09-01T03:59:54.917Z",
+        "model": "gemini-3.5-flash-lite",
+        "tavily_results": [
+          {
+            "rank": 1,
+            "url": "https://www.isctglobal.org/telegrafthub/blogs/lauren-reville/2022/08/26/recent-initiatives-in-the-australia-and-new-zealan",
+            "title": "Recent Initiatives in the Australia and New Zealand region",
+            "content": "Royal Prince Alfred Hospital Institutional. Institute of Medical Research Wellington, New Zealand. Biologics & Vaccines, Cell & Gene Therapies",
+            "score": 0.958134111868676
+          },
+          {
+            "rank": 2,
+            "url": "https://accredited.factglobal.org/country/new-zealand",
+            "title": "Countries – New Zealand - FACT Accredited Institutions",
+            "content": "New Zealand Found 1 Result(s) Auckland City and Starship Children's Hospitals Stem Cell Transplant Programme Organization Director Name: Richard Doocey, MD.",
+            "score": 0.9551908186349397
+          },
+          {
+            "rank": 3,
+            "url": "https://onlinelibrary.wiley.com/doi/10.1002/der2.244",
+            "title": "Regulatory Aspects of Regenerative Medicine in the United ...",
+            "content": "it involves oversight by the Ministry of Health and its regulatory arm, the New Zealand Medicines and Medical Devices Safety Authority (MEDSAFE",
+            "score": 0.9173576169124571
+          },
+          {
+            "rank": 4,
+            "url": "https://ir.avitamedical.com/news-releases/news-release-details/avita-medical-announces-exclusive-distribution-agreement-expand",
+            "title": "AVITA Medical Announces Exclusive Distribution Agreement ...",
+            "content": "Revolution Surgical will serve as the exclusive distributor of the RECELL® product platform, including RECELL GO® in Australia and New Zealand.",
+            "score": 0.9159330484355794
+          },
+          {
+            "rank": 5,
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517",
+            "title": "2026 Watch List: Regenerative Medicine - NCBI Bookshelf",
+            "content": "Sandra Holdsworth indicated they have received payments for advisory or consultancy work, speaking engagements, or travel or other expenses from the Transplant AI Initiative and the University Health Network (Bhat Labs), as well as honorariums from the Centre of Digital Health Evaluations, the Minister’s Patient and Family Advisory Council, and from researchers at various hospitals. They also disclosed involvement in the 2025 Watch List as an Advisory Group member. [...] Early in the process, the Advisory Group agreed that the Watch List should focus on broader technology platforms rather than individual products. Technology platforms refer to overarching therapeutic approaches, modalities, or methods that can be used to develop many different types of products. This focus reflects both the broad range of emerging regenerative medicine products and the rapid pace at which the field is advancing. [...] Conducting rigorous preclinical testing to evaluate the safety, stability, and unique risks associated with new regenerative medicine products.\n\nCollecting long-term follow-up data in clinical trials to identify delayed or unforeseen risks and to build more robust safety data.121\n\nStrengthening stringent quality control measures across production, storage, and transport, while ensuring full compliance with good manufacturing practices to ensure product consistency, purity, and safety.129",
+            "score": 0.8526059276270698
+          }
+        ],
+        "raw_response": "Based on the provided search results, Revolution Surgical serves as the exclusive distributor of the RECELL® product platform (including RECELL GO®), which is part of the regenerative medicine and biologics products in Australia and New Zealand [4].",
+        "citations": [
+          {
+            "url": "https://www.isctglobal.org/telegrafthub/blogs/lauren-reville/2022/08/26/recent-initiatives-in-the-australia-and-new-zealan",
+            "title": "Recent Initiatives in the Australia and New Zealand region"
+          },
+          {
+            "url": "https://accredited.factglobal.org/country/new-zealand",
+            "title": "Countries – New Zealand - FACT Accredited Institutions"
+          },
+          {
+            "url": "https://onlinelibrary.wiley.com/doi/10.1002/der2.244",
+            "title": "Regulatory Aspects of Regenerative Medicine in the United ..."
+          },
+          {
+            "url": "https://ir.avitamedical.com/news-releases/news-release-details/avita-medical-announces-exclusive-distribution-agreement-expand",
+            "title": "AVITA Medical Announces Exclusive Distribution Agreement ..."
+          },
+          {
+            "url": "https://www.ncbi.nlm.nih.gov/books/NBK622517",
+            "title": "2026 Watch List: Regenerative Medicine - NCBI Bookshelf"
+          }
+        ],
+        "analysis": {
+          "brands_mentioned": [
+            {
+              "code": "EMT",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "LHC",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "code": "TMD",
+              "mentioned": false,
+              "position": "not_mentioned",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "competitors_mentioned": [
+            "Revolution Surgical"
+          ]
+        }
       }
     ],
     "page_checks": [
@@ -273,43 +1869,106 @@
         "code": "EMT",
         "type": "homepage",
         "url": "https://www.ebosmedtech.com/",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "question": "What is EBOS MedTech and what companies does it own?",
+        "domain_cited": false,
+        "exact_page_cited": false,
+        "matched_results": [],
+        "total_results": 5,
+        "timestamp": "2026-09-01T03:59:54.917Z"
       },
       {
         "code": "EMT",
         "type": "article",
         "url": "https://www.ebosmedtech.com/our-companies/",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "question": "What companies make up the EBOS MedTech portfolio?",
+        "domain_cited": true,
+        "exact_page_cited": true,
+        "matched_results": [
+          {
+            "rank": 1,
+            "url": "https://www.ebosmedtech.com/our-companies",
+            "title": "Our Companies | EBOS MedTech, United Expertise in Medical Technology | EBOS Medical Technology",
+            "content": "EBOS Medical Technology\n\nAbout us   Our companies   Careers   Contact\n\nEBOS Medical Technology\n\nEBOS Medical Technology\n\nOur companies\n\nWe’re a connected portfolio of medical technology companies improving lives across Australia, New Zealand, USA and SE Asia + Hong Kong. We’re united by a shared value, Connect, and a drive to deliver better outcomes through expertise and partnership [...] EBOS MedTech brings together deep expertise from across its companies, sharing knowledge and strengths to achieve more together than any one company could alone.\n\nLifeHealthcare\n\nHow do we support better patient outcomes? By partnering with clinicians across ANZ to deliver advanced medical technologies.\n\n Learn more\n\nTransmedic\n\nHow do you bring leading innovation to Asia? By connecting healthcare professionals with medical technology solutions.\n\n Learn more\n\nAustralian Biotechnologies [...] How do we transform the gift of donation? By manufacturing allograft solutions across ANZ.\n\n Learn more\n\nCryomed\n\nWhat do clinics deliver confidence and care? By providing innovative aesthetics technologies that empower practitioners.\n\n Learn more\n\nOrigin Biologics\n\nHow do we transform the gift of donation in the US? By manufacturing allograft solutions.\n\n Learn More\n\nYou are leaving our site\n\nStay on this page Confirm",
+            "score": 0.912909499697565
+          }
+        ],
+        "total_results": 5,
+        "timestamp": "2026-09-01T03:59:54.917Z"
       },
       {
         "code": "LHC",
         "type": "homepage",
         "url": "https://www.lifehealthcare.com.au/",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "question": "What does LifeHealthcare distribute and who owns LifeHealthcare?",
+        "domain_cited": true,
+        "exact_page_cited": false,
+        "matched_results": [
+          {
+            "rank": 1,
+            "url": "https://www.lifehealthcare.com.au/about-us",
+            "title": "About us | LifeHealthcare",
+            "content": "We not only source and distribute surgical implants but are focused on biologics, surgical instruments, consumables, enabling technology, and capital equipment.",
+            "score": 0.8683448278864238
+          }
+        ],
+        "total_results": 5,
+        "timestamp": "2026-09-01T03:59:54.917Z"
       },
       {
         "code": "LHC",
         "type": "article",
         "url": "https://www.lifehealthcare.com.au/spine/",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "question": "What spine surgery products and brands does LifeHealthcare distribute in Australia and New Zealand?",
+        "domain_cited": true,
+        "exact_page_cited": false,
+        "matched_results": [
+          {
+            "rank": 1,
+            "url": "https://www.lifehealthcare.com.au/news/vb-spine-partnership",
+            "title": "VB Spine parntership | LifeHealthcare",
+            "content": "Life Healthcare\n\nLife Healthcare\n\nBack to news \n\nLifeHealthcare and VB Spine: A new era for spinal surgery in ANZ\n\n#### 1 August 2025\n\nBrands\n\nSupplier partners\n\nTeam\n\n  \n\n##### Sydney, Australia , 1st August 2025 [...] LifeHealthcare has established over the last nearly 2 decades of support in the Australian and New Zealand market its ability to distribute and support clinicans with expertise in spinal implants. VB Spine’s exclusive focus on spinal implants, positions the partnership to deliver meaningful innovations and enhanced outcomes for patients. [...] It is understood under the new structure, VB Spine and Stryker will continue to work in close partnership, with VB Spine retaining exclusive access to Stryker Smart Guidance Enabling Technology Suite.\n\nImportantly, LifeHealthcare will remain the exclusive distributor for VB Spine products across Australia and New Zealand, ensuring uninterrupted access and clinical support for surgeons and hospitals.\n\nKey transition details include:",
+            "score": 0.9380941549946504
+          },
+          {
+            "rank": 4,
+            "url": "https://www.lifehealthcare.com.au",
+            "title": "LifeHealthcare: LHC Homepage",
+            "content": "The Extremities division is focused on surgical implants, devices and biologics specifically for upper and lower limb orthopaedic surgery. #### Orthopaedics: Regenerative Medicine\n\nThe regen offering from LifeHealthcare is focused on recovery with brands like Exogen and Durolane. #### Neurovascular Intervention (NVI)\n\nA division focused on interventional neurovascular surgery with minimally invasive surgical products from Microvention. #### Plastics & Reconstructive Surgery [...] LifeHealthcare is focused on providing access to world-leading medical devices and technology for Australian and New Zealand patients, whilst ensuring long-term economic sustainability for our healthcare system. LifeHealthcare has a broad portfolio of products in various channels that includes Spine, Orthopaedics (Recon, Extremities and Regen), Enabling Technology, Plastics & Reconstructive Surgery, Neurovascular Intervention, Abdo-Pelvic and Neurosurgery, OR capital and scope repair, to name a [...] ## Our therapeutic areas\n\nLifeHealthcare, through our organic growth, and the addition of new organisations is continuing to grow our therapeutic offering of products. Click below to learn more about these areas, and if you are an HCP please register to access individual product information and events available.\n\n#### Spine",
+            "score": 0.9238203871442303
+          }
+        ],
+        "total_results": 5,
+        "timestamp": "2026-09-01T03:59:54.917Z"
       },
       {
         "code": "TMD",
         "type": "homepage",
         "url": "https://www.transmedicgroup.com/",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "question": "What does Transmedic Group do and where does it operate?",
+        "domain_cited": false,
+        "exact_page_cited": false,
+        "matched_results": [],
+        "total_results": 5,
+        "timestamp": "2026-09-01T03:59:54.917Z"
       },
       {
         "code": "TMD",
         "type": "article",
         "url": "https://www.transmedicgroup.com/our-therapeutic-areas/",
-        "timestamp": "2026-09-01T00:41:24.886Z",
-        "error": "404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API."
+        "question": "What therapeutic areas and medical specialties does Transmedic Group cover in Southeast Asia?",
+        "domain_cited": true,
+        "exact_page_cited": false,
+        "matched_results": [
+          {
+            "rank": 4,
+            "url": "https://www.transmedicgroup.com/our-brands",
+            "title": "Our Brands | Transmedic",
+            "content": "Our Brands · Blood Therapy · Cardiovascular · Hospital Infrastructure · In-Vitro Diagnostics · Neuro · Oncology · Ophthalmology",
+            "score": 0.53181785
+          }
+        ],
+        "total_results": 5,
+        "timestamp": "2026-09-01T03:59:54.917Z"
       }
     ],
     "aborted": false
