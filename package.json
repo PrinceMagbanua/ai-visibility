@@ -5,7 +5,8 @@
   "description": "Weekly tracker for AI-answer visibility (Gemini) of EBOS MedTech, LifeHealthcare and Transmedic",
   "type": "commonjs",
   "scripts": {
-    "check": "node src/run.js"
+    "check": "node src/run.js",
+    "diagnose": "node src/diagnose-quota.js"
   },
   "dependencies": {
     "@google/genai": "^2.20.0"
