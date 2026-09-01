@@ -153,9 +153,16 @@ async function checkPageCitation(page) {
 
 // Errors that will fail identically on every subsequent call — no point
 // burning through the rest of the prompts/pages once one of these hits.
+// This only fires after withRateLimit has already exhausted its retries, so
+// a 429 here means the quota is genuinely exhausted, not a transient blip.
 function isFatalAccountError(err) {
   const message = err?.message || "";
-  return err?.status === 401 || err?.status === 403 || /API key not valid|PERMISSION_DENIED/i.test(message);
+  return (
+    err?.status === 401 ||
+    err?.status === 403 ||
+    err?.status === 429 ||
+    /API key not valid|PERMISSION_DENIED|RESOURCE_EXHAUSTED|exceeded your current quota/i.test(message)
+  );
 }
 
 async function main() {
