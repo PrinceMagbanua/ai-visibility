@@ -77,7 +77,7 @@ function buildPageTrend(files) {
           date,
           exact_page_cited: !!check.exact_page_cited,
           domain_cited: !!check.domain_cited,
-          total_citations: check.total_citations ?? null,
+          total_results: check.total_results ?? null,
         });
       }
     }

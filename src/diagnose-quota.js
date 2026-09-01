@@ -1,5 +1,9 @@
 const { GoogleGenAI } = require("@google/genai");
 
+// Note: run.js no longer uses Gemini's built-in Google Search grounding
+// (it's billing-gated on the free tier — confirmed by an earlier version of
+// this script). Tavily now handles search instead, so this only checks
+// plain Gemini text-generation availability across candidate models.
 const client = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 // A spread of "Text-out models" free-tier candidates, cheapest/highest-quota
@@ -14,24 +18,6 @@ const MODELS_TO_TEST = [
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// Mirrors the exact call shape run.js uses in getAnswer() — this is the
-// thing that actually matters, since the real script always attaches the
-// search tool. A model can pass a bare text call and still fail here if
-// Google Search grounding has its own separate quota/eligibility gate.
-async function testGrounded(model) {
-  try {
-    const response = await client.models.generateContent({
-      model,
-      contents: "What is the capital of France? Use search to confirm.",
-      config: { tools: [{ googleSearch: {} }] },
-    });
-    const usedSearch = !!response.candidates?.[0]?.groundingMetadata;
-    return { model, ok: true, text: response.text?.trim()?.slice(0, 60), usedSearch };
-  } catch (err) {
-    return { model, ok: false, error: err.message };
-  }
-}
-
 async function testPlain(model) {
   try {
     const response = await client.models.generateContent({
@@ -45,51 +31,30 @@ async function testPlain(model) {
 }
 
 async function main() {
-  console.log(`Testing ${MODELS_TO_TEST.length} model(s) against this API key...\n`);
-  const plainResults = [];
-  const groundedResults = [];
+  console.log(`Testing ${MODELS_TO_TEST.length} model(s) against this Gemini API key...\n`);
+  const results = [];
 
-  console.log("--- Plain text calls (no search tool) ---");
   for (const model of MODELS_TO_TEST) {
     process.stdout.write(`  ${model} ... `);
     const result = await testPlain(model);
-    plainResults.push(result);
+    results.push(result);
     console.log(result.ok ? `OK (replied: "${result.text}")` : `FAILED: ${result.error}`);
     await sleep(3000);
   }
 
-  console.log("\n--- Grounded calls WITH Google Search tool (matches run.js) ---");
-  for (const model of MODELS_TO_TEST) {
-    process.stdout.write(`  ${model} ... `);
-    const result = await testGrounded(model);
-    groundedResults.push(result);
-    console.log(
-      result.ok
-        ? `OK (grounding metadata present: ${result.usedSearch}, replied: "${result.text}")`
-        : `FAILED: ${result.error}`,
-    );
-    await sleep(3000);
-  }
-
   console.log("\n=== Summary ===");
-  const plainWorking = plainResults.filter((r) => r.ok).map((r) => r.model);
-  const groundedWorking = groundedResults.filter((r) => r.ok).map((r) => r.model);
-  console.log(`Plain text working: ${plainWorking.join(", ") || "none"}`);
-  console.log(`Grounded (search tool) working: ${groundedWorking.join(", ") || "none"}`);
+  const working = results.filter((r) => r.ok);
+  const failing = results.filter((r) => !r.ok);
+  console.log(`Working: ${working.map((r) => r.model).join(", ") || "none"}`);
+  console.log(`Failing: ${failing.map((r) => r.model).join(", ") || "none"}`);
 
-  if (groundedWorking.length === 0 && plainWorking.length > 0) {
+  if (working.length === 0) {
     console.log(
-      "\nPlain text works but grounded search calls don't for every model tested — " +
-        "this points to Google Search grounding specifically being unavailable/quota-gated " +
-        "on this key, separate from the model's own text-generation quota.",
-    );
-  } else if (groundedWorking.length === 0) {
-    console.log(
-      "\nNothing worked at all, plain or grounded — this points to an account/project-level " +
-        "issue (billing not linked, API not enabled, or a key-wide block).",
+      "\nNo tested model worked at all — this points to an account/project-level issue " +
+        "(billing not linked, API not enabled, or a key-wide block), not a single model's quota.",
     );
   } else {
-    console.log(`\nUse GEMINI_MODEL=${groundedWorking[0]} — confirmed working with search grounding right now.`);
+    console.log(`\nUse GEMINI_MODEL=${working[0].model} — it's confirmed working right now.`);
   }
 }
 

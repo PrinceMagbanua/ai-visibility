@@ -24,6 +24,8 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          TAVILY_MAX_RESULTS: ${{ vars.TAVILY_MAX_RESULTS }}
           API_CALL_DELAY_MS: ${{ vars.API_CALL_DELAY_MS }}
 
       - run: node src/build-dashboard.js

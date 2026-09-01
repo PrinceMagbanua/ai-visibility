@@ -1,37 +1,55 @@
 # EBOS AI Visibility Tracker
 
-A minimal DIY tracker for how EBOS MedTech, LifeHealthcare and Transmedic show up in
-Gemini's answers to realistic buyer/procurement prompts. Runs weekly via GitHub Actions,
-commits results back into `results/` as dated JSON files so history lives in git.
+A minimal DIY tracker for how EBOS MedTech, LifeHealthcare and Transmedic show up
+in AI-generated answers and AI-agent search results for realistic buyer/procurement
+prompts. Runs weekly via GitHub Actions, commits results back into `results/` as
+dated JSON files so history lives in git.
 
-Uses Google's **Gemini API free tier** (no billing account needed) — genuinely
-free on an ongoing basis, not a one-time trial credit.
+Uses **two free-tier providers together**, after discovering Gemini's own
+built-in Google Search grounding is billing-gated on the free tier (plain
+text generation isn't — only the search-tool feature is):
+
+- **Tavily** (`@tavily/core`) does the actual web search — it has its own
+  free tier, and is itself a real retrieval backend used by many AI
+  agents/RAG products, so tracking raw presence there is a legitimate signal
+  in its own right.
+- **Gemini** (`@google/genai`, free tier, plain text calls only — no search
+  tool) writes a natural-language answer using Tavily's search results as
+  context, and separately analyzes that answer for brand mentions.
 
 ## What it does
 
 **Brand-visibility check** — for each prompt in `config/prompts.json`:
-1. Asks Gemini (with Google Search grounding enabled) the prompt, as a real user would.
-2. Asks Gemini a second time to analyze that answer: is each tracked brand
-   (`config/brands.json`) mentioned, roughly where, what sentiment, and what
-   other companies show up.
+1. Searches Tavily for the prompt text — records the raw ranked results
+   (`tavily_results`: url, title, score, rank). This is the "does this show
+   up in AI-agent search at all" signal, independent of any LLM.
+2. Feeds those search results to Gemini as context and asks it to answer the
+   prompt, citing sources by URL — reproducing "AI searches the web and
+   answers" without depending on Gemini's own (billing-gated) grounding.
+3. Asks Gemini a second time to analyze that generated answer: is each
+   tracked brand (`config/brands.json`) mentioned, roughly where, what
+   sentiment, and what other companies show up.
 
 **Page-citation check** — for each entry in `config/pages.json` (a homepage +
-one article/product page per brand):
-1. Asks Gemini the page's associated search-style question (with search grounding).
-2. Checks whether that specific tracked URL (or its domain) shows up among
-   the citations returned — a direct signal for whether a given page,
-   including any JSON-LD on it, is actually surfacing in AI answers.
+one article/product page per brand): searches Tavily for the page's
+associated question and checks whether that specific tracked URL (or its
+domain) shows up in the raw ranked results. Pure Tavily, no LLM involved —
+a direct "does this specific page rank for this query" signal, useful for
+checking JSON-LD/SEO impact on a specific page.
 
 Both checks write into a single combined `results/<date>.json` per run.
 
 ## Setup
 
 1. `npm install`
-2. Get a free API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
-   — sign in with a Google account, accept the terms, and it generates a key
-   with no payment method required for the free tier.
-3. Add it as `GEMINI_API_KEY` in this repo's GitHub Actions secrets
-   (Settings → Secrets and variables → Actions → New repository secret).
+2. Get a free Tavily API key at [tavily.com](https://tavily.com) (starts
+   with `tvly-`) and add it as `TAVILY_API_KEY` in this repo's GitHub
+   Actions secrets (Settings → Secrets and variables → Actions → New
+   repository secret).
+3. Get a free Gemini API key at
+   [aistudio.google.com/apikey](https://aistudio.google.com/apikey) — sign
+   in with a Google account, accept the terms, no payment method required
+   for the free tier — and add it as `GEMINI_API_KEY` the same way.
 4. The workflow in `.github/workflows/weekly-visibility-check.yml` runs every
    Monday. Trigger it manually any time via the Actions tab ("Run workflow").
 
@@ -55,20 +73,22 @@ model names/quotas often — re-check that dashboard (or run
 a capacity error means something else, and update the `GEMINI_MODEL` list
 if a model gets retired.
 
-The script spaces out calls (default 5 seconds between requests) via
+The script spaces out Gemini calls (default 5 seconds between requests) via
 `API_CALL_DELAY_MS`. It does **not** retry-with-backoff on auth or quota
 errors — a 401/403 immediately aborts the entire run (and fails the GitHub
 Actions job); a 429 first tries the next candidate model, and only aborts
 once the whole list is exhausted, rather than burning time retrying every
-remaining prompt against a quota that isn't going to recover mid-run. If
-you're hitting daily quota
-limits, trim `config/prompts.json` — each prompt costs 2 API calls, each
-tracked page costs 1.
+remaining prompt against a quota that isn't going to recover mid-run.
+
+Per run: each prompt costs 1 Tavily search + 2 Gemini calls (answer +
+analysis); each tracked page costs 1 Tavily search only. `TAVILY_MAX_RESULTS`
+(default 5) controls how many search results are pulled per query — trim it
+or `config/prompts.json` if you're hitting Tavily's free-tier credit limit.
 
 To run locally:
 
 ```
-GEMINI_API_KEY=... npm run check
+GEMINI_API_KEY=... TAVILY_API_KEY=... npm run check
 ```
 
 ## Editing what's tracked
@@ -90,6 +110,7 @@ Each `results/<date>.json` looks like:
     {
       "prompt": "...",
       "model": "gemini-3.5-flash-lite",
+      "tavily_results": [{ "rank": 1, "url": "...", "title": "...", "score": 0.87 }],
       "raw_response": "...",
       "citations": [{ "url": "...", "title": "..." }],
       "analysis": {
@@ -108,16 +129,19 @@ Each `results/<date>.json` looks like:
       "question": "What spine surgery products and brands does LifeHealthcare distribute...",
       "domain_cited": true,
       "exact_page_cited": false,
-      "matched_citations": [{ "url": "...", "title": "..." }],
-      "total_citations": 6
+      "matched_results": [{ "rank": 2, "url": "...", "title": "...", "score": 0.71 }],
+      "total_results": 5
     }
   ]
 }
 ```
 
-`exact_page_cited` is the strict signal (that specific URL was cited);
-`domain_cited` is looser (the site was cited, maybe a different page).
-Compare a tracked page's `exact_page_cited` rate before vs. after a change
+`tavily_results` (prompts) / `matched_results` (page checks) are the raw
+Tavily search-ranking signal — independent of Gemini entirely.
+`exact_page_cited` is the strict signal (that specific URL showed up in
+Tavily's results); `domain_cited` is looser (the site showed up, maybe a
+different page). Compare a tracked page's `exact_page_cited` rate before vs.
+after a change
 (e.g. a JSON-LD deployment) by diffing across dated files.
 
 ## Dashboard (graphs, tables, history)
@@ -144,5 +168,7 @@ node src/build-dashboard.js
 
 ## Known gaps vs. a paid tool
 
-- Single AI engine (Gemini only) — no ChatGPT/Claude/Perplexity coverage.
+- Tavily's search results feed Gemini's answer, but Gemini isn't the same
+  thing as ChatGPT/Perplexity/Claude actually browsing the web themselves —
+  it's a reasonable proxy, not a literal "what does ChatGPT say" check.
 - No crawler-log or GA4-referral tracking (separate, manual check).
