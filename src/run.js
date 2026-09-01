@@ -27,7 +27,8 @@ async function withRateLimit(fn) {
       const isRateLimit = err?.status === 429 || /RESOURCE_EXHAUSTED|rate limit|quota/i.test(message);
       if (!isRateLimit || attempt === maxAttempts) throw err;
       const backoff = CALL_DELAY_MS * 2 ** attempt;
-      console.warn(`Rate limited (attempt ${attempt}/${maxAttempts}), waiting ${backoff}ms...`);
+      console.warn(`Rate limited (attempt ${attempt}/${maxAttempts}): ${message}`);
+      console.warn(`Waiting ${backoff}ms before retry...`);
       await sleep(backoff);
     }
   }
