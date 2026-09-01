@@ -35,8 +35,15 @@ Both checks write into a single combined `results/<date>.json` per run.
 4. The workflow in `.github/workflows/weekly-visibility-check.yml` runs every
    Monday. Trigger it manually any time via the Actions tab ("Run workflow").
 
-**Free-tier rate limits are low** (roughly 10 requests/minute, ~500/day for
-`gemini-2.5-flash` as of writing — check your actual limits at
+**Model name changes often.** Google periodically retires free-tier model
+IDs for new users (e.g. `gemini-2.5-flash` → `gemini-3.6-flash` happened
+mid-2026). The default model is set via `GEMINI_MODEL` (currently
+`gemini-3.6-flash` in `src/run.js`) — if a run fails with a 404 naming a
+different recommended model, update that default or set the `GEMINI_MODEL`
+repo variable to the model name the error message suggests.
+
+**Free-tier rate limits are low** (roughly 10-15 requests/minute, a few
+hundred to ~1500/day depending on model — check your actual limits at
 [aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit) once
 you have a key). The script spaces out calls (default 5 seconds between
 requests, plus exponential backoff retries) via `API_CALL_DELAY_MS`, and
