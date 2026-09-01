@@ -9,22 +9,48 @@ const trackedPages = require("../config/pages.json");
 const client = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 // The plain "Flash" free tier is only 5 RPM / 20 requests-per-day — far too
 // low for a ~46-call run. "Flash Lite" gets a much higher free daily quota
-// (15 RPM / 500 RPD as of writing) — check current numbers per model at
+// (15 RPM / 500 RPD as of writing, confirmed working for both models below
+// via src/diagnose-quota.js) — check current numbers per model at
 // https://aistudio.google.com/rate-limit before changing this.
-const MODEL = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
+// GEMINI_MODEL can be a comma-separated list; if the current model's quota
+// is exhausted mid-run, the next one in the list is used automatically.
+const MODEL_CANDIDATES = (process.env.GEMINI_MODEL || "gemini-3.5-flash-lite,gemini-3.1-flash-lite")
+  .split(",")
+  .map((m) => m.trim())
+  .filter(Boolean);
+let activeModelIndex = 0;
+const currentModel = () => MODEL_CANDIDATES[activeModelIndex];
 
 // Stay comfortably under the free-tier RPM cap for the chosen model.
 const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 5000);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// No retries on quota/rate-limit errors — a quota error means the daily/
-// per-minute cap is genuinely exhausted, and retrying with backoff just
-// burns time waiting on something that won't clear up mid-run. Let it
-// throw straight through to isFatalAccountError() and abort the run.
-async function withRateLimit(fn) {
-  const result = await fn();
-  await sleep(CALL_DELAY_MS);
-  return result;
+function isQuotaError(err) {
+  const message = err?.message || "";
+  return err?.status === 429 || /RESOURCE_EXHAUSTED|exceeded your current quota/i.test(message);
+}
+
+// makeRequest(model) builds the actual API call for a given model name.
+// On a quota error, automatically switches to the next candidate model and
+// retries the same call — no arbitrary backoff/retry loop, since a quota
+// error won't clear up mid-run on the same model. Only throws (aborting the
+// whole run) once every candidate model has been tried.
+async function withModelFallback(makeRequest) {
+  while (true) {
+    const model = currentModel();
+    try {
+      const result = await makeRequest(model);
+      await sleep(CALL_DELAY_MS);
+      return result;
+    } catch (err) {
+      if (isQuotaError(err) && activeModelIndex < MODEL_CANDIDATES.length - 1) {
+        activeModelIndex++;
+        console.warn(`Quota hit on ${model} — switching to ${currentModel()} and retrying.`);
+        continue;
+      }
+      throw err;
+    }
+  }
 }
 
 const ANALYSIS_SCHEMA = {
@@ -64,9 +90,9 @@ const ANALYSIS_SCHEMA = {
 // much tighter quota bucket independent of the per-model limits shown at
 // aistudio.google.com/rate-limit).
 async function getAnswer(prompt) {
-  const response = await withRateLimit(() =>
+  const response = await withModelFallback((model) =>
     client.models.generateContent({
-      model: MODEL,
+      model,
       contents: prompt,
       config: { tools: [{ googleSearch: {} }] },
     }),
@@ -86,9 +112,9 @@ async function getAnswer(prompt) {
 async function analyzeAnswer(prompt, answerText) {
   const brandList = brands.map((b) => `${b.code} (${b.name}, ${b.domain})`).join(", ");
 
-  const response = await withRateLimit(() =>
+  const response = await withModelFallback((model) =>
     client.models.generateContent({
-      model: MODEL,
+      model,
       contents:
         `Here is an AI-generated answer to the question: "${prompt}"\n\n` +
         `---\n${answerText}\n---\n\n` +
@@ -159,18 +185,18 @@ async function main() {
   console.log("=".repeat(60));
   console.log(`AI Visibility Check — ${timestamp}`);
   console.log(`Provider: Google Gemini (@google/genai)`);
-  console.log(`Model: ${MODEL}`);
+  console.log(`Model candidates (in order, with automatic fallback): ${MODEL_CANDIDATES.join(" -> ")}`);
   console.log(`Call delay: ${CALL_DELAY_MS}ms`);
   console.log(`Prompts: ${prompts.length} | Tracked pages: ${trackedPages.length}`);
   console.log("=".repeat(60));
 
   for (const prompt of prompts) {
     if (aborted) break;
-    console.log(`[${MODEL}] Running prompt: ${prompt}`);
+    console.log(`[${currentModel()}] Running prompt: ${prompt}`);
     try {
       const { text, citations } = await getAnswer(prompt);
       const analysis = await analyzeAnswer(prompt, text);
-      promptResults.push({ prompt, timestamp, raw_response: text, citations, analysis });
+      promptResults.push({ prompt, timestamp, model: currentModel(), raw_response: text, citations, analysis });
     } catch (err) {
       console.error(`Failed on prompt "${prompt}":`, err.message);
       promptResults.push({ prompt, timestamp, error: err.message });
@@ -183,10 +209,10 @@ async function main() {
 
   for (const page of trackedPages) {
     if (aborted) break;
-    console.log(`[${MODEL}] Checking page citation: ${page.url}`);
+    console.log(`[${currentModel()}] Checking page citation: ${page.url}`);
     try {
       const result = await checkPageCitation(page);
-      pageCheckResults.push({ ...result, timestamp });
+      pageCheckResults.push({ ...result, timestamp, model: currentModel() });
     } catch (err) {
       console.error(`Failed on page "${page.url}":`, err.message);
       pageCheckResults.push({ code: page.code, type: page.type, url: page.url, timestamp, error: err.message });
@@ -210,7 +236,7 @@ async function main() {
   console.log(
     `Wrote ${promptResults.length} prompt results and ${pageCheckResults.length} page checks to ${outPath}`,
   );
-  console.log(`Provider: Google Gemini | Model: ${MODEL} | Aborted early: ${aborted}`);
+  console.log(`Provider: Google Gemini | Final model used: ${currentModel()} | Aborted early: ${aborted}`);
   console.log("=".repeat(60));
 
   if (aborted) process.exitCode = 1;

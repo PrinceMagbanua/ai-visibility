@@ -42,17 +42,26 @@ plain `gemini-3.6-flash` (or `3.5-flash`, `3-flash`, etc.) is capped at just
 **5 RPM / 20 requests-per-day** on the free tier — far too low for this
 script's ~46 calls per run. The **Lite** variants get a much higher free
 quota (`gemini-3.5-flash-lite` / `gemini-3.1-flash-lite`: **15 RPM / 500
-RPD** as of writing), which is why `src/run.js` defaults to
-`gemini-3.5-flash-lite`. Google changes these numbers and model names
-often — re-check that dashboard before assuming a "no capacity" error means
-something else, and update `GEMINI_MODEL` (env var / repo variable) if a
-model gets retired or its quota changes.
+RPD** as of writing, confirmed working via `npm run diagnose`).
+
+`GEMINI_MODEL` accepts a **comma-separated list** — `src/run.js` defaults to
+`gemini-3.5-flash-lite,gemini-3.1-flash-lite`. It tries the first model, and
+if that model's quota is exhausted mid-run, automatically switches to the
+next one in the list for all subsequent calls (logged when it happens, and
+recorded per-result as `model` in the output JSON). It only aborts the
+whole run once every candidate in the list has hit quota. Google changes
+model names/quotas often — re-check that dashboard (or run
+`npm run diagnose` / the "Diagnose Gemini Quota" workflow) before assuming
+a capacity error means something else, and update the `GEMINI_MODEL` list
+if a model gets retired.
 
 The script spaces out calls (default 5 seconds between requests) via
-`API_CALL_DELAY_MS`. It does **not** retry on auth or quota errors — a 401,
-403, or 429 immediately aborts the entire run (and fails the GitHub Actions
-job), rather than burning time retrying every remaining prompt against a
-quota that isn't going to recover mid-run. If you're hitting daily quota
+`API_CALL_DELAY_MS`. It does **not** retry-with-backoff on auth or quota
+errors — a 401/403 immediately aborts the entire run (and fails the GitHub
+Actions job); a 429 first tries the next candidate model, and only aborts
+once the whole list is exhausted, rather than burning time retrying every
+remaining prompt against a quota that isn't going to recover mid-run. If
+you're hitting daily quota
 limits, trim `config/prompts.json` — each prompt costs 2 API calls, each
 tracked page costs 1.
 
@@ -80,6 +89,7 @@ Each `results/<date>.json` looks like:
   "prompts": [
     {
       "prompt": "...",
+      "model": "gemini-3.5-flash-lite",
       "raw_response": "...",
       "citations": [{ "url": "...", "title": "..." }],
       "analysis": {
