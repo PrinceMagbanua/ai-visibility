@@ -1,21 +1,23 @@
 # EBOS AI Visibility Tracker
 
 A minimal DIY tracker for how EBOS MedTech, LifeHealthcare and Transmedic show up in
-Claude's answers to realistic buyer/procurement prompts. Runs weekly via GitHub Actions,
+Gemini's answers to realistic buyer/procurement prompts. Runs weekly via GitHub Actions,
 commits results back into `results/` as dated JSON files so history lives in git.
+
+Uses Google's **Gemini API free tier** (no billing account needed) — genuinely
+free on an ongoing basis, not a one-time trial credit.
 
 ## What it does
 
 **Brand-visibility check** — for each prompt in `config/prompts.json`:
-1. Asks Claude (with web search enabled) the prompt, as a real user would.
-2. Asks Claude a second time to analyze that answer: is each tracked brand
+1. Asks Gemini (with Google Search grounding enabled) the prompt, as a real user would.
+2. Asks Gemini a second time to analyze that answer: is each tracked brand
    (`config/brands.json`) mentioned, roughly where, what sentiment, and what
    other companies show up.
 
 **Page-citation check** — for each entry in `config/pages.json` (a homepage +
 one article/product page per brand):
-1. Asks Claude the page's associated search-style question (with web search
-   enabled).
+1. Asks Gemini the page's associated search-style question (with search grounding).
 2. Checks whether that specific tracked URL (or its domain) shows up among
    the citations returned — a direct signal for whether a given page,
    including any JSON-LD on it, is actually surfacing in AI answers.
@@ -25,27 +27,27 @@ Both checks write into a single combined `results/<date>.json` per run.
 ## Setup
 
 1. `npm install`
-2. Add `ANTHROPIC_API_KEY` as a GitHub Actions secret on this repo
+2. Get a free API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+   — sign in with a Google account, accept the terms, and it generates a key
+   with no payment method required for the free tier.
+3. Add it as `GEMINI_API_KEY` in this repo's GitHub Actions secrets
    (Settings → Secrets and variables → Actions → New repository secret).
-3. **If your API key is an identity-linked (workspace-member) key** — you'll
-   see a 400 error `anthropic-workspace-id is required` if so — also add an
-   `ANTHROPIC_WORKSPACE_ID` secret with your workspace's ID (found in the
-   Anthropic Console under workspace settings; the ID starts with `wrkspc_`).
-   Standalone/legacy API keys don't need this.
 4. The workflow in `.github/workflows/weekly-visibility-check.yml` runs every
    Monday. Trigger it manually any time via the Actions tab ("Run workflow").
 
-**Evaluation-tier / low rate-limit keys:** the script spaces out API calls
-(default 5 seconds between requests, plus exponential backoff retries on
-429s) via `API_CALL_DELAY_MS`. If you're still hitting rate limits, raise it
-(e.g. `API_CALL_DELAY_MS=10000` as a repo variable/secret passed into the
-workflow's `env`), or trim `config/prompts.json` down to fewer prompts —
-each prompt costs 2 API calls, each tracked page costs 1.
+**Free-tier rate limits are low** (roughly 10 requests/minute, ~500/day for
+`gemini-2.5-flash` as of writing — check your actual limits at
+[aistudio.google.com/rate-limit](https://aistudio.google.com/rate-limit) once
+you have a key). The script spaces out calls (default 5 seconds between
+requests, plus exponential backoff retries) via `API_CALL_DELAY_MS`, and
+aborts the whole run early if it hits an auth/permission error rather than
+retrying every remaining prompt. If you're hitting daily quota limits, trim
+`config/prompts.json` — each prompt costs 2 API calls, each tracked page costs 1.
 
 To run locally:
 
 ```
-ANTHROPIC_API_KEY=sk-... npm run check
+GEMINI_API_KEY=... npm run check
 ```
 
 ## Editing what's tracked
@@ -98,9 +100,7 @@ Compare a tracked page's `exact_page_cited` rate before vs. after a change
 
 ## Known gaps vs. a paid tool
 
-- Single AI engine (Claude only) — no ChatGPT/Gemini/Perplexity coverage.
+- Single AI engine (Gemini only) — no ChatGPT/Claude/Perplexity coverage.
 - No crawler-log or GA4-referral tracking (separate, manual check).
 - No historical dashboard — just JSON files; build a small script over
   `results/*.json` if you want trend charts.
-# ebos-visibility
-# ai-visibility

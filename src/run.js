@@ -1,20 +1,17 @@
 const fs = require("fs");
 const path = require("path");
-const Anthropic = require("@anthropic-ai/sdk");
+const { GoogleGenAI } = require("@google/genai");
 
 const brands = require("../config/brands.json").own;
 const prompts = require("../config/prompts.json");
 const trackedPages = require("../config/pages.json");
 
-const client = new Anthropic({
-  // reads ANTHROPIC_API_KEY from env
-  defaultHeaders: process.env.ANTHROPIC_WORKSPACE_ID
-    ? { "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID }
-    : undefined,
-});
+const client = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
-// Evaluation-tier keys have very low rate limits — space requests out and
-// retry on 429 instead of hammering the API.
+// Free-tier keys have low rate limits (roughly 10-15 requests/minute
+// depending on model) — space requests out and retry on 429 instead of
+// hammering the API.
 const CALL_DELAY_MS = Number(process.env.API_CALL_DELAY_MS || 5000);
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -26,7 +23,8 @@ async function withRateLimit(fn) {
       await sleep(CALL_DELAY_MS);
       return result;
     } catch (err) {
-      const isRateLimit = err?.status === 429 || err?.error?.error?.type === "rate_limit_error";
+      const message = err?.message || "";
+      const isRateLimit = err?.status === 429 || /RESOURCE_EXHAUSTED|rate limit|quota/i.test(message);
       if (!isRateLimit || attempt === maxAttempts) throw err;
       const backoff = CALL_DELAY_MS * 2 ** attempt;
       console.warn(`Rate limited (attempt ${attempt}/${maxAttempts}), waiting ${backoff}ms...`);
@@ -56,7 +54,6 @@ const ANALYSIS_SCHEMA = {
           },
         },
         required: ["code", "mentioned", "position", "sentiment"],
-        additionalProperties: false,
       },
     },
     competitors_mentioned: {
@@ -66,29 +63,28 @@ const ANALYSIS_SCHEMA = {
     },
   },
   required: ["brands_mentioned", "competitors_mentioned"],
-  additionalProperties: false,
 };
 
 async function getAnswer(prompt) {
-  const response = await withRateLimit(() =>
-    client.messages.create({
-      model: "claude-opus-4-8",
-      max_tokens: 2048,
-      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 5 }],
-      messages: [{ role: "user", content: prompt }],
+  const interaction = await withRateLimit(() =>
+    client.interactions.create({
+      model: MODEL,
+      input: prompt,
+      tools: [{ type: "google_search" }],
     }),
   );
 
-  const text = response.content
-    .filter((b) => b.type === "text")
-    .map((b) => b.text)
-    .join("\n");
-
+  const text = interaction.output_text || "";
   const citations = [];
-  for (const block of response.content) {
-    if (block.type === "web_search_tool_result" && Array.isArray(block.content)) {
-      for (const result of block.content) {
-        if (result.url) citations.push({ url: result.url, title: result.title });
+
+  for (const step of interaction.steps || []) {
+    if (step.type !== "model_output") continue;
+    for (const contentBlock of step.content || []) {
+      if (contentBlock.type !== "text" || !contentBlock.annotations) continue;
+      for (const annotation of contentBlock.annotations) {
+        if (annotation.type === "url_citation") {
+          citations.push({ url: annotation.url, title: annotation.title });
+        }
       }
     }
   }
@@ -99,29 +95,26 @@ async function getAnswer(prompt) {
 async function analyzeAnswer(prompt, answerText) {
   const brandList = brands.map((b) => `${b.code} (${b.name}, ${b.domain})`).join(", ");
 
-  const response = await withRateLimit(() =>
-    client.messages.create({
-      model: "claude-opus-4-8",
-      max_tokens: 1024,
-      output_config: { format: { type: "json_schema", schema: ANALYSIS_SCHEMA } },
-      messages: [
-        {
-          role: "user",
-          content:
-            `Here is an AI-generated answer to the question: "${prompt}"\n\n` +
-            `---\n${answerText}\n---\n\n` +
-            `Tracked brands: ${brandList}.\n` +
-            `For each tracked brand, determine whether it is mentioned in the answer, ` +
-            `roughly where (early/mid/late in the text, or not_mentioned), and the sentiment ` +
-            `of the mention (positive/neutral/negative, or not_mentioned if absent). ` +
-            `Also list any other company names mentioned that are not in the tracked brand list.`,
-        },
-      ],
+  const interaction = await withRateLimit(() =>
+    client.interactions.create({
+      model: MODEL,
+      input:
+        `Here is an AI-generated answer to the question: "${prompt}"\n\n` +
+        `---\n${answerText}\n---\n\n` +
+        `Tracked brands: ${brandList}.\n` +
+        `For each tracked brand, determine whether it is mentioned in the answer, ` +
+        `roughly where (early/mid/late in the text, or not_mentioned), and the sentiment ` +
+        `of the mention (positive/neutral/negative, or not_mentioned if absent). ` +
+        `Also list any other company names mentioned that are not in the tracked brand list.`,
+      response_format: {
+        type: "text",
+        mime_type: "application/json",
+        schema: ANALYSIS_SCHEMA,
+      },
     }),
   );
 
-  const textBlock = response.content.find((b) => b.type === "text");
-  return JSON.parse(textBlock.text);
+  return JSON.parse(interaction.output_text);
 }
 
 function normalizeUrl(u) {
@@ -159,7 +152,7 @@ async function checkPageCitation(page) {
 // burning through the rest of the prompts/pages once one of these hits.
 function isFatalAccountError(err) {
   const message = err?.message || "";
-  return /credit balance is too low/i.test(message) || err?.status === 401;
+  return err?.status === 401 || err?.status === 403 || /API key not valid|PERMISSION_DENIED/i.test(message);
 }
 
 async function main() {

@@ -2,12 +2,12 @@
   "name": "ebos-ai-visibility",
   "version": "1.0.0",
   "private": true,
-  "description": "Weekly tracker for AI-answer visibility (Claude) of EBOS MedTech, LifeHealthcare and Transmedic",
+  "description": "Weekly tracker for AI-answer visibility (Gemini) of EBOS MedTech, LifeHealthcare and Transmedic",
   "type": "commonjs",
   "scripts": {
     "check": "node src/run.js"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.68.0"
+    "@google/genai": "^1.0.0"
   }
 }
