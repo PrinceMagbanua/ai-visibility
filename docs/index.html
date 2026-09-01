@@ -138,16 +138,18 @@ function renderPageTables(d) {
     wrap.appendChild(heading);
 
     const table = document.createElement("table");
+    // Skip failed-run rows (e.g. old runs before a provider switch) — not
+    // useful signal, just noise on the trend view.
     const rows = page.points
-      .map((p) => {
-        if (p.error) return `<tr><td>${p.date}</td><td colspan="3" class="na">error</td></tr>`;
-        return `<tr>
+      .filter((p) => !p.error)
+      .map(
+        (p) => `<tr>
           <td>${p.date}</td>
           <td class="${p.exact_page_cited ? "yes" : "no"}">${p.exact_page_cited ? "Yes" : "No"}</td>
           <td class="${p.domain_cited ? "yes" : "no"}">${p.domain_cited ? "Yes" : "No"}</td>
           <td>${p.total_results ?? "-"}</td>
-        </tr>`;
-      })
+        </tr>`,
+      )
       .join("");
     table.innerHTML = `
       <thead><tr><th>Date</th><th>Exact page cited</th><th>Domain cited</th><th>Tavily results</th></tr></thead>
